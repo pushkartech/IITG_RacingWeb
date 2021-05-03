@@ -10,6 +10,8 @@
     <style>
       *{
         scroll-behavior: smooth;
+        /* margin: 0px;
+        padding: 0px; */
       }
       .clip-cars {
         -webkit-clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
@@ -32,74 +34,65 @@
     <a href="#" class="px-8">
       <img class="hidden lg:block h-24" src="./img/iitgracing.png" title="IITG RACING">
     </a>
-    <button class="lg:hidden">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white hover:text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <button class="lg:hidden ml-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" class="p-3 h-12 w-12 text-white hover:text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
     <div class="w-full lg:inline-flex lg:flex-grow lg:w-auto">
-      <div class="uppercase text-lg tracking-widest">
-        <a href="#" class="text-white lg:inline-flex lg:w-auto px-6 rounded underline" style="text-underline-position: under;"><span>Cars</span></a>
-        <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Competitions</span></a>
-        <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>News</span></a>
-        <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Team</span></a>
+      <div class="uppercase text-lg tracking-widest lg:inline-flex lg:flex-grow">
+        <div class="group relative">
+          <a href="#" class="text-white lg:inline-flex lg:w-auto px-6 rounded underline hover:underline hover:text-white customnavi" style="text-underline-position: under;" id="cars-btn"><span>Cars</span></a>
+        </div>
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;" id="competitions-btn"><span>Competitions</span></a>
+        </div>
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>News</span></a>
+        </div>
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;" id="teams-btn"><span>Team</span></a>
+        </div>
       </div>
-      <div class="text-white uppercase text-lg tracking-widest lg:ml-auto px-8">
-        <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Sponsors</span></a>
-        <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Contact Us</span></a>
+      <div class="text-white uppercase text-lg tracking-widest lg:ml-auto lg:inline-flex lg:flex-grow lg:pl-12" style="margin-right: -25%;">
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Sponsors</span></a>
+        </div>
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Contact Us</span></a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- <nav style="z-index: 9999;">
-    <div class="w-full mx-auto px-2 sm:px-6 lg:px-8 fixed bg-black" style="z-index: 9999;">
-      <div class="relative flex items-center justify-between h-16">
-        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex-shrink-0 flex items-center">
-            <img class="hidden lg:block h-12" src="./img/iitgracing.png" title="IITG RACING">
-          </div>
-          <div class="hidden sm:block sm:ml-6">
-            <div class="flex space-x-4">
-              <a href="#" class="underline text-white px-3 py-2 rounded-md tracking-widest" aria-current="page" style="text-underline-position: under;">CARS</a>
-  
-              <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md tracking-widest" style="text-underline-position: under;">COMPETITIONS</a>
-  
-              <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md tracking-widest" style="text-underline-position: under;">NEWS</a>
-  
-              <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md tracking-widest" style="text-underline-position: under;">TEAM</a>
-            </div>
-          </div>
-        </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div class="ml-3 relative">
-                <div>
-                  <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 pb-9 rounded-md tracking-widest" style="text-underline-position: under;">SPONSORS</a>
-                </div>
-              </div>
-          <div class="ml-3 relative">
-            <div>
-              <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 pb-9 rounded-md leading-relaxed tracking-widest" style="text-underline-position: under;">CONTACT US</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">CARS</a>
-  
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">COMPETITIONS</a>
-  
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">NEWS</a>
-  
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">TEAM</a>
 
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">SPONSORS</a>
+  <!-- Cars Dropdown -->
+  <div class="bg-black text-white text-xl absolute w-full uppercase pb-4 hidden flex-col" style="top: 96px; left: 0;" id="cars-dropdown">
+    <ul style="padding-left: 225px;">
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Student</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Efficycle</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Baja</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Concept</a></li>
+    </ul>
+  </div>
 
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">CONTACT US</a>
-      </div>
-    </div>
-  </nav> -->
+  <!-- Competitions Dropdown -->
+  <div class="bg-black text-white text-xl absolute w-full uppercase pb-3 hidden flex-col" style="top: 96px; left: 0;" id="competitions-dropdown">
+    <ul style="padding-left: 323px;">
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Formula Student</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Efficycle</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Baja</a></li>
+    </ul>
+  </div>
+
+  <!-- Team Dropdown -->
+  <div class="bg-black text-white text-xl absolute w-full uppercase pb-4 hidden flex-col" style="top: 96px; left: 0;" id="teams-dropdown">
+    <ul style="padding-left: 620px;">
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">2020-21</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">2019-20</a></li>
+    </ul>
+  </div>
+
     <div style="padding-top: 10.207934336525307vh;" class="container" style="position: relative; z-index: 99;"> 
       <img src="./img/ANewBeginning.png" alt="" style="height: auto; width: 100%; max-height: 92vh;">
       <div style="position: absolute; top: 240px;" class="text-7xl text-white w-96 pl-12 leading-tight">
@@ -222,5 +215,58 @@
             </div>
         </div>
     </footer>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const carsBtn = document.querySelector('#cars-btn')
+        const competitionsBtn = document.querySelector('#competitions-btn')
+        const teamsBtn = document.querySelector('#teams-btn')
+
+        const carsDropDown = document.querySelector('#cars-dropdown')
+        const competitionsDropDown = document.querySelector('#competitions-dropdown')
+        const teamsDropDown = document.querySelector('#teams-dropdown')
+
+        carsBtn.addEventListener('click', () => {
+          carsDropDown.classList.toggle('hidden')
+          carsDropDown.classList.toggle('flex')
+          if(competitionsDropDown.classList.contains('flex')) {
+            competitionsDropDown.classList.remove('flex');
+            competitionsDropDown.classList.add('hidden');
+          }
+          if(teamsDropDown.classList.contains('flex')) {
+            teamsDropDown.classList.remove('flex');
+            teamsDropDown.classList.add('hidden');
+          }
+        })
+
+        competitionsBtn.addEventListener('click', () => {
+          competitionsDropDown.classList.toggle('hidden')
+          competitionsDropDown.classList.toggle('flex')
+          if(carsDropDown.classList.contains('flex')) {
+            carsDropDown.classList.remove('flex');
+            carsDropDown.classList.add('hidden');
+          }
+          if(teamsDropDown.classList.contains('flex')) {
+            teamsDropDown.classList.remove('flex');
+            teamsDropDown.classList.add('hidden');
+          }
+        })
+
+        teamsBtn.addEventListener('click', () => {
+          teamsDropDown.classList.toggle('hidden')
+          teamsDropDown.classList.toggle('flex')
+          if(carsDropDown.classList.contains('flex')) {
+            carsDropDown.classList.remove('flex');
+            carsDropDown.classList.add('hidden');
+          }
+          if(competitionsDropDown.classList.contains('flex')) {
+            competitionsDropDown.classList.remove('flex');
+            competitionsDropDown.classList.add('hidden');
+          }
+        })
+
+      })
+    </script>
+
 </body>
 </html>
