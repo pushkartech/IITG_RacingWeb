@@ -226,43 +226,34 @@
         const competitionsDropDown = document.querySelector('#competitions-dropdown')
         const teamsDropDown = document.querySelector('#teams-dropdown')
 
-        carsBtn.addEventListener('click', () => {
+        carsBtn.addEventListener('mouseover', () => {
           carsDropDown.classList.toggle('hidden')
           carsDropDown.classList.toggle('flex')
-          if(competitionsDropDown.classList.contains('flex')) {
-            competitionsDropDown.classList.remove('flex');
-            competitionsDropDown.classList.add('hidden');
-          }
-          if(teamsDropDown.classList.contains('flex')) {
-            teamsDropDown.classList.remove('flex');
-            teamsDropDown.classList.add('hidden');
-          }
         })
 
-        competitionsBtn.addEventListener('click', () => {
+        carsBtn.addEventListener('mouseout', () => {
+          carsDropDown.classList.toggle('hidden')
+          carsDropDown.classList.toggle('flex')
+        })
+
+        competitionsBtn.addEventListener('mouseover', () => {
           competitionsDropDown.classList.toggle('hidden')
           competitionsDropDown.classList.toggle('flex')
-          if(carsDropDown.classList.contains('flex')) {
-            carsDropDown.classList.remove('flex');
-            carsDropDown.classList.add('hidden');
-          }
-          if(teamsDropDown.classList.contains('flex')) {
-            teamsDropDown.classList.remove('flex');
-            teamsDropDown.classList.add('hidden');
-          }
+        })
+        
+        competitionsBtn.addEventListener('mouseout', () => {
+          competitionsDropDown.classList.toggle('hidden')
+          competitionsDropDown.classList.toggle('flex')
         })
 
-        teamsBtn.addEventListener('click', () => {
+        teamsBtn.addEventListener('mouseover', () => {
           teamsDropDown.classList.toggle('hidden')
           teamsDropDown.classList.toggle('flex')
-          if(carsDropDown.classList.contains('flex')) {
-            carsDropDown.classList.remove('flex');
-            carsDropDown.classList.add('hidden');
-          }
-          if(competitionsDropDown.classList.contains('flex')) {
-            competitionsDropDown.classList.remove('flex');
-            competitionsDropDown.classList.add('hidden');
-          }
+        })
+
+        teamsBtn.addEventListener('mouseout', () => {
+          teamsDropDown.classList.toggle('hidden')
+          teamsDropDown.classList.toggle('flex')
         })
 
       })
