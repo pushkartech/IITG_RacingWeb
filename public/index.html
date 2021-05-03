@@ -10,8 +10,8 @@
     <style>
       *{
         scroll-behavior: smooth;
-        /* margin: 0px;
-        padding: 0px; */
+        margin: 0px;
+        padding: 0px;
       }
       .clip-cars {
         -webkit-clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
@@ -216,48 +216,35 @@
         </div>
     </footer>
 
-    <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        const carsBtn = document.querySelector('#cars-btn')
-        const competitionsBtn = document.querySelector('#competitions-btn')
-        const teamsBtn = document.querySelector('#teams-btn')
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-        const carsDropDown = document.querySelector('#cars-dropdown')
-        const competitionsDropDown = document.querySelector('#competitions-dropdown')
-        const teamsDropDown = document.querySelector('#teams-dropdown')
-
-        carsBtn.addEventListener('mouseover', () => {
-          carsDropDown.classList.toggle('hidden')
-          carsDropDown.classList.toggle('flex')
-        })
-
-        carsBtn.addEventListener('mouseout', () => {
-          carsDropDown.classList.toggle('hidden')
-          carsDropDown.classList.toggle('flex')
-        })
-
-        competitionsBtn.addEventListener('mouseover', () => {
-          competitionsDropDown.classList.toggle('hidden')
-          competitionsDropDown.classList.toggle('flex')
-        })
-        
-        competitionsBtn.addEventListener('mouseout', () => {
-          competitionsDropDown.classList.toggle('hidden')
-          competitionsDropDown.classList.toggle('flex')
-        })
-
-        teamsBtn.addEventListener('mouseover', () => {
-          teamsDropDown.classList.toggle('hidden')
-          teamsDropDown.classList.toggle('flex')
-        })
-
-        teamsBtn.addEventListener('mouseout', () => {
-          teamsDropDown.classList.toggle('hidden')
-          teamsDropDown.classList.toggle('flex')
-        })
-
-      })
-    </script>
-
+<script>
+  $(document).ready(function() {
+    $("#cars-btn").mouseenter(function() {
+      $("#cars-dropdown").show();
+      $("#competitions-dropdown").hide();
+      $("#teams-dropdown").hide();
+    })
+    $("#cars-dropdown").mouseleave(function() {
+      $("#cars-dropdown").hide();
+    })
+    $("#competitions-btn").mouseenter(function() {
+      $("#competitions-dropdown").show();
+      $("#cars-dropdown").hide();
+      $("#teams-dropdown").hide();
+    })
+    $("#competitions-dropdown").mouseleave(function() {
+      $("#competitions-dropdown").hide();
+    })
+    $("#teams-btn").mouseenter(function() {
+      $("#teams-dropdown").show();
+      $("#competitions-dropdown").hide();
+      $("#cars-dropdown").hide();
+    })
+    $("#teams-dropdown").mouseleave(function() {
+      $("#teams-dropdown").hide();
+    })
+  })
+</script>
 </body>
 </html>
