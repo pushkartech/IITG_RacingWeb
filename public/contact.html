@@ -165,5 +165,35 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function() {
+    $("#cars-btn").mouseenter(function() {
+      $("#cars-dropdown").show();
+      $("#competitions-dropdown").hide();
+      $("#teams-dropdown").hide();
+    })
+    $("#cars-dropdown").mouseleave(function() {
+      $("#cars-dropdown").hide();
+    })
+    $("#competitions-btn").mouseenter(function() {
+      $("#competitions-dropdown").show();
+      $("#cars-dropdown").hide();
+      $("#teams-dropdown").hide();
+    })
+    $("#competitions-dropdown").mouseleave(function() {
+      $("#competitions-dropdown").hide();
+    })
+    $("#teams-btn").mouseenter(function() {
+      $("#teams-dropdown").show();
+      $("#competitions-dropdown").hide();
+      $("#cars-dropdown").hide();
+    })
+    $("#teams-dropdown").mouseleave(function() {
+      $("#teams-dropdown").hide();
+    })
+  })
+</script>
 </body>
 </html>
