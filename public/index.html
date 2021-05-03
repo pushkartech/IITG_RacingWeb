@@ -19,6 +19,11 @@
         -webkit-clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
         clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
       }
+      .customnavi:hover {
+        letter-spacing: 0.2em;
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+      }
     </style>
 </head>
 <body> 
@@ -33,15 +38,15 @@
       </svg>
     </button>
     <div class="w-full lg:inline-flex lg:flex-grow lg:w-auto">
-      <div class="text-white uppercase text-lg tracking-widest">
-        <a href="#" class="lg:inline-flex lg:w-auto px-6 rounded"><span>Cars</span></a>
-        <a href="#" class="lg:inline-flex lg:w-auto px-6 rounded"><span>Competitions</span></a>
-        <a href="#" class="lg:inline-flex lg:w-auto px-6 rounded"><span>News</span></a>
-        <a href="#" class="lg:inline-flex lg:w-auto px-6 rounded"><span>Team</span></a>
+      <div class="uppercase text-lg tracking-widest">
+        <a href="#" class="text-white lg:inline-flex lg:w-auto px-6 rounded underline" style="text-underline-position: under;"><span>Cars</span></a>
+        <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Competitions</span></a>
+        <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>News</span></a>
+        <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Team</span></a>
       </div>
       <div class="text-white uppercase text-lg tracking-widest lg:ml-auto px-8">
-        <a href="#" class="lg:inline-flex lg:w-auto px-6 rounded"><span>Sponsors</span></a>
-        <a href="#" class="lg:inline-flex lg:w-auto px-6 rounded"><span>Contact Us</span></a>
+        <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Sponsors</span></a>
+        <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Contact Us</span></a>
       </div>
     </div>
   </nav>
