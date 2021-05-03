@@ -6,63 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwindcss 2.0</title>
     <link rel="stylesheet" href="css/tailwind.css">
+    <style>
+      *{
+        scroll-behavior: smooth;
+        margin: 0px;
+        padding: 0px;
+      }
+      .clip-cars {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
+      }
+      .clip-members {
+        -webkit-clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+      }
+      .customnavi:hover {
+        letter-spacing: 0.2em;
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+      }
+    </style>
 </head>
 <body>
-    <!-- This example requires Tailwind CSS v2.0+ -->
-<nav class="bg-black">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-16">
-        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex-shrink-0 flex items-center">
-            <!-- <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"> -->
-            <img class="hidden lg:block h-12" src="./img/iitgracing.png" title="IITG RACING">
-          </div>
-          <div class="hidden sm:block sm:ml-6">
-            <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="#" class="underline text-white px-3 py-2 rounded-md tracking-widest" aria-current="page" style="text-underline-position: under;">CARS</a>
-  
-              <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md tracking-widest" style="text-underline-position: under;">COMPETITIONS</a>
-  
-              <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md tracking-widest" style="text-underline-position: under;">NEWS</a>
-  
-              <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md tracking-widest" style="text-underline-position: under;">TEAM</a>
-            </div>
-          </div>
+  <nav class="flex items-center flex-wrap bg-black fixed w-full" style="z-index: 999;">
+    <div class="px-8">
+      <a href="#"><img class="hidden lg:block h-24" src="./img/iitgracing.png" title="IITG RACING"></a>
+    </div>
+    <button class="lg:hidden ml-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" class="p-3 h-12 w-12 text-white hover:text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    <div class="w-full lg:inline-flex lg:flex-grow lg:w-auto">
+      <div class="uppercase text-lg tracking-widest lg:inline-flex lg:flex-grow">
+        <div class="group relative">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;" id="cars-btn"><span>Cars</span></a>
         </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div class="ml-3 relative">
-                <div>
-                  <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md tracking-widest" style="text-underline-position: under;">SPONSORS</a>
-                </div>
-              </div>
-  
-          <!-- Profile dropdown -->
-          <div class="ml-3 relative">
-            <div>
-              <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md leading-relaxed tracking-widest" style="text-underline-position: under;">CONTACT US</a>
-            </div>
-          </div>
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;" id="competitions-btn"><span>Competitions</span></a>
+        </div>
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>News</span></a>
+        </div>
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;" id="teams-btn"><span>Team</span></a>
         </div>
       </div>
-    </div>
-  
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
-  
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-  
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-  
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+      <div class="text-white uppercase text-lg tracking-widest lg:ml-auto lg:inline-flex lg:flex-grow lg:pl-12" style="margin-right: -25%;">
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Sponsors</span></a>
+        </div>
+        <div class="relative group">
+          <a href="#" class="text-white lg:inline-flex lg:w-auto px-6 rounded underline hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Contact Us</span></a>
+        </div>
       </div>
     </div>
   </nav>
-  
 
+  <!-- Cars Dropdown -->
+  <div class="bg-black text-white text-xl absolute w-full uppercase pb-4 hidden flex-col" style="top: 13.132694938440492vh; left: 0;" id="cars-dropdown">
+    <ul style="padding-left: 14.6484375vw;">
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Student</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Efficycle</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Baja</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Concept</a></li>
+    </ul>
+  </div>
+
+  <!-- Competitions Dropdown -->
+  <div class="bg-black text-white text-xl absolute w-full uppercase pb-3 hidden flex-col" style="top: 13.132694938440492vh; left: 0;" id="competitions-dropdown">
+    <ul style="padding-left: 21.028645833333332vw;">
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Formula Student</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Efficycle</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Baja</a></li>
+    </ul>
+  </div>
+
+  <!-- Team Dropdown -->
+  <div class="bg-black text-white text-xl absolute w-full uppercase pb-4 hidden flex-col" style="top: 13.132694938440492vh; left: 0;" id="teams-dropdown">
+    <ul style="padding-left: 40.364583333333336vw;">
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">2020-21</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">2019-20</a></li>
+    </ul>
+  </div>
+
+  <div style="padding-top: 10.207934336525307vh;" class="container" style="position: relative; z-index: 99;"> 
+    <img src="./img/contact.png" alt="" style="height: auto; width: 100%; max-height: 92vh;">
+    <div style="position: absolute; top: 32.83173734610123vh;" class="text-7xl text-white w-100 pl-12 leading-tight">
+      CONTACT US
+      <div id="intro"></div>
+    </div>
+    <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-80%, -80%);">
+      <a href="#intro"><img alt="Arrow Down Icon" src="./img/down.png"></a>
+    </div>
+  </div>
 
     <div class="flex justify-center items-center h-screen">
         <div class="p-20 text-center">
