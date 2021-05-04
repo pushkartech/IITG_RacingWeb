@@ -4229,6 +4229,34 @@ video {
   background-image: linear-gradient(to top left, var(--tw-gradient-stops));
 }
 
+.bg-nw-hdr {
+  background-image: url('/public/img_news/header.jpg');
+}
+
+.bg-nw-1 {
+  background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news1.jpg');
+}
+
+.bg-nw-2 {
+  background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news2.jpg');
+}
+
+.bg-nw-3 {
+  background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news3.jpg');
+}
+
+.bg-nw-4 {
+  background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news4.jpg');
+}
+
+.bg-nw-5 {
+  background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news5.jpg');
+}
+
+.bg-nw-6 {
+  background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news6.jpg');
+}
+
 .from-transparent {
   --tw-gradient-from: transparent;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -35510,6 +35538,34 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .sm\:bg-nw-hdr {
+    background-image: url('/public/img_news/header.jpg');
+  }
+
+  .sm\:bg-nw-1 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news1.jpg');
+  }
+
+  .sm\:bg-nw-2 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news2.jpg');
+  }
+
+  .sm\:bg-nw-3 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news3.jpg');
+  }
+
+  .sm\:bg-nw-4 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news4.jpg');
+  }
+
+  .sm\:bg-nw-5 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news5.jpg');
+  }
+
+  .sm\:bg-nw-6 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news6.jpg');
+  }
+
   .sm\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -66619,6 +66675,34 @@ video {
 
   .md\:bg-gradient-to-tl {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+  }
+
+  .md\:bg-nw-hdr {
+    background-image: url('/public/img_news/header.jpg');
+  }
+
+  .md\:bg-nw-1 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news1.jpg');
+  }
+
+  .md\:bg-nw-2 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news2.jpg');
+  }
+
+  .md\:bg-nw-3 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news3.jpg');
+  }
+
+  .md\:bg-nw-4 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news4.jpg');
+  }
+
+  .md\:bg-nw-5 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news5.jpg');
+  }
+
+  .md\:bg-nw-6 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news6.jpg');
   }
 
   .md\:from-transparent {
@@ -97732,6 +97816,34 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .lg\:bg-nw-hdr {
+    background-image: url('/public/img_news/header.jpg');
+  }
+
+  .lg\:bg-nw-1 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news1.jpg');
+  }
+
+  .lg\:bg-nw-2 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news2.jpg');
+  }
+
+  .lg\:bg-nw-3 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news3.jpg');
+  }
+
+  .lg\:bg-nw-4 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news4.jpg');
+  }
+
+  .lg\:bg-nw-5 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news5.jpg');
+  }
+
+  .lg\:bg-nw-6 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news6.jpg');
+  }
+
   .lg\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -128843,6 +128955,34 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .xl\:bg-nw-hdr {
+    background-image: url('/public/img_news/header.jpg');
+  }
+
+  .xl\:bg-nw-1 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news1.jpg');
+  }
+
+  .xl\:bg-nw-2 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news2.jpg');
+  }
+
+  .xl\:bg-nw-3 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news3.jpg');
+  }
+
+  .xl\:bg-nw-4 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news4.jpg');
+  }
+
+  .xl\:bg-nw-5 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news5.jpg');
+  }
+
+  .xl\:bg-nw-6 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news6.jpg');
+  }
+
   .xl\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -159952,6 +160092,34 @@ video {
 
   .\32xl\:bg-gradient-to-tl {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+  }
+
+  .\32xl\:bg-nw-hdr {
+    background-image: url('/public/img_news/header.jpg');
+  }
+
+  .\32xl\:bg-nw-1 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news1.jpg');
+  }
+
+  .\32xl\:bg-nw-2 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news2.jpg');
+  }
+
+  .\32xl\:bg-nw-3 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news3.jpg');
+  }
+
+  .\32xl\:bg-nw-4 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news4.jpg');
+  }
+
+  .\32xl\:bg-nw-5 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news5.jpg');
+  }
+
+  .\32xl\:bg-nw-6 {
+    background-image: url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news6.jpg');
   }
 
   .\32xl\:from-transparent {

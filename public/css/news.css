@@ -1,0 +1,14 @@
+.news {
+    overflow: hidden;
+}
+
+.news-img {
+    height: 400px;
+    background-size: 100% 100%;
+    transition: all .1s ease-in-out;
+
+}
+
+.news-img:hover {
+    transform: scale(1.05);
+}
