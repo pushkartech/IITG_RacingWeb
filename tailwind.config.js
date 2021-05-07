@@ -11,6 +11,7 @@ module.exports = {
         blue: '@49AADE',
         grey: '#222222',
       },
+      // these images are customized to twcss classes- can be used as bg-{name}
       backgroundImage: (theme) => ({
         'nw-hdr' : "url('/public/img_news/header.jpg')",
         'nw-1' : "url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news1.jpg')",

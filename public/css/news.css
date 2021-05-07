@@ -9,6 +9,30 @@
 
 }
 
+.news-img-6 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/article-2015.jpg);
+}
+
+.news-img-5 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/eficycle-2015.jpg);
+}
+
+.news-img-4 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/supra-2015.jpg);
+}
+
+.news-img-3 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/eficycle-2014.jpg);
+}
+
+.news-img-2 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/eficycle-2013.jpeg);
+}
+
+.news-img-1 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/Baja-2012.jpg);
+}
+
 .news-img:hover {
     transform: scale(1.05);
 }
