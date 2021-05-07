@@ -13919,6 +13919,9 @@ video {
 .max-h-2\.5 {
   max-height: 0.625rem;
 }
+.top-57{
+  top:19rem;
+}
 
 .max-h-3\.5 {
   max-height: 0.875rem;
@@ -22061,7 +22064,12 @@ video {
 .focus-within\:ring-offset-red-200:focus-within {
   --tw-ring-offset-color: #fecaca;
 }
-
+.top-60{
+  top: 20rem;
+}
+.top-58{
+  top:572px;
+}
 .focus-within\:ring-offset-red-300:focus-within {
   --tw-ring-offset-color: #fca5a5;
 }
