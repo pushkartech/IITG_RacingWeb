@@ -1,6 +1,6 @@
 /*! tailwindcss v2.1.2 | MIT License | https://tailwindcss.com */
 
-/*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
 Document
@@ -12,8 +12,8 @@ Use a better box model (opinionated).
 */
 
 *,
-*::before,
-*::after {
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -21,7 +21,7 @@ Use a better box model (opinionated).
 Use a more readable tab size (opinionated).
 */
 
-:root {
+html {
   -moz-tab-size: 4;
   -o-tab-size: 4;
      tab-size: 4;
@@ -13919,9 +13919,6 @@ video {
 .max-h-2\.5 {
   max-height: 0.625rem;
 }
-.top-57{
-  top:19rem;
-}
 
 .max-h-3\.5 {
   max-height: 0.875rem;
@@ -22064,12 +22061,7 @@ video {
 .focus-within\:ring-offset-red-200:focus-within {
   --tw-ring-offset-color: #fecaca;
 }
-.top-60{
-  top: 20rem;
-}
-.top-58{
-  top:572px;
-}
+
 .focus-within\:ring-offset-red-300:focus-within {
   --tw-ring-offset-color: #fca5a5;
 }
