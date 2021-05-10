@@ -21,6 +21,9 @@ module.exports = {
         'nw-5' : "url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news5.jpg')",
         'nw-6' : "url('/public/img_news/BlackOverlay.png'), url('/public/img_news/news6.jpg')",
       }),
+      fontSize: {
+        'xxs' : "0.5rem",
+      }
     },
   },
   variants: {

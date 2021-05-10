@@ -8,6 +8,33 @@
     transition: all .1s ease-in-out;
 
 }
+.news-img-13 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/for-bhar-2020.jpg);
+}
+
+.news-img-12 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/eficycle-2018.jpg);
+}
+
+.news-img-11 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/eficycle-2017.jpg);
+}
+
+.news-img-10 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/tachyon-2017.jpg);
+}
+
+.news-img-9 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/tel-article-2017.jpg);
+}
+
+.news-img-8 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/techevince-2017.jpg);
+}
+
+.news-img-7 {
+    background-image: url(../img_news/BlackOverlay.png), url(../img_news/for-bhar-2017.JPG);
+}
 
 .news-img-6 {
     background-image: url(../img_news/BlackOverlay.png), url(../img_news/article-2015.jpg);
@@ -35,4 +62,22 @@
 
 .news-img:hover {
     transform: scale(1.05);
+}
+
+/* News content  */
+.cnt-img {
+    height: 35rem;
+}
+
+
+/* Responsive  */
+@media screen and (max-width: 648px) {
+    .news-img {
+        height: 250px;
+    }
+
+    .cnt-img {
+        height: 25rem;
+    }
+     
 }
