@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIAL</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        .carcarousel::-webkit-scrollbar {
+            display: none;
+        }
+        .carcarousel::-webkit-overflow-scrolling {
+            display: none;
+        }
+        #carousel {
+            touch-action: none;
+        }
+        #indicate-1-slide:visited {
+            border: 2px solid white;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div>
+        <ul class="list-none p-2 fixed">
+            <a href="#indicate-1-slide">
+                <li class="w-44 m-0.5 text-start py-1 float-left border-b-2 pl-1 border-white text-white border-solid cursor-pointer" id="indicate-1">
+                    A New Beginning
+                </li>
+            </a>
+            <a href="#indicate-2-slide">
+                <li class="w-8 m-0.5 text-start py-1 float-left border-b-2 pl-1 border-white text-white border-solid cursor-pointer" id="indicate-2">
+                    2
+                </li>
+            </a>            
+            <a href="#indicate-3-slide">
+                <li class="w-8 m-0.5 text-start py-1 float-left border-b-2 pl-1 border-white text-white border-solid cursor-pointer" id="indicate-3">
+                    3
+                </li>
+            </a>
+            <a href="#indicate-4-slide">
+                <li class="w-8 m-0.5 text-start py-1 float-left border-b-2 pl-1 border-white text-white border-solid cursor-pointer" id="indicate-4">
+                    4
+                </li>
+            </a>
+        </ul>
+    </div>
+    <div class="w-screen h-screen flex float-left carcarousel overflow-x-hidden" id="carousel" data-touch="true">
+        <img src="./img/ANewBeginning.png" alt="" id="indicate-1-slide" class="w-screen">
+        <img src="./img/carsc.png" alt="" id="indicate-2-slide" class="w-screen">
+        <img src="./img/visionf.png" alt="" id="indicate-3-slide" class="w-screen">
+        <img src="./img/contact.png" alt="" id="indicate-4-slide" class="w-screen">
+    </div>
+    <script>
+        var c = 1;
+        var time = setInterval(function() {
+            if(c<5) {
+                c++;
+                $("#indicate-"+c).click();
+            }
+            else {
+                c = 0;
+            }
+        }, 2000);
+        for(var i=1;i<=4;i++) {
+            $("#indicate-"+i).mousedown(function(event) {
+                if(event.which == 1) {
+                    clearInterval(time);
+                    setTimeout(function() {
+                        time = setInterval(function() {
+                            if(c<5) {
+                                c++;
+                                $("#indicate-"+c).click();
+                            }
+                            else {
+                                c = 0;
+                            }
+                        }, 2000);
+                    },2000);
+                }
+            });
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#indicate-1").click(function() {
+                $("#indicate-1").animate(
+                    {width: "11rem"},
+                    {
+                        duration: 400, 
+                        easing: "linear", 
+                        complete: function() {
+                            $(this).text('A New Beginning');
+                    }}
+                );
+                $("#indicate-4, #indicate-3, #indicate-2").animate({width: "2rem"},{duration: 500, easing: "linear"});
+                $("#indicate-4").text('4');
+                $("#indicate-3").text('3');
+                $("#indicate-2").text('2');
+            });
+            $("#indicate-2").click(function() {
+                $("#indicate-2").animate(
+                    {width: "11rem"},
+                    {
+                        duration: 400, 
+                        easing: "linear",
+                        complete: function() {
+                            $(this).text('Another Heading');
+                        }
+                    });
+                $("#indicate-4, #indicate-3, #indicate-1").animate({width: "2rem"},{duration: 500, easing: "linear"});
+                $("#indicate-4").text('4');
+                $("#indicate-3").text('3');
+                $("#indicate-1").text('1');
+            });
+            $("#indicate-3").click(function() {
+                $("#indicate-3").animate({
+                    width: "11rem"},
+                    {
+                        duration: 400, 
+                        easing: "linear",
+                        complete: function() {
+                            $(this).text('Yet Another Heading');
+                        }
+                    });
+                $("#indicate-4, #indicate-2, #indicate-1").animate({width: "2rem"},{duration: 500, easing: "linear"});
+                $("#indicate-4").text('4');
+                $("#indicate-2").text('2');
+                $("#indicate-1").text('1');
+            });
+            $("#indicate-4").click(function() {
+                $("#indicate-4").animate(
+                    {width: "11rem"},
+                    {
+                        duration: 400, 
+                        easing: "linear",
+                        complete: function() {
+                            $(this).text('Final Heading');
+                        }
+                    });
+                $("#indicate-2, #indicate-3, #indicate-1").animate({width: "2rem"},{duration: 500, easing: "linear"});
+                $("#indicate-2").text('2');
+                $("#indicate-3").text('3');
+                $("#indicate-1").text('1');
+            });
+        });
+        for(let i=1; i<4;i++) {
+            document.getElementById('indicate-'+i+'-slide').click();
+            setTimeout(function() {
+                console.log('Wait');
+            }, 10000);
+        }
+    </script>
+</body>
+</html>
