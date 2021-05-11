@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+    .md\:h-100 {
+        height: 40rem/* 384px */;
+    }
+}
+
+.tracking-widest1 {
+    letter-spacing: .40em;
+}
+
+.tracking-widest2 {
+    letter-spacing: .20em;
+}
