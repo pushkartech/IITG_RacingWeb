@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwindcss 2.0</title>
+    <title>Our Cars</title>
     <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
+    <link rel="stylesheet" href="css/carpg.css">
     <style>
       *{
         scroll-behavior: smooth;
@@ -27,6 +31,19 @@
       }
     </style>
 </head>
+
+<style media="screen">
+  .carousel-cell {
+    width: 24%;
+    margin-left: 10px;
+    }
+
+    /* cell number */
+    .carousel-cell:before {
+      display: block;
+    }
+  </style>
+
 <body>
 
   <nav class="flex items-center flex-wrap bg-black fixed w-full" style="z-index: 999;">
@@ -93,7 +110,7 @@
 
   <div style="padding-top: 10.207934336525307vh;" class="container" style="position: relative; z-index: 99;">
     <img src="./img/carsc.png" alt="" style="height: auto; width: 100%; max-height: 92vh;">
-    <div style="position: absolute; top: 32.83173734610123vh;" class="text-7xl text-white w-100 pl-12 leading-tight">
+    <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;" class="text-8xl text-white w-100 pl-12 leading-tight">
       OUR CARS
       <div id="intro"></div>
     </div>
@@ -102,8 +119,130 @@
     </div>
   </div>
 
+  <div class="mt-16 mb-36">
+    <div class="ml-10 mb-8">
+      <h1 class="text-4xl justify-center" style="font-family: nebula; text-align: center;">formula student</h1>
+    </div>
+    <div class="carousel" data-flickity='{ "wrapAround": true, "imagesLoaded": false}'>
+      <div class="carousel-cell">
+        <div class="">
+          <img class="cars-img" src="./img/side png 1 (1)cc.png">
+          <p class="text-2xl justify-center" style="font-family: nebula; text-align: center;">origin</p>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <div class="">
+          <img class="cars-img" src="./img/side png 1 (1)cc.png">
+          <p class="text-2xl" style="font-family: nebula; text-align: center;">tachyon 1.0</p>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <div class="">
+          <img class="cars-img" src="./img/side png 1 (1)cc.png">
+          <p class="text-2xl" style="font-family: nebula; text-align: center;">tachyon 2.0</p>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <div class="">
+          <img class="cars-img" src="./img/side png 1 (1)cc.png">
+          <p class="text-2xl" style="font-family: nebula; text-align: center;">tachyon 3.0</p>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <div class="cars-img">
+          <img class="" src="./img/side png 1 (1)cc.png">
+          <p class="text-2xl" style="font-family: nebula; text-align: center;">tachyon 4.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  
+
+  <div class="mt-16 mb-36">
+    <div class="ml-10 mb-8">
+      <h1 class="text-4xl justify-center" style="font-family: nebula; text-align: center;">Efficycle</h1>
+    </div>
+    <div class="carousel" data-flickity='{ "wrapAround": true, "imagesLoaded": false}'>
+      <div class="carousel-cell">
+        <div class="">
+          <div>
+            <img class="cars-img" src="./img/side png 1cc.png">
+          </div>
+          <div class="">
+            <p class="text-2xl justify-center" style="font-family: nebula; text-align: center;">Efficycle 1.0</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <div class="cars-img">
+          <img class="" src="./img/side png 1cc.png">
+          <p class="text-2xl" style="font-family: nebula; text-align: center;">Efficycle 2.0</p>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <div class="">
+          <img class="cars-img" src="./img/side png 1cc.png">
+          <p class="text-2xl" style="font-family: nebula; text-align: center;">Efficycle 5.0</p>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <div class="">
+          <img class="cars-img" src="./img/side png 1cc.png">
+          <p class="text-2xl" style="font-family: nebula; text-align: center;">Efficycle 3.0</p>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <div class="">
+          <img class="cars-img" src="./img/side png 1cc.png">
+          <p class="text-2xl" style="font-family: nebula; text-align: center;">Efficycle 4.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="mt-16 mb-36">
+    <div class="ml-10 mb-8">
+      <h1 class="text-4xl justify-center" style="font-family: nebula; text-align: center;">Concept Cars</h1>
+    </div>
+    <div class="flex justify-center">
+      <div class="">
+        <div>
+          <img class="cars-img" src="./img/side png 1.png">
+        </div>
+        <div class="">
+          <p class="text-2xl justify-center" style="font-family: nebula; text-align: center;">concept a</p>
+        </div>
+      </div>
+
+      <div class="">
+        <div>
+          <img class="cars-img" src="./img/side png 1 (1).png">
+        </div>
+        <div class="">
+          <p class="text-2xl justify-center" style="font-family: nebula; text-align: center;">vision f</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="mt-16 mb-20">
+    <div class="ml-10 mb-8">
+      <h1 class="text-4xl justify-center" style="font-family: nebula; text-align: center;">baja</h1>
+    </div>
+    <div class="flex justify-center">
+      <div class="">
+        <div>
+          <img class="cars-img" src="./img/side png 1 (2).png">
+        </div>
+        <div class="">
+          <p class="text-2xl justify-center" style="font-family: nebula; text-align: center;">srijan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     <footer class="footer-1 bg-black py-10 text-white">
         <div class="flex justify-center">
@@ -165,6 +304,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 <script>
   $(document).ready(function() {
