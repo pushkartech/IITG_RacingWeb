@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sponsors</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/tailwind.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
     <style>
       *{
         scroll-behavior: smooth;
@@ -20,10 +23,59 @@
         -webkit-clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
         clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
       }
+     
+      @media (min-width: 1024px){
+
+        .lgclip-members {
+        -webkit-clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+      }
+      }
+     
       .customnavi:hover {
         letter-spacing: 0.2em;
         font-size: 1.2rem;
         line-height: 1.7rem;
+      }
+      ::-webkit-scrollbar {
+        width: 18px; 
+      }
+      ::-webkit-scrollbar-track {
+        background: black;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: white;
+        border: 5px solid black;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: red;
+      }
+      /* Buttons */
+      ::-webkit-scrollbar-button:single-button {
+        background-color: #000;
+        display: block;
+        border-style: double;
+        height: 13px;
+        width: 16px;
+      }
+      /* Up */
+      ::-webkit-scrollbar-button:single-button:vertical:decrement {
+        border-width: 0 8px 8px 8px;
+        border-color: transparent transparent #fff transparent;
+      }
+
+      ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+        border-color: transparent transparent red transparent;
+      }
+      /* Down */
+      ::-webkit-scrollbar-button:single-button:vertical:increment {
+        border-width: 8px 8px 0 8px;
+        border-color: #fff transparent transparent transparent;
+      }
+
+      ::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+        border-color: red transparent transparent transparent;
       }
     </style>
 </head>
@@ -40,31 +92,31 @@
     <div class="w-full lg:inline-flex lg:flex-grow lg:w-auto">
       <div class="uppercase text-lg tracking-widest lg:inline-flex lg:flex-grow">
         <div class="group relative">
-          <a href="#" class="text-white lg:inline-flex lg:w-auto px-6 rounded underline hover:underline hover:text-white customnavi" style="text-underline-position: under;" id="cars-btn"><span>Cars</span></a>
+          <a href="#" class="text-white lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;" id="cars-btn"><span>Cars</span></a>
         </div>
         <div class="relative group">
-          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;" id="competitions-btn"><span>Competitions</span></a>
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;" id="competitions-btn"><span>Competitions</span></a>
         </div>
         <div class="relative group">
-          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>News</span></a>
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;"><span>News</span></a>
         </div>
         <div class="relative group">
-          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;" id="teams-btn"><span>Team</span></a>
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;" id="teams-btn"><span>Team</span></a>
         </div>
       </div>
       <div class="text-white uppercase text-lg tracking-widest lg:ml-auto lg:inline-flex lg:flex-grow lg:pl-12" style="margin-right: -25%;">
         <div class="relative group">
-          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Sponsors</span></a>
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded underline hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;"><span>Sponsors</span></a>
         </div>
         <div class="relative group">
-          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under;"><span>Contact Us</span></a>
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;"><span>Contact Us</span></a>
         </div>
       </div>
     </div>
   </nav>
   
 <!-- Cars Dropdown -->
-<div class="bg-black text-white text-xl absolute w-full uppercase pb-4 hidden flex-col" style="top: 13.132694938440492vh; left: 0;" id="cars-dropdown">
+<div class="bg-black text-white text-xl absolute w-full uppercase pb-4 hidden flex-col" style="top: 13.132694938440492vh; left: 0; font-family: nebula;" id="cars-dropdown">
   <ul style="padding-left: 14.6484375vw;">
     <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Student</a></li>
     <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Efficycle</a></li>
@@ -74,7 +126,7 @@
 </div>
 
 <!-- Competitions Dropdown -->
-<div class="bg-black text-white text-xl absolute w-full uppercase pb-3 hidden flex-col" style="top: 13.132694938440492vh; left: 0;" id="competitions-dropdown">
+<div class="bg-black text-white text-xl absolute w-full uppercase pb-3 hidden flex-col" style="top: 13.132694938440492vh; left: 0; font-family: nebula;" id="competitions-dropdown">
   <ul style="padding-left: 21.028645833333332vw;">
     <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Formula Student</a></li>
     <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Efficycle</a></li>
@@ -83,16 +135,16 @@
 </div>
 
 <!-- Team Dropdown -->
-<div class="bg-black text-white text-xl absolute w-full uppercase pb-4 hidden flex-col" style="top: 13.132694938440492vh; left: 0;" id="teams-dropdown">
+<div class="bg-black text-white text-xl absolute w-full uppercase pb-4 hidden flex-col" style="top: 13.132694938440492vh; left: 0; font-family: nebula;" id="teams-dropdown">
   <ul style="padding-left: 40.364583333333336vw;">
     <li><a href="#" class="hover:underline hover:text-white customnavi py-4">2020-21</a></li>
     <li><a href="#" class="hover:underline hover:text-white customnavi py-4">2019-20</a></li>
   </ul>
 </div>
 
-<div style="padding-top: 10.207934336525307vh;" class="container" style="position: relative; z-index: 99;"> 
-  <img src="./img/sponsor.png" alt="" style="height: auto; width: 100%; max-height: 92vh;">
-  <div style="position: absolute; top: 32.83173734610123vh;" class="text-7xl text-white w-100 pl-12 leading-tight">
+<div style="padding-top: 10.007934336525307vh;" class="container" style="position: relative; z-index: 99;"> 
+  <img src="./img/sponsor.png" alt="" style="height: 92vh;" class="object-cover lg:object-fill lg:w-full">
+  <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;" class="lg:text-8xl md:text-7xl sm:text-5xl text-4xl text-white w-100 sm:pl-12 pl-6 leading-tight">
     SPONSORS
     <div id="intro"></div>
   </div>
@@ -101,60 +153,99 @@
   </div>
 </div>
 
-<div class="w-full lg:max-w-full lg:flex py-16">
+<div class="flex flex-col w-full lg:w-full lg:flex-row-reverse py-16">
+  <div class="h-96 w-full bg-cover  text-center mb-16 lgclip-members" style="background-image: url('./img/16_21\ 1.jpg'); z-index: -1;" title="Our Team">
+  </div>
   <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex leading-normal my-auto px-12">
-    <div class="mb-8">
-      <div class="text-gray-900 font-bold text-xl mb-4">MESSAGE TO SPONSORS</div>
+    <div class="mb-4">
+      <div class="text-gray-900 font-bold text-2xl mb-4" style="font-family: nebula;">MESSAGE TO SPONSORS</div>
       <p class="text-gray-700 text-base">Formula Student is the world’s biggest competition for engineers. Every year competitions are held all across the globe. Founded by the «Society of Automotive Engineers» in 1981, the first competition in Europe took place in 1998. At present, there are more than 600 teams from universities all over the world competing with their self-constructed race cars.<br><br>
         The goal is to develop and provide a platform for student engineers to experience, build, and learn. It offers a unique way to test students’ theoretical knowledge in a practical context. Students gain and develop skills such as engineering, project management and team work.</p>
     </div>
-  </div>
-  <div class="h-96 w-full bg-cover rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-members" style="background-image: url('./img/16_21\ 1.jpg'); z-index: -1;" title="Our Team">
-  </div>
+  </div> 
 </div>
 
-<div class="flex justify-center text-gray-900 font-bold text-4xl mb-6 w-100%">TITLE SPONSOR</div>
-  <div class="flex justify-center w-auto h-auto mb-16 ">
-    <img src="./img/iitg.png">
-  </div>
-  
-<div class="flex justify-center text-gray-900 font-bold text-4xl mb-2 w-100%">DIAMOND SPONSORS</div>
-  <div class="flex justify-evenly w-auto h-auto mb-16 ">
-    <img src="./img/Rectangle 9.jpg">
-    <img src="./img/amazon.png">
-    <img src="./img/SBI.jpg">
-    <img src="./img/Nike.png">
-  </div>
+<div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-6 mb-8 w-100%" style="font-family: nebula;">TITLE SPONSOR</div>
+<div class="flex justify-center lg:w-auto w-1/2 m-auto lg:mx-0 h-auto px-5 mb-16 ">
+  <img src="./img/iitg.png">
+</div>
 
-<div class="flex justify-center text-gray-900 font-bold text-4xl mb-2 w-100%">GOLD SPONSORS</div>
-  <div class="flex justify-evenly w-auto h-auto mb-16 ">
-    <img src="./img/boss.png">
-    <img src="./img/paytm.png">
-    <img src="./img/lotus.png">
-    <img src="./img/simscale.png">
-  </div>
+<div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-2 mb-12 w-100%" style="font-family: nebula;">DIAMOND SPONSORS</div> 
+<div class="grid grid-cols-2 lg:flex justify-center w-auto mb-16">
+    <div class="w-auto  px-5 m-auto">
+      <img src="./img/Rectangle 9.jpg">
+    </div>
+    <div class="w-auto  px-5 m-auto">
+      <img src="./img/amazon.png">
+    </div>
+    <div class="w-auto  px-5 m-auto">
+      <img src="./img/SBI.jpg">
+    </div>
+    <div class="w-auto  px-5 m-auto">
+      <img src="./img/Nike.png">
+    </div>
+</div>
 
-<div class="flex justify-center text-gray-900 font-bold text-4xl mb-2 w-100%">SILVER SPONSORS</div>
-  <div class="flex justify-evenly w-auto h-auto mb-16 ">
-    <img src="./img/solidworks.png">
-    <img src="./img/mathworks.png">
-    <img src="./img/ansys.png">
-    <img src="./img/adidas.png">
-  </div>
+<div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-2 mb-8 w-100%" style="font-family: nebula;">GOLD SPONSORS</div> 
+<div class="grid grid-cols-2 lg:flex justify-center w-auto mb-16">
+    <div class="w-auto  px-5 m-auto">
+      <img src="./img/boss.png">
+    </div>
+    <div class="w-auto  px-5 m-auto">
+      <img src="./img/paytm.png">
+    </div>
+    <div class="w-auto  px-5 m-auto">
+      <img src="./img/lotus.png">
+    </div>
+    <div class="w-auto  px-5 m-auto">
+      <img src="./img/simscale.png">
+    </div>
+</div>
 
-<div class="flex justify-center text-gray-900 font-bold text-4xl mb-2 w-100%">BRONZE SPONSORS</div>
-  <div class="flex justify-evenly w-auto h-auto mb-16 ">
-    <img src="./img/basics.png">
-    <img src="./img/logitech.png">
-    <img src="./img/Castrol.png">
-    <img src="./img/Chanel.png">
-  </div>
+<div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-2 mb-8 w-100%" style="font-family: nebula;">SILVER SPONSORS</div> 
+<div class="grid grid-cols-2 lg:flex justify-center w-auto mb-16">
+    <div class="w-auto  px-5 m-auto">
+      <img src="./img/solidworks.png">
+    </div>
+    <div class="w-auto  px-5 m-auto">
+      <img src="./img/mathworks.png">
+    </div>
+    <div class="w-auto  px-5 m-auto ">
+      <img src="./img/ansys.png">
+    </div>
+    <div class="w-auto  px-5 m-auto ">
+      <img src="./img/adidas.png">
+    </div>
+</div>
 
-<div class="flex justify-center text-gray-900 font-bold text-4xl mb-2 w-100%">MERCHANDISE PARTNERS</div>
-<div class="flex justify-evenly w-auto h-auto mb-16 ">
-  <img src="./img/Nike.png">
-  <img src="./img/Red Bull.png">
-  <img src="./img/Indian oil.png">
+<div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-2 mb-16 w-100%" style="font-family: nebula;">BRONZE SPONSORS</div> 
+<div class="grid grid-cols-2 lg:flex justify-center w-auto mb-16">
+    <div class="w-auto px-5 m-auto ">
+      <img src="./img/basics.png">
+    </div>
+    <div class="w-auto px-5 m-auto ">
+      <img src="./img/logitech.png">
+    </div>
+    <div class="w-auto px-5 m-auto ">
+      <img src="./img/Castrol.png">
+    </div>
+    <div class="w-auto m-auto ">
+      <img src="./img/Chanel.png">
+    </div>
+</div>
+
+
+<div class="flex justify-center text-gray-900 font-bold lg:text-4xl text-2xl text-center lg:mb-2 mb-8 w-100%" style="font-family: nebula;">MERCHANDISE PARTNERS</div>
+<div class="grid grid-cols-2 lg:flex justify-center w-auto m-auto mb-16">
+    <div class="w-auto m-auto px-5 ">
+      <img src="./img/Nike.png">
+    </div>
+    <div class="w-auto m-auto px-5 ">
+      <img src="./img/Red Bull.png">
+    </div>
+    <div class="w-1/2 lg:w-auto m-auto col-span-2 px-5 ">
+      <img src="./img/Indian oil.png">
+    </div>
 </div>
 
     <footer class="footer-1 bg-black py-10 text-white">
