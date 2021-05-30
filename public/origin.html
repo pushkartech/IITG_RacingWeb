@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origin</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
+    <script>
+       function ShowAndHide() {
+         var x = document.getElementById("SectionName");
+         if (x.style.display == "none") {
+           x.style.display = "block";
+         } else {
+           x.style.display = "none";
+         }
+       }
+     </script>
+    
+    <style>
+			.carousel-open:checked + .carousel-item {
+				position: static;
+				opacity: 100;
+			}
+			.carousel-item {
+				-webkit-transition: opacity 0.6s ease-out;
+				transition: opacity 0.6s ease-out;
+			}
+			#carousel-1:checked ~ .control-1,
+			#carousel-2:checked ~ .control-2,
+			#carousel-3:checked ~ .control-3 {
+				display: block;
+			}
+			.carousel-indicators {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				bottom: 2%;
+				left: 0;
+				right: 0;
+				text-align: center;
+				z-index: 10;
+			}
+			#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+			#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+			#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+				color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+			}
+		</style>
+
+    <style>
+      *{
+        scroll-behavior: smooth;
+        margin: 0px;
+        padding: 0px;
+      }
+      .clip-cars {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
+      }
+      .clip-members {
+        -webkit-clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+      }
+
+    </style>
+</head>
+<body>
+  <nav class="flex items-center flex-wrap bg-black fixed w-full" style="z-index: 999;">
+    <div class="px-8">
+      <a href="#"><img class="hidden lg:block h-24" src="./img/iitgracing.png" title="IITG RACING"></a>
+    </div>
+    <button class="lg:hidden ml-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" class="p-3 h-12 w-12 text-white hover:text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    <div class="w-full lg:inline-flex lg:flex-grow lg:w-auto">
+      <div class="uppercase text-lg tracking-widest lg:inline-flex lg:flex-grow">
+        <div class="group relative">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;" id="cars-btn"><span>Cars</span></a>
+        </div>
+        <div class="relative group">
+          <a href="#" class="text-white lg:inline-flex lg:w-auto px-6 rounded underline hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;" id="competitions-btn"><span>Competitions</span></a>
+        </div>
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;" id="news-btn"><span>News</span></a>
+        </div>
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;" id="teams-btn"><span>Team</span></a>
+        </div>
+      </div>
+      <div class="text-white uppercase text-lg tracking-widest lg:ml-auto lg:inline-flex lg:flex-grow lg:pl-12" style="margin-right: -25%;">
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;"><span>Sponsors</span></a>
+        </div>
+        <div class="relative group">
+          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;"><span>Contact Us</span></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cars Dropdown -->
+  <div class="bg-black text-white text-xl absolute w-full uppercase pb-4 hidden flex-col" style="top: 13.132694938440492vh; left: 0; font-family: nebula;" id="cars-dropdown">
+    <ul style="padding-left: 14.6484375vw;">
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Student</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Efficycle</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Baja</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Concept</a></li>
+    </ul>
+  </div>
+
+  <!-- Competitions Dropdown -->
+  <div class="bg-black text-white text-xl absolute w-full uppercase pb-3 hidden flex-col" style="font-family: nebula; top: 13.132694938440492vh; left: 0;" id="competitions-dropdown">
+    <ul style="padding-left: 21.028645833333332vw;">
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Formula Student</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Efficycle</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Baja</a></li>
+    </ul>
+  </div>
+
+  <!-- Team Dropdown -->
+  <div class="bg-black text-white text-xl absolute w-full uppercase pb-4 hidden flex-col" style="top: 13.132694938440492vh; left: 0; font-family: nebula;" id="teams-dropdown">
+    <ul style="padding-left: 40.364583333333336vw;">
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">2020-21</a></li>
+      <li><a href="#" class="hover:underline hover:text-white customnavi py-4">2019-20</a></li>
+    </ul>
+  </div> -->
+
+  <div style="padding-top: 10.007934336525307vh; " class="container" style="position: relative; z-index: 99;">
+    <img src="./img_cars/origin_1.png " alt="" style="height: 92vh;" class="object-cover bg-black lg:object-fill lg:w-full">
+    <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;" class="lg:text-8xl md:text-7xl sm:text-5xl text-4xl text-white w-100 sm:pl-12 pl-6 leading-tight">
+  Origin
+      <div id="intro"></div>
+    </div>
+    <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-80%, -80%);">
+      <a href="#intro"><img alt="Arrow Down Icon" src="./img/down.png"></a>
+    </div>
+  </div>
+
+  <div class="w-full lg:max-w-full lg:flex py-16">
+    <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
+      <div class="mb-8">
+        <p class="text-gray-700 text-base">This is a formula style car designed keeping in mind SUPRA 2015. It was the first racing car manufactured by our club, which came with its own ups and downs. We stood at 67th position among the 167 teams that participated in the competition at the Madras Motor Track</p>
+      </div>
+
+    </div>
+    <div class="h-96 w-full bg-cover bg-no-repeat bg-top rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-members" style="background-image: url('./img_cars/origin_2.jpg'); z-index: -1;" title="Our Team">
+
+    </div>
+  </div>
+  <div class="w-full lg:max-w-full lg:flex py-16 relative">
+      <img src="./img_cars/origin_3.jpg" alt="" class="relative w-full">
+  <div class=""ONCLICK="ShowAndHide()">
+    <div class="absolute"style="bottom:40%;left:33%" >
+      <img src="./img/Ellipse 7.png" class="" alt="">
+      <img class="relative bottom-5 right-1 "  src="./img/Ellipse 8.png" alt="">
+      <div class="text-3xl w-full text-white absolute bottom-4 left-8 " style="font-family: nebula;">ENGINE</div>
+    </div>
+    <div class="absolute" style="display: none;top:55.3%;left:32.8%" id="SectionName">
+      <img class=" "style="width:6%"src="./img/circle-cropped.png" alt="">
+     <img class=" relative  left-4 bottom-1"style="width:70%;"src="./img/Vector 1.png" alt="">
+    <div class="relative"style="bottom:100px;left:55%">
+      <div class="text-xl text-white  " style="font-family: poppins;">600 CC</div>
+      <div class="text-xl text-white  " style="font-family: poppins;">88 kW</div>
+      <div class="text-xl text-white " style="font-family: poppins;">66 nm</div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+<div class="lg:flex" style="justify-content:center;">
+  <div class="flex ml-24 w-auto">
+    <div class="p-5 px-10 flex">
+
+      <div class="flex-col">
+        <div class="text-base  mt-6" style="font-family: nebula; margin-right:300px">TOP SPEED</div>
+        <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">115 km/h</div>
+      </div>
+    </div>
+
+    <div class="p-5 px-10 flex">
+
+      <div class="flex-col">
+        <div class="text-base  mt-6" style="font-family: nebula;margin-right:300px">MAX POWER</div>
+        <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">88 kW</div>
+      </div>
+    </div>
+
+    <div class="p-5 px-10 flex">
+
+      <div class="flex-col">
+        <div class=" text-base  mt-6" style="font-family: nebula">MAX TORQUE</div>
+        <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">66NM</div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+  <div class="w-full lg:max-w-full lg:flex py-16">
+    <div class="h-96 w-full bg-cover rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-cars bg-cover bg-center" style="background-image: url('./img_cars/origin_4.jpg'); z-index: -1;" title="Our Cars">
+    </div>
+    <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
+      <div class="mb-8">
+        <p class="text-gray-700 text-base">The car was designed to reach speed up to 115 kmph powered by a Honda CBR 600cc engine with max torque of 66Nm. This car reached 0 to 100 kmph in 14.5 sec. Firstly the car had a green body but after the competition, the team did many changes to its design and the body was also changed to Red-Black</p>
+      </div>
+
+    </div>
+    </div>
+    <div class="carousel relative shadow-2xl bg-white">
+	<div class="carousel-inner relative overflow-hidden w-full">
+	  <!--Slide 1-->
+		<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+		<div class="carousel-item absolute opacity-0" style="height:80vh;">
+  <img class="d-block  w-full h-full object-center object-contain bg-black"  src="./img_cars/origin_5a.jpg" alt="First slide">
+		</div>
+		<label for="carousel-5" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+		<!--Slide 2-->
+		<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+		<div class="carousel-item absolute opacity-0" style="height:80vh;">
+			<img class="d-block w-full h-full object-bottom object-contain bg-black" src="./img_cars/origin_5b.jpg" alt="First slide">
+    	</div>
+		<label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+		<!--Slide 3-->
+		<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+		<div class="carousel-item absolute opacity-0" style="height:80vh;">
+			<img class="d-block w-full h-full object-center object-contain bg-black" src="./img_cars/origin_5c.jpg" alt="First slide">
+		</div>
+		<label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+
+		<!-- Add additional indicators for each slide-->
+		<ol class="carousel-indicators">
+			<li class="inline-block mr-3">
+				<label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+			<li class="inline-block mr-3">
+				<label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+			<li class="inline-block mr-3">
+				<label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+
+		</ol>
+
+	</div>
+
+    <footer class="footer-1 bg-black py-10 text-white">
+        <div class="flex justify-center">
+            <img src="./img/fb.png" title="Our Facebook page" class="mx-5 w-7.5 h-6">
+            <img src="./img/insta.png" title="Our Instagram page" class="mx-5 w-7.5 h-6">
+            <img src="./img/yt.png" title="Our YouTube page" class="mx-5 w-7.5 h-6">
+            <img src="./img/linkedin.png" title="Our LinkedIn page" class="mx-5 w-7.5 h-6">
+        </div>
+        <div class="container mx-auto px-4 font-thin">
+            <div class="sm:flex sm:flex-wrap sm:mx-4 md:py-4">
+                <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/3">
+                    <div class="grid grid-flow-col grid-cols-2">
+                        <div class="py-6 pl-10">
+                            <img src="./img/iitgracing.png" title="IITG RACING">
+                        </div>
+                        <div>
+                            <span class="font-bold">IIT GUWAHATI RACING</span><br><br>
+                            New SAC<br>
+                            Indian Institute of Technology<br>
+                            Guwahati 781039<br>
+                            Assam, India
+                        </div>
+                    </div>
+                </div>
+                <div class="px-2 py-12 sm:w-1/2 md:w-1/4 xl:w-1/3">
+                    <div class="sm:flex sm:flex-wrap text-center">
+                        <div class="px-4 sm:w-1/2 md:w-1/3 text-left">
+                            HOME
+                        </div>
+                        <div class="px-4 sm:w-1/2 md:w-1/3">
+                            CARS
+                        </div>
+                        <div class="px-4 sm:w-1/2 md:w-1/3">
+                            SPONSORS
+                        </div>
+                        <div class="px-4 sm:w-1/2 md:w-1/3 text-left">
+                            COMPETITIONS
+                        </div>
+                        <div class="px-4 sm:w-1/2 md:w-1/3">
+                            TEAM
+                        </div>
+                        <div class="px-4 sm:w-1/2 md:w-1/3">
+                            CONTACT
+                        </div>
+                    </div>
+                </div>
+                <div class="px-2 py-12 sm:w-1/2 md:w-1/4 xl:w-1/3">
+                    <div class="sm:flex sm:flex-wrap flex-row-reverse">
+                        <img src="./img/ft3.png" alt="" class="h-10 w-12 mx-3">
+                        <img src="./img/ft2.png" alt="" class="h-10 w-12 mx-3">
+                        <img src="./img/ft1.png" alt="" class="h-10 w-12 mx-3">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                Copyright &copy; Since 2012 - IITG RACING WEB-OPS. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function() {
+    $("#cars-btn").mouseenter(function() {
+      $("#cars-dropdown").show();
+      $("#competitions-dropdown").hide();
+      $("#teams-dropdown").hide();
+    })
+    $("#news-btn").mouseenter(function() {
+      $("#cars-dropdown").hide();
+      $("#competitions-dropdown").hide();
+      $("#teams-dropdown").hide();
+    })
+    $("#cars-dropdown").mouseleave(function() {
+      $("#cars-dropdown").hide();
+    })
+    $("#competitions-btn").mouseenter(function() {
+      $("#competitions-dropdown").show();
+      $("#cars-dropdown").hide();
+      $("#teams-dropdown").hide();
+    })
+    $("#competitions-dropdown").mouseleave(function() {
+      $("#competitions-dropdown").hide();
+    })
+    $("#teams-btn").mouseenter(function() {
+      $("#teams-dropdown").show();
+      $("#competitions-dropdown").hide();
+      $("#cars-dropdown").hide();
+    })
+    $("#teams-dropdown").mouseleave(function() {
+      $("#teams-dropdown").hide();
+    })
+  })
+</script>
+
+</body>
+</html>
