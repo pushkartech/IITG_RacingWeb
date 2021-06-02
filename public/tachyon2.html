@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tachyon 2.0</title>
     <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
@@ -89,6 +91,8 @@
     </style>
 </head>
 <body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
   <nav class="flex items-center flex-wrap bg-black fixed w-full" style="z-index: 999;">
     <div class="px-8">
       <a href="#"><img class="hidden lg:block h-24" src="./img/iitgracing.png" title="IITG RACING"></a>
@@ -302,66 +306,53 @@
 
 	</div>
 
-    <footer class="footer-1 bg-black py-10 text-white">
-        <div class="flex justify-center">
-            <img src="./img/fb.png" title="Our Facebook page" class="mx-5 w-7.5 h-6">
-            <img src="./img/insta.png" title="Our Instagram page" class="mx-5 w-7.5 h-6">
-            <img src="./img/yt.png" title="Our YouTube page" class="mx-5 w-7.5 h-6">
-            <img src="./img/linkedin.png" title="Our LinkedIn page" class="mx-5 w-7.5 h-6">
+  <footer class="bg-black text-white">
+    <div class="grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 pt-16 gap-5 px-10">
+        <div class="grid grid-flow-col grid-cols-2 place-items-center">
+          <div>
+            <img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING">
+          </div>
+          <div class="text-sm" style="margin-left: -2vw;">
+            <span class="font-bold">IIT GUWAHATI RACING</span><br><br>
+            New SAC<br>
+            Indian Institute of Technology Guwahati<br>
+            Guwahati 781039<br>
+            Assam, India
+          </div>
         </div>
-        <div class="container mx-auto px-4 font-thin">
-            <div class="sm:flex sm:flex-wrap sm:mx-4 md:py-4">
-                <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/3">
-                    <div class="grid grid-flow-col grid-cols-2">
-                        <div class="py-6 pl-10">
-                            <img src="./img/iitgracing.png" title="IITG RACING">
-                        </div>
-                        <div>
-                            <span class="font-bold">IIT GUWAHATI RACING</span><br><br>
-                            New SAC<br>
-                            Indian Institute of Technology<br>
-                            Guwahati 781039<br>
-                            Assam, India
-                        </div>
-                    </div>
-                </div>
-                <div class="px-2 py-12 sm:w-1/2 md:w-1/4 xl:w-1/3">
-                    <div class="sm:flex sm:flex-wrap text-center">
-                        <div class="px-4 sm:w-1/2 md:w-1/3 text-left">
-                            HOME
-                        </div>
-                        <div class="px-4 sm:w-1/2 md:w-1/3">
-                            CARS
-                        </div>
-                        <div class="px-4 sm:w-1/2 md:w-1/3">
-                            SPONSORS
-                        </div>
-                        <div class="px-4 sm:w-1/2 md:w-1/3 text-left">
-                            COMPETITIONS
-                        </div>
-                        <div class="px-4 sm:w-1/2 md:w-1/3">
-                            TEAM
-                        </div>
-                        <div class="px-4 sm:w-1/2 md:w-1/3">
-                            CONTACT
-                        </div>
-                    </div>
-                </div>
-                <div class="px-2 py-12 sm:w-1/2 md:w-1/4 xl:w-1/3">
-                    <div class="sm:flex sm:flex-wrap flex-row-reverse">
-                        <img src="./img/ft3.png" alt="" class="h-10 w-12 mx-3">
-                        <img src="./img/ft2.png" alt="" class="h-10 w-12 mx-3">
-                        <img src="./img/ft1.png" alt="" class="h-10 w-12 mx-3">
-                    </div>
-                </div>
-            </div>
-            <div class="text-center">
-                Copyright &copy; Since 2012 - IITG RACING WEB-OPS. All rights reserved.
-            </div>
+        <div class="grid grid-cols-2 grid-rows-3 lg:grid-cols-3 text-base md:text-sm px-4 md:pl-24 lg:pl-0 gap-x-20">
+          <div class="order-1 pl-2 ml-1">HOME</div>
+          <div class="lg:order-2 order-5 pl-2 ml-1">CARS</div>
+          <div class="lg:order-3 order-4 pl-2 ml-1 md:ml-3 lg:ml-1">SPONSORS</div>
+          <div class="lg:order-4 order-3 pl-2 ml-1">COMPETITIONS</div>
+          <div class="lg:order-5 order-2 pl-2 ml-2 md:ml-3 lg:ml-1">TEAM</div>
+          <div class="order-6 pl-2 ml-1 md:ml-3 lg:ml-1">CONTACT</div>
         </div>
-    </footer>
+        <div class="grid grid-rows-2 gap-0 lg:gap-10">
+          <div class="flex flex-row-reverse mx-auto lg:mx-0">
+            <a href="https://www.linkedin.com/company/iitgracing/" target="_blank"><img src="./img/linkedin.png" title="Our LinkedIn page" class="mx-5 w-7.5 h-6"></a>
+            <a href="https://www.youtube.com/channel/UCv6DkzU0C6Fo2Y1bK56y0ew" target="_blank"><img src="./img/yt.png" title="Our YouTube page" class="mx-5 w-7.5 h-6"></a>
+            <a href="https://www.instagram.com/iitg.racing/" target="_blank"><img src="./img/insta.png" title="Our Instagram page" class="mx-5 w-7.5 h-6"></a>
+            <a href="https://www.facebook.com/iitg.racing/" target="_blank"><img src="./img/fb.png" title="Our Facebook page" class="mx-5 w-7.5 h-6"></a>
+          </div>
+          <div class="flex flex-row-reverse mx-auto lg:mx-0">
+            <a href="https://www.iitg.ac.in/" target="_blank"><img src="./img/ft3.png" alt="" class="h-10 w-12 mx-2"></a>
+            <a href="https://www.iitg.ac.in/stud/gymkhana/technical/index.html" target="_blank"><img src="./img/ft2.png" alt="" class="h-10 w-12 mx-2"></a>
+            <a href="https://www.iitg.ac.in/mech/" target="_blank"><img src="./img/ft1.png" alt="" class="h-10 w-12 mx-2"></a>
+          </div>
+        </div>
+      
+    </div>
+    <div class="text-center md:text-base text-xs pb-5 mx-auto">
+      Copyright &copy; Since 2012 - IITG RACING WEB-OPS. All rights reserved.
+    </div>
+  </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
+  <script src="forcursor.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="vanilla-tilt.js"></script>
 
 <script>
   $(document).ready(function() {
