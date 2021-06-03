@@ -2,6 +2,12 @@ $(document).ready(function() {
     $("#hamburger").click(function() {
         $(this).toggleClass('is-active');
         $("#navmenu").toggle("slide");
+        if($(this).hasClass('is-active')) {
+            $("html").css("overflow-y", "hidden");
+        }
+        if(!$(this).hasClass('is-active')) {
+            $("html").css("overflow-y", "auto");
+        }
         if(!$("#carsmenu").hasClass('hidden')) {
             $("#backToMainFromCars").click();
         }
