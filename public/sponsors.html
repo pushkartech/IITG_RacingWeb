@@ -4,312 +4,515 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sponsors</title>
+    <title>Sponsors | IITG RACING</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/hamburger.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/cursor.css">
     <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
+    <link rel="stylesheet" href="css/carpg.css">
     <style>
-      *{
-        scroll-behavior: smooth;
-        margin: 0px;
-        padding: 0px;
-      }
-      .clip-cars {
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
-        clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
-      }
-      .clip-members {
-        -webkit-clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
-        clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
-      }
-     
-      @media (min-width: 1024px){
-
-        .lgclip-members {
-        -webkit-clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
-        clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
-      }
-      }
-     
-      .customnavi:hover {
-        letter-spacing: 0.2em;
-        font-size: 1.2rem;
-        line-height: 1.7rem;
-      }
+        *{
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        @media screen and (min-width: 1025px) {
+            .clip-cars {
+            -webkit-clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
+            }
+            .clip-members {
+            -webkit-clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+            }
+        }
+        .customunderline:hover {
+            text-underline-offset: 5px;
+            font-weight: 500;
+        }
+        .customnavi:hover {
+            letter-spacing: 0.08em;
+            font-weight: 500;
+            font-size: 18px;
+        }
+        #btn1, #btn2, #btn3, #btn4 {
+            display: none;
+        }
+        #btn1:checked + label > svg {
+            transform: rotate(-180deg);
+            transition-duration: 1s;
+        }
+        #btn2:checked + label > svg {
+            transform: rotate(-180deg);
+            transition-duration: 1s;
+        }
+        #btn3:checked + label > svg {
+            transform: rotate(-180deg);
+            transition-duration: 1s;
+        }
+        #btn4:checked + label > svg {
+            transform: rotate(-180deg);
+            transition-duration: 1s;
+        }
     </style>
 </head>
 <body>
-  <div class="cursor"></div>
-  <div class="cursor-follower"></div>
-  <button onclick="reachTop()" class="bg-red-600 text-white px-1 py-1 rounded-full hover:bg-red-500 focus:outline-none fixed z-50 bottom-10 right-10 hidden" id="topBtn">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-      <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
-    </svg>
-  </button> 
-  <nav class="flex items-center flex-wrap bg-black fixed w-full" style="z-index: 999;">
-    <div class="px-8">
-      <a href="#"><img class="hidden lg:block h-24" src="./img/iitgracing.png" title="IITG RACING"></a>
-    </div>
-    <button class="lg:hidden ml-auto">
-      <svg xmlns="http://www.w3.org/2000/svg" class="p-3 h-12 w-12 text-white hover:text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-    <div class="w-full lg:inline-flex lg:flex-grow lg:w-auto">
-      <div class="uppercase text-lg tracking-widest lg:inline-flex lg:flex-grow">
-        <div class="group relative">
-          <a href="#" class="text-white lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;" id="cars-btn"><span>Cars</span></a>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <button onclick="reachTop()" class="bg-red-600 text-white px-1 py-1 rounded-full hover:bg-red-500 focus:outline-none fixed z-50 bottom-10 right-10 hidden" id="topBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    <nav class="bg-black text-white hidden lg:block fixed w-screen z-50">
+        <div class="grid grid-cols-3">
+            <div class="col-span-2">
+                <ul class="list-none font-normal">
+                    <li class="float-left pl-9">
+                        <img src="./img/iitgracing.png" alt="IITG RACING" id="logo">
+                    </li>
+                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="carshover">CARS</li>
+                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="competitionshover">COMPETITIONS</li>
+                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="newshover">NEWS</li>
+                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="teamhover">TEAM</li>
+                </ul>
+            </div>
+            
+            <div class="ml-auto">
+                <ul class="list-none font-normal">
+                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="sponsorshover">SPONSORS</li>
+                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="contacthover">CONTACT US</li>
+                </ul>
+            </div>
         </div>
-        <div class="relative group">
-          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;" id="competitions-btn"><span>Competitions</span></a>
+        <div class="grid grid-rows-2 hidden" id="carsMenu">
+            <div>
+                <ul class="list-none pl-40">
+                    <li class="float-left pl-10">
+                        <ul class="list-none pl-4">
+                            <li class="customnavi cursor-default py-2" id="formulaHover">FORMULA STUDENT</li>
+                            <li class="customnavi cursor-default py-2" id="effiHover">EFFICYCLE</li>
+                            <li class="customnavi cursor-default py-2" id="bajaHover">BAJA</li>
+                            <li class="customnavi cursor-default py-2" id="conceptHover">CONCEPT</li>
+                        </ul>
+                    </li>
+                    <li class="float-left pl-36">
+                        <ul class="list-none hidden" id="formulaOptions">
+                            <li class="customnavi cursor-pointer py-2" id="originHover">ORIGIN</li>
+                            <li class="customnavi cursor-pointer py-2" id="tachyon1Hover">TACHYON 1.0</li>
+                            <li class="customnavi cursor-pointer py-2" id="tachyon2Hover">TACHYON 2.0</li>
+                            <li class="customnavi cursor-pointer py-2" id="tachyon3Hover">TACHYON 3.0</li>
+                        </ul>
+                        <ul class="list-none pl-9 hidden" id="effiOptions">
+                            <li class="customnavi cursor-pointer py-2" id="effi1Hover">EFFICYCLE 1.0</li>
+                            <li class="customnavi cursor-pointer py-2" id="effi2Hover">EFFICYCLE 2.0</li>
+                            <li class="customnavi cursor-pointer py-2" id="effi3Hover">EFFICYCLE 3.0</li>
+                            <li class="customnavi cursor-pointer py-2" id="effi4Hover">EFFICYCLE 4.0</li>
+                        </ul>
+                        <ul class="list-none pl-9 hidden" id="bajaOptions">
+                            <li class="custom-navi cursor-pointer py-2" id="srijanHover">SRIJAN</li>
+                        </ul>
+                        <ul class="list-none pl-9 hidden" id="conceptOptions">
+                            <li class="customnavi cursor-pointer py-2" id="conceptAHover">CONCEPT A</li>
+                            <li class="customnavi cursor-pointer py-2" id="visionfHover">VISION F</li>
+                        </ul>
+                    </li>
+                    <li class="h-40">
+                        <center><img src="img/Navpics/Origin.png" alt="ORIGIN" class="h-60 xl:h-72 hidden" id="originCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                        <center><img src="img/Navpics/Tachyon 1.0.png" alt="TACHYON1.0" class="h-72 xl:h-80 hidden" id="tachyon1Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                        <center><img src="img/Navpics/Tachyon 2.0.png" alt="TACHYON2.0" class="h-48 xl:h-60 hidden" id="tachyon2Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                        <center><img src="img/Navpics/tachyon3.png" alt="TACHYON3.0" class="h-52 xl:h-72 hidden" id="tachyon3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                        <center><img src="img/Navpics/Effi 1.png" alt="EFFICYCLE1.0" class="hidden h-48 xl:h-80" id="effi1Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                        <center><img src="img/Navpics/Effi 2.png" alt="EFFICYCLE2.0" class="h-48 xl:h-80 hidden" id="effi2Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                        <center><img src="img/Navpics/Efficycle 3.0.png" alt="EFFICYCLE3.0" class="h-72 xl:h-80 hidden" id="effi3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                        <center><img src="img/Navpics/Effi4.0.png" alt="EFFICYCLE4.0" class="h-48 xl:h-80 hidden" id="effi4Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                        <center><img src="img/Navpics/Baja 2012.png" alt="BAJA" class="h-64 hidden" id="srijanCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                        <center><img src="img/Navpics/conceptA.png" alt="CONCEPT A" class="h-64 xl:h-80 hidden" id="conceptACar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                        <center><img src="img/nav_img.png" alt="VISION F" class="h-48 xl:h-64 hidden" id="visionfCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                    </li>
+                </ul>
+                <ul class="list-none pl-52 hidden" id="CompetitionsMenu">
+                    <li class="pl-24 cursor-pointer">FORMULA STUDENT</li>
+                    <li class="pl-24 cursor-pointer">EFFICYCLE</li>
+                    <li class="pl-24 cursor-pointer">BAJA</li>
+                </ul>
+                <ul class="list-none pl-60 hidden" id="TeamsMenu">
+                    <li class="pl-80 cursor-pointer">2020-21</li>
+                    <li class="pl-80 cursor-pointer">2019-20</li>
+                    <li class="pl-80 cursor-pointer">ALUMNI</li>
+                </ul>
+            </div>
+            <div class="mx-auto mt-32 hidden" id="detailsMenu">
+                <ul class="list-none">
+                    <li class="px-12 float-left">
+                        <span id="f11">TOP SPEED</span><br>
+                        <span class="text-4xl font-semibold" id="f1"></span>
+                    </li>
+                    <li class="px-12 float-left">
+                        <span id="f22">MAX POWER</span><br>
+                        <span class="text-4xl font-semibold" id="f2"></span>
+                    </li>
+                    <li class="px-12 float-left">
+                        <span id="f33">MAX TORQUE</span><br>
+                        <span class="text-4xl font-semibold" id="f3"></span>
+                    </li>
+                    <li class="px-12 float-left">
+                        <span class="" id="f4">ORIGIN</span><br>
+                        <span class="text-4xl font-semibold">KNOW MORE</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-auto text-black cursor-default select-none" id="hideDon">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam magnam aperiam harum, ipsum optio aliquam alias sit corrupti minus numquam hic ea veniam eos, ratione possimus, fuga placeat porro.
+            </div>    
         </div>
-        <div class="relative group">
-          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;"><span>News</span></a>
+        <div class="px-72 hidden" id="compMenu">
+            <ul class="list-none pl-5">
+                <li class="py-1 customnavi"><a href="">FORMULA STUDENT</a></li>
+                <li class="py-1 customnavi"><a href="">COMPETITIONS</a></li>
+                <li class="pb-4 py-1 customnavi"><a href="">BAJA</a></li>
+            </ul>
         </div>
-        <div class="relative group">
-          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;" id="teams-btn"><span>Team</span></a>
+        <div class="pl-96 hidden" id="teamsMenu">
+            <ul class="list-none pl-52 pb-5">
+                <li class="customnavi"><a href="">2020-21</a></li>
+                <li class="customnavi"><a href="">2019-20</a></li>
+                <li class="customnavi"><a href="">ALUMNI</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="bg-black lg:hidden text-white">
+        <div class="grid grid-cols-2">
+            <div class="px-5 focus:outline-none">
+                <a href="#"><img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING" class="h-16 focus:outline-none"></a>
+            </div>
+            <div class="justify-end flex px-10" id="hamburger"> 
+                <button class="text-white focus:outline-none" id="hamburger">
+                    <span class="bar w-6 h-0.5 bg-white block my-1"></span>
+                    <span class="bar w-6 h-0.5 bg-white block my-1"></span>
+                    <span class="bar w-6 h-0.5 bg-white block my-1"></span>
+                </button>
+            </div>
+        </div>
+        <div class="bg-black px-9 border-t-2 border-gray-500 hidden" id="navmenu">
+            <ul class="list-none text-lg">
+                <li class="py-4 grid grid-cols-2" id="carsBtn">
+                    <div>CARS</div> 
+                    <div class="ml-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </li>
+                <li class="py-4 grid grid-cols-2" id="competitionsBtn">
+                    <div>COMPETITIONS</div>
+                    <div class="ml-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </li>
+                <li class="py-4">NEWS</li>
+                <li class="py-4 grid grid-cols-2" id="teamsBtn">
+                    <div>TEAM</div>
+                    <div class="ml-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </li>
+                <li class="py-4">SPONSORS</li>
+                <li class="py-4">CONTACT US</li>
+            </ul>
+        </div>
+        <div class="bg-black px-9 border-t-2 border-gray-500 hidden" id="carsmenu">
+          <ul class="list-none text-lg">
+            <li class="py-4" id="backToMainFromCars">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+            </li>
+            <li class="py-4 grid grid-cols-2">
+                <div id="studentAccoBtn">FORMULA STUDENT</div>
+                <div class="ml-auto">
+                    <input type="checkbox" id="btn1" disabled>
+                    <label for="btn1" class="btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </label>
+                </div>
+                <ul class="list-none text-sm tracking-widest py-4 hid" id="studentAccoDiv">
+                    <li class="py-1">ORIGIN</li>
+                    <li class="py-1">TACHYON 1.0</li>
+                    <li class="py-1">TACHYON 2.0</li>
+                    <li class="py-1">TACHYON 3.0</li>
+                </ul>
+            </li>
+            <li class="py-4 grid grid-cols-2">
+                <div id="effiAccoBtn">EFFICYCLE</div>
+                <div class="ml-auto">
+                    <input type="checkbox" id="btn2" disabled>
+                    <label for="btn2" class="btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </label>
+                </div>
+                <ul class="list-none text-sm tracking-widest py-4 hid" id="effiAccoDiv">
+                    <li class="py-1">EFFICYCLE 1.0</li>
+                    <li class="py-1">EFFICYCLE 2.0</li>
+                    <li class="py-1">EFFICYCLE 3.0</li>
+                    <li class="py-1">EFFICYCLE 4.0</li>
+                </ul>
+            </li>
+            <li class="py-4 grid grid-cols-2">
+                <div id="bajaAccoBtn">BAJA</div>
+                <div class="ml-auto">
+                    <input type="checkbox" id="btn3" disabled>
+                    <label for="btn3" class="btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </label>
+                </div>
+                <ul class="list-none text-sm tracking-widest py-4 hid" id="bajaAccoDiv">
+                    <li class="py-1">SRIJAN </li>
+                </ul>
+            </li>
+            <li class="py-4 grid grid-cols-2">
+                <div id="conceptAccoBtn">CONCEPT</div>
+                <div class="ml-auto">
+                    <input type="checkbox" id="btn4" disabled>
+                    <label for="btn4" class="btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </label>
+                </div>
+                <ul class="list-none text-sm tracking-widest py-4 hid" id="conceptAccoDiv">
+                    <li class="py-1">CONCEPT A</li>
+                    <li class="py-1">VISION F</li>
+                </ul>
+            </li>
+          </ul>  
+        </div>
+        <div class="bg-black px-9 border-t-2 border-gray-500 hidden" id="competitionsmenu">
+            <ul class="list-none text-lg">
+                <li class="py-4" id="backToMainFromComp">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                </li>
+                <li class="py-4">FORMULA STUDENT</li>
+                <li class="py-4">EFFICYCLE</li>
+                <li class="py-4">BAJA</li>
+            </ul>
+        </div>
+        <div class="bg-black px-9 border-t-2 border-gray-500 hidden" id="teamsmenu">
+            <ul class="list-none text-lg">
+                <li class="py-4" id="backToMainFromTeam">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                </li>
+                <li class="py-4">2020-21</li>
+                <li class="py-4">2019-20</li>
+                <li class="py-4">ALUMNI</li>
+            </ul>
+        </div>
+        <div class="bg-black fixed w-full text-black h-screen hidden" id="hiddenarea">
+        </div>
+    </nav>
+    <div class="h-20 hidden lg:block"></div>
+
+    <div style="padding-top: 0.007934336525307vh;" class="container" style="position: relative; z-index: 99;"> 
+        <img src="./img/sponsor.png" alt="" style="height: 92vh;" class="object-cover lg:object-fill lg:w-full">
+        <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;" class="lg:text-8xl md:text-7xl sm:text-5xl text-4xl text-white w-100 sm:pl-12 pl-6 leading-tight">
+          SPONSORS
+          <div id="intro"></div>
+        </div>
+        <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-80%, -80%);">
+          <a href="#intro"><img alt="Arrow Down Icon" src="./img/down.png"></a>
         </div>
       </div>
-      <div class="text-white uppercase text-lg tracking-widest lg:ml-auto lg:inline-flex lg:flex-grow lg:pl-12" style="margin-right: -25%;">
-        <div class="relative group">
-          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded underline hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;"><span>Sponsors</span></a>
+      
+      <div class="flex flex-col w-full lg:w-full lg:flex-row-reverse py-16">
+        <div class="h-96 w-full bg-cover  text-center mb-16 clip-members" style="background-image: url('./img/16_21\ 1.jpg'); z-index: -1;" title="Our Team">
         </div>
-        <div class="relative group">
-          <a href="#" class="text-gray-200 lg:inline-flex lg:w-auto px-6 rounded hover:underline hover:text-white customnavi" style="text-underline-position: under; font-family: nebula;"><span>Contact Us</span></a>
-        </div>
+        <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex leading-normal my-auto px-12">
+          <div class="mb-4">
+            <div class="text-gray-900 font-bold text-2xl mb-4" style="font-family: nebula;">MESSAGE TO SPONSORS</div>
+            <p class="text-gray-700 text-base">Formula Student is the world’s biggest competition for engineers. Every year competitions are held all across the globe. Founded by the «Society of Automotive Engineers» in 1981, the first competition in Europe took place in 1998. At present, there are more than 600 teams from universities all over the world competing with their self-constructed race cars.<br><br>
+              The goal is to develop and provide a platform for student engineers to experience, build, and learn. It offers a unique way to test students’ theoretical knowledge in a practical context. Students gain and develop skills such as engineering, project management and team work.</p>
+          </div>
+        </div> 
       </div>
-    </div>
-  </nav>
-  
-<!-- Cars Dropdown -->
-<div class="bg-black text-white text-xl absolute w-full uppercase pb-4 hidden flex-col" style="top: 13.132694938440492vh; left: 0; font-family: nebula;" id="cars-dropdown">
-  <ul style="padding-left: 14.6484375vw;">
-    <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Student</a></li>
-    <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Efficycle</a></li>
-    <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Baja</a></li>
-    <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Concept</a></li>
-  </ul>
-</div>
-
-<!-- Competitions Dropdown -->
-<div class="bg-black text-white text-xl absolute w-full uppercase pb-3 hidden flex-col" style="top: 13.132694938440492vh; left: 0; font-family: nebula;" id="competitions-dropdown">
-  <ul style="padding-left: 21.028645833333332vw;">
-    <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Formula Student</a></li>
-    <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Efficycle</a></li>
-    <li><a href="#" class="hover:underline hover:text-white customnavi py-4">Baja</a></li>
-  </ul>
-</div>
-
-<!-- Team Dropdown -->
-<div class="bg-black text-white text-xl absolute w-full uppercase pb-4 hidden flex-col" style="top: 13.132694938440492vh; left: 0; font-family: nebula;" id="teams-dropdown">
-  <ul style="padding-left: 40.364583333333336vw;">
-    <li><a href="#" class="hover:underline hover:text-white customnavi py-4">2020-21</a></li>
-    <li><a href="#" class="hover:underline hover:text-white customnavi py-4">2019-20</a></li>
-  </ul>
-</div>
-
-<div style="padding-top: 10.007934336525307vh;" class="container" style="position: relative; z-index: 99;"> 
-  <img src="./img/sponsor.png" alt="" style="height: 92vh;" class="object-cover lg:object-fill lg:w-full">
-  <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;" class="lg:text-8xl md:text-7xl sm:text-5xl text-4xl text-white w-100 sm:pl-12 pl-6 leading-tight">
-    SPONSORS
-    <div id="intro"></div>
-  </div>
-  <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-80%, -80%);">
-    <a href="#intro"><img alt="Arrow Down Icon" src="./img/down.png"></a>
-  </div>
-</div>
-
-<div class="flex flex-col w-full lg:w-full lg:flex-row-reverse py-16">
-  <div class="h-96 w-full bg-cover  text-center mb-16 lgclip-members" style="background-image: url('./img/16_21\ 1.jpg'); z-index: -1;" title="Our Team">
-  </div>
-  <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex leading-normal my-auto px-12">
-    <div class="mb-4">
-      <div class="text-gray-900 font-bold text-2xl mb-4" style="font-family: nebula;">MESSAGE TO SPONSORS</div>
-      <p class="text-gray-700 text-base">Formula Student is the world’s biggest competition for engineers. Every year competitions are held all across the globe. Founded by the «Society of Automotive Engineers» in 1981, the first competition in Europe took place in 1998. At present, there are more than 600 teams from universities all over the world competing with their self-constructed race cars.<br><br>
-        The goal is to develop and provide a platform for student engineers to experience, build, and learn. It offers a unique way to test students’ theoretical knowledge in a practical context. Students gain and develop skills such as engineering, project management and team work.</p>
-    </div>
-  </div> 
-</div>
-
-<div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-6 mb-8 w-100%" style="font-family: nebula;">TITLE SPONSOR</div>
-<div class="flex justify-center lg:w-auto w-1/2 m-auto lg:mx-0 h-auto px-5 mb-16 ">
-  <img src="./img/iitg.png">
-</div>
-
-<div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-2 mb-12 w-100%" style="font-family: nebula;">DIAMOND SPONSORS</div> 
-<div class="grid grid-cols-2 lg:flex justify-center w-auto mb-16">
-    <div class="w-auto  px-5 m-auto">
-      <img src="./img/Rectangle 9.jpg">
-    </div>
-    <div class="w-auto  px-5 m-auto">
-      <img src="./img/amazon.png">
-    </div>
-    <div class="w-auto  px-5 m-auto">
-      <img src="./img/SBI.jpg">
-    </div>
-    <div class="w-auto  px-5 m-auto">
-      <img src="./img/Nike.png">
-    </div>
-</div>
-
-<div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-2 mb-8 w-100%" style="font-family: nebula;">GOLD SPONSORS</div> 
-<div class="grid grid-cols-2 lg:flex justify-center w-auto mb-16">
-    <div class="w-auto  px-5 m-auto">
-      <img src="./img/boss.png">
-    </div>
-    <div class="w-auto  px-5 m-auto">
-      <img src="./img/paytm.png">
-    </div>
-    <div class="w-auto  px-5 m-auto">
-      <img src="./img/lotus.png">
-    </div>
-    <div class="w-auto  px-5 m-auto">
-      <img src="./img/simscale.png">
-    </div>
-</div>
-
-<div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-2 mb-8 w-100%" style="font-family: nebula;">SILVER SPONSORS</div> 
-<div class="grid grid-cols-2 lg:flex justify-center w-auto mb-16">
-    <div class="w-auto  px-5 m-auto">
-      <img src="./img/solidworks.png">
-    </div>
-    <div class="w-auto  px-5 m-auto">
-      <img src="./img/mathworks.png">
-    </div>
-    <div class="w-auto  px-5 m-auto ">
-      <img src="./img/ansys.png">
-    </div>
-    <div class="w-auto  px-5 m-auto ">
-      <img src="./img/adidas.png">
-    </div>
-</div>
-
-<div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-2 mb-16 w-100%" style="font-family: nebula;">BRONZE SPONSORS</div> 
-<div class="grid grid-cols-2 lg:flex justify-center w-auto mb-16">
-    <div class="w-auto px-5 m-auto ">
-      <img src="./img/basics.png">
-    </div>
-    <div class="w-auto px-5 m-auto ">
-      <img src="./img/logitech.png">
-    </div>
-    <div class="w-auto px-5 m-auto ">
-      <img src="./img/Castrol.png">
-    </div>
-    <div class="w-auto m-auto ">
-      <img src="./img/Chanel.png">
-    </div>
-</div>
-
-
-<div class="flex justify-center text-gray-900 font-bold lg:text-4xl text-2xl text-center lg:mb-2 mb-8 w-100%" style="font-family: nebula;">MERCHANDISE PARTNERS</div>
-<div class="grid grid-cols-2 lg:flex justify-center w-auto m-auto mb-16">
-    <div class="w-auto m-auto px-5 ">
-      <img src="./img/Nike.png">
-    </div>
-    <div class="w-auto m-auto px-5 ">
-      <img src="./img/Red Bull.png">
-    </div>
-    <div class="w-1/2 lg:w-auto m-auto col-span-2 px-5 ">
-      <img src="./img/Indian oil.png">
-    </div>
-</div>
-
-<footer class="bg-black text-white">
-  <div class="grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 pt-16 gap-5 px-10">
-      <div class="grid grid-flow-col grid-cols-2 place-items-center">
-        <div>
-          <img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING">
-        </div>
-        <div class="text-sm" style="margin-left: -2vw;">
-          <span class="font-bold">IIT GUWAHATI RACING</span><br><br>
-          New SAC<br>
-          Indian Institute of Technology Guwahati<br>
-          Guwahati 781039<br>
-          Assam, India
-        </div>
+      
+      <div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-6 mb-8 w-100%" style="font-family: nebula;">TITLE SPONSOR</div>
+      <div class="flex justify-center lg:w-auto w-1/2 m-auto lg:mx-0 h-auto px-5 mb-16 ">
+        <img src="./img/iitg.png">
       </div>
-      <div class="grid grid-cols-2 grid-rows-3 lg:grid-cols-3 text-base md:text-sm px-4 md:pl-24 lg:pl-0 gap-x-20">
-        <div class="order-1 pl-2 ml-1">HOME</div>
-        <div class="lg:order-2 order-5 pl-2 ml-1">CARS</div>
-        <div class="lg:order-3 order-4 pl-2 ml-1 md:ml-3 lg:ml-1">SPONSORS</div>
-        <div class="lg:order-4 order-3 pl-2 ml-1">COMPETITIONS</div>
-        <div class="lg:order-5 order-2 pl-2 ml-2 md:ml-3 lg:ml-1">TEAM</div>
-        <div class="order-6 pl-2 ml-1 md:ml-3 lg:ml-1">CONTACT</div>
+      
+      <div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-2 mb-12 w-100%" style="font-family: nebula;">DIAMOND SPONSORS</div> 
+      <div class="grid grid-cols-1 lg:flex justify-center w-auto mb-16">
+          <div class="px-5 mx-auto">
+            <img src="./img/Rectangle 9.jpg" class="h-48 w-48">
+          </div>
+          <div class="px-5 mx-auto">
+            <img src="./img/amazon.png" class="h-48 w-48">
+          </div>
+          <div class="px-5 mx-auto">
+            <img src="./img/SBI.jpg" class="h-48 w-48">
+          </div>
+          <div class="px-5 mx-auto">
+            <img src="./img/Nike.png" class="h-48 w-48">
+          </div>
       </div>
-      <div class="grid grid-rows-2 gap-0 lg:gap-10">
-        <div class="flex flex-row-reverse mx-auto lg:mx-0">
-          <a href="https://www.linkedin.com/company/iitgracing/" target="_blank"><img src="./img/linkedin.png" title="Our LinkedIn page" class="mx-5 w-7.5 h-6"></a>
-          <a href="https://www.youtube.com/channel/UCv6DkzU0C6Fo2Y1bK56y0ew" target="_blank"><img src="./img/yt.png" title="Our YouTube page" class="mx-5 w-7.5 h-6"></a>
-          <a href="https://www.instagram.com/iitg.racing/" target="_blank"><img src="./img/insta.png" title="Our Instagram page" class="mx-5 w-7.5 h-6"></a>
-          <a href="https://www.facebook.com/iitg.racing/" target="_blank"><img src="./img/fb.png" title="Our Facebook page" class="mx-5 w-7.5 h-6"></a>
-        </div>
-        <div class="flex flex-row-reverse mx-auto lg:mx-0">
-          <a href="https://www.iitg.ac.in/" target="_blank"><img src="./img/ft3.png" alt="" class="h-10 w-12 mx-2"></a>
-          <a href="https://www.iitg.ac.in/stud/gymkhana/technical/index.html" target="_blank"><img src="./img/ft2.png" alt="" class="h-10 w-12 mx-2"></a>
-          <a href="https://www.iitg.ac.in/mech/" target="_blank"><img src="./img/ft1.png" alt="" class="h-10 w-12 mx-2"></a>
-        </div>
+      
+      <div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-2 mb-8 w-100%" style="font-family: nebula;">GOLD SPONSORS</div> 
+      <div class="grid grid-cols-1 lg:flex justify-center w-auto mb-16">
+          <div class="px-5 mx-auto">
+            <img src="./img/boss.png" class="h-52 w-52">
+          </div>
+          <div class="px-5 mx-auto">
+            <img src="./img/paytm.png" class="h-52 w-52">
+          </div>
+          <div class="px-5 mx-auto">
+            <img src="./img/lotus.png" class="h-52 w-52">
+          </div>
+          <div class="px-5 mx-auto">
+            <img src="./img/simscale.png" class="h-52 w-52">
+          </div>
+      </div>
+      
+      <div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-2 mb-8 w-100%" style="font-family: nebula;">SILVER SPONSORS</div> 
+      <div class="grid grid-cols-1 lg:flex justify-center w-auto mb-16">
+          <div class="px-5 mx-auto">
+            <img src="./img/solidworks.png" class="h-56 w-56">
+          </div>
+          <div class="px-5 mx-auto">
+            <img src="./img/mathworks.png" class="h-56 w-56">
+          </div>
+          <div class="px-5 mx-auto ">
+            <img src="./img/ansys.png" class="h-56 w-56">
+          </div>
+          <div class="px-5 mx-auto ">
+            <img src="./img/adidas.png" class="h-56 w-56">
+          </div>
+      </div>
+      
+      <div class="flex justify-center text-gray-900 text-center font-bold lg:text-4xl text-2xl lg:mb-2 mb-16 w-100%" style="font-family: nebula;">BRONZE SPONSORS</div> 
+      <div class="grid grid-cols-1 lg:flex justify-center w-auto mb-16">
+          <div class="px-5 mx-auto">
+            <img src="./img/basics.png" class="h-40 w-40">
+          </div>
+          <div class="px-5 mx-auto">
+            <img src="./img/logitech.png" class="h-40 w-40">
+          </div>
+          <div class="px-5 mx-auto">
+            <img src="./img/Castrol.png" class="h-40 w-40">
+          </div>
+          <div class="px-5 mx-auto">
+            <img src="./img/Chanel.png" class="h-40 w-40">
+          </div>
+      </div>
+      
+      
+      <div class="flex justify-center text-gray-900 font-bold lg:text-4xl text-2xl text-center lg:mb-2 mb-8 w-100%" style="font-family: nebula;">MERCHANDISE PARTNERS</div>
+      <div class="grid grid-cols-1 lg:flex justify-center w-auto m-auto mb-16">
+          <div class="mx-auto px-5">
+            <img src="./img/Nike.png" class="h-56 w-56">
+          </div>
+          <div class="mx-auto px-5 pb-10">
+            <img src="./img/Red Bull.png" class="h-60 w-60">
+          </div>
+          <div class="mx-auto px-5">
+            <img src="./img/Indian oil.png" class="h-52 w-52">
+          </div>
       </div>
     
-  </div>
-  <div class="text-center md:text-base text-xs pb-5 mx-auto">
-    Copyright &copy; Since 2012 - IITG RACING WEB-OPS. All rights reserved.
-  </div>
-</footer>
+      <footer class="bg-black text-white">
+        <div class="grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 pt-16 gap-5 px-10">
+            <div class="grid grid-flow-col grid-cols-2 place-items-center">
+              <div>
+                <img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING">
+              </div>
+              <div class="text-sm" style="margin-left: -2vw;">
+                <span class="font-bold">IIT GUWAHATI RACING</span><br><br>
+                New SAC<br>
+                Indian Institute of Technology Guwahati<br>
+                Guwahati 781039<br>
+                Assam, India
+              </div>
+            </div>
+            <div class="grid grid-cols-2 grid-rows-3 lg:grid-cols-3 text-base md:text-sm px-4 md:pl-24 lg:pl-0 gap-x-20">
+              <div class="order-1 pl-2 ml-1">HOME</div>
+              <div class="lg:order-2 order-5 pl-2 ml-1">CARS</div>
+              <div class="lg:order-3 order-4 pl-2 ml-1 md:ml-3 lg:ml-1">SPONSORS</div>
+              <div class="lg:order-4 order-3 pl-2 ml-1">COMPETITIONS</div>
+              <div class="lg:order-5 order-2 pl-2 ml-2 md:ml-3 lg:ml-1">TEAM</div>
+              <div class="order-6 pl-2 ml-1 md:ml-3 lg:ml-1">CONTACT</div>
+            </div>
+            <div class="grid grid-rows-2 gap-0 lg:gap-10">
+              <div class="flex flex-row-reverse mx-auto lg:mx-0">
+                <a href="https://www.linkedin.com/company/iitgracing/" target="_blank"><img src="./img/linkedin.png" title="Our LinkedIn page" class="mx-5 w-7.5 h-6"></a>
+                <a href="https://www.youtube.com/channel/UCv6DkzU0C6Fo2Y1bK56y0ew" target="_blank"><img src="./img/yt.png" title="Our YouTube page" class="mx-5 w-7.5 h-6"></a>
+                <a href="https://www.instagram.com/iitg.racing/" target="_blank"><img src="./img/insta.png" title="Our Instagram page" class="mx-5 w-7.5 h-6"></a>
+                <a href="https://www.facebook.com/iitg.racing/" target="_blank"><img src="./img/fb.png" title="Our Facebook page" class="mx-5 w-7.5 h-6"></a>
+              </div>
+              <div class="flex flex-row-reverse mx-auto lg:mx-0">
+                <a href="https://www.iitg.ac.in/" target="_blank"><img src="./img/ft3.png" alt="" class="h-10 w-12 mx-2"></a>
+                <a href="https://www.iitg.ac.in/stud/gymkhana/technical/index.html" target="_blank"><img src="./img/ft2.png" alt="" class="h-10 w-12 mx-2"></a>
+                <a href="https://www.iitg.ac.in/mech/" target="_blank"><img src="./img/ft1.png" alt="" class="h-10 w-12 mx-2"></a>
+              </div>
+            </div>
+          
+        </div>
+        <div class="text-center md:text-base text-xs pb-5 mx-auto">
+          Copyright &copy; Since 2012 - IITG RACING WEB-OPS. All rights reserved.
+        </div>
+      </footer>
+      <script>
+        var toTop = document.getElementById("topBtn");
+        window.onscroll = function() {scrollFunction()};
 
+        function scrollFunction() {
+          if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            toTop.style.display = "block";
+          }
+          else {
+            toTop.style.display = "none";
+          }
+        }
+
+        function reachTop() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      </script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
     <script src="forcursor.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="vanilla-tilt.js"></script>
+    <script src="desktopnavbar.js"></script>
+    <script src="mobilenavbar.js"></script>
     <script>
-      var toTop = document.getElementById("topBtn");
-      window.onscroll = function() {scrollFunction()};
-  
-      function scrollFunction() {
-        if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          toTop.style.display = "block";
-        }
-        else {
-          toTop.style.display = "none";
-        }
-      }
-  
-      function reachTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
+        $("#hamburger").click(function() {
+            if($('this').hasClass('is-active')) {
+                $(".introbanner").css("overflow-y", "hidden");
+            }
+            if(!$(this).hasClass('is-active')) {
+                $(".introbanner").css("overflow-y", "auto");
+            }
+        });
     </script>
-    <script>
-      $(document).ready(function() {
-        $("#cars-btn").mouseenter(function() {
-          $("#cars-dropdown").show();
-          $("#competitions-dropdown").hide();
-          $("#teams-dropdown").hide();
-        })
-        $("#cars-dropdown").mouseleave(function() {
-          $("#cars-dropdown").hide();
-        })
-        $("#competitions-btn").mouseenter(function() {
-          $("#competitions-dropdown").show();
-          $("#cars-dropdown").hide();
-          $("#teams-dropdown").hide();
-        })
-        $("#competitions-dropdown").mouseleave(function() {
-          $("#competitions-dropdown").hide();
-        })
-        $("#teams-btn").mouseenter(function() {
-          $("#teams-dropdown").show();
-          $("#competitions-dropdown").hide();
-          $("#cars-dropdown").hide();
-        })
-        $("#teams-dropdown").mouseleave(function() {
-          $("#teams-dropdown").hide();
-        })
-      })
-    </script>
-
 </body>
 </html>
