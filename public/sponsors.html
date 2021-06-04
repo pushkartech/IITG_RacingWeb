@@ -4,21 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sponsors | IITG RACING</title>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/hamburger.css">
+    <title>SPONSORS | IITG RACING</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/scrollbar.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
-    <link rel="stylesheet" href="css/carpg.css">
     <style>
         *{
             scroll-behavior: smooth;
-            overflow-x: hidden;
         }
         @media screen and (min-width: 1025px) {
             .clip-cars {
@@ -65,9 +61,10 @@
     <div class="cursor-follower"></div>
     <button onclick="reachTop()" class="bg-red-600 text-white px-1 py-1 rounded-full hover:bg-red-500 focus:outline-none fixed z-50 bottom-10 right-10 hidden" id="topBtn">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+          <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/>
         </svg>
-      </button>
+    </button>
+
     <nav class="bg-black text-white hidden lg:block fixed w-screen z-50">
         <div class="grid grid-cols-3">
             <div class="col-span-2">
@@ -77,15 +74,15 @@
                     </li>
                     <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="carshover">CARS</li>
                     <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="competitionshover">COMPETITIONS</li>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="newshover">NEWS</li>
+                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="newshover"><a href="news.html">NEWS</a></li>
                     <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="teamhover">TEAM</li>
                 </ul>
             </div>
             
             <div class="ml-auto">
                 <ul class="list-none font-normal">
-                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="sponsorshover">SPONSORS</li>
-                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="contacthover">CONTACT US</li>
+                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="sponsorshover"><a href="sponsors.html">SPONSORS</a></li>
+                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="contacthover"><a href="contact.html">CONTACT US</a></li>
                 </ul>
             </div>
         </div>
@@ -135,16 +132,6 @@
                         <center><img src="img/nav_img.png" alt="VISION F" class="h-48 xl:h-64 hidden" id="visionfCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
                     </li>
                 </ul>
-                <ul class="list-none pl-52 hidden" id="CompetitionsMenu">
-                    <li class="pl-24 cursor-pointer">FORMULA STUDENT</li>
-                    <li class="pl-24 cursor-pointer">EFFICYCLE</li>
-                    <li class="pl-24 cursor-pointer">BAJA</li>
-                </ul>
-                <ul class="list-none pl-60 hidden" id="TeamsMenu">
-                    <li class="pl-80 cursor-pointer">2020-21</li>
-                    <li class="pl-80 cursor-pointer">2019-20</li>
-                    <li class="pl-80 cursor-pointer">ALUMNI</li>
-                </ul>
             </div>
             <div class="mx-auto mt-32 hidden" id="detailsMenu">
                 <ul class="list-none">
@@ -172,19 +159,20 @@
         </div>
         <div class="px-72 hidden" id="compMenu">
             <ul class="list-none pl-5">
-                <li class="py-1 customnavi"><a href="">FORMULA STUDENT</a></li>
-                <li class="py-1 customnavi"><a href="">COMPETITIONS</a></li>
-                <li class="pb-4 py-1 customnavi"><a href="">BAJA</a></li>
+                <li class="py-1 customnavi"><a href="competitions.html">FORMULA STUDENT</a></li>
+                <li class="py-1 customnavi"><a href="competitions.html">COMPETITIONS</a></li>
+                <li class="pb-4 py-1 customnavi"><a href="competitions.html">BAJA</a></li>
             </ul>
         </div>
         <div class="pl-96 hidden" id="teamsMenu">
             <ul class="list-none pl-52 pb-5">
-                <li class="customnavi"><a href="">2020-21</a></li>
-                <li class="customnavi"><a href="">2019-20</a></li>
-                <li class="customnavi"><a href="">ALUMNI</a></li>
+                <li class="customnavi"><a href="team21_22.html">2021-22</a></li>
+                <li class="customnavi"><a href="team20_21.html">2020-21</a></li>
+                <li class="customnavi"><a href="alumni.html">ALUMNI</a></li>
             </ul>
         </div>
     </nav>
+
 
     <nav class="bg-black lg:hidden text-white">
         <div class="grid grid-cols-2">
@@ -226,7 +214,7 @@
                         </svg>
                     </div>
                 </li>
-                <li class="py-4">SPONSORS</li>
+                <li class="py-4"><a href="sponsors.html"></a>SPONSORS</li>
                 <li class="py-4">CONTACT US</li>
             </ul>
         </div>
@@ -331,17 +319,17 @@
     </nav>
     <div class="h-20 hidden lg:block"></div>
 
-    <div style="padding-top: 0.007934336525307vh;" class="container" style="position: relative; z-index: 99;"> 
-        <img src="./img/sponsor.png" alt="" style="height: 92vh;" class="object-cover lg:object-fill lg:w-full">
-        <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;" class="lg:text-8xl md:text-7xl sm:text-5xl text-4xl text-white w-100 sm:pl-12 pl-6 leading-tight">
-          SPONSORS
+     <div style="padding-top: 0.007934336525307vh;" class="container" style="position: relative; z-index: 99;">
+        <img src="./img/sponsor.png" alt="" style="height: 92vh;" class="object-cover w-full bg-black">
+        <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;" class="lg:text-8xl md:text-7xl sm:text-5xl text-4xl text-white w-100 leading-tight">
+          <span class="pl-16">SPONSORS</span>
           <div id="intro"></div>
         </div>
-        <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-80%, -80%);">
+        <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-50%, -50%);" class="mx-auto">
           <a href="#intro"><img alt="Arrow Down Icon" src="./img/down.png"></a>
         </div>
       </div>
-      
+
       <div class="flex flex-col w-full lg:w-full lg:flex-row-reverse py-16">
         <div class="h-96 w-full bg-cover  text-center mb-16 clip-members" style="background-image: url('./img/16_21\ 1.jpg'); z-index: -1;" title="Our Team">
         </div>
@@ -436,8 +424,9 @@
             <img src="./img/Indian oil.png" class="h-52 w-52">
           </div>
       </div>
-    
-      <footer class="bg-black text-white">
+
+
+    <footer class="bg-black text-white">
         <div class="grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 pt-16 gap-5 px-10">
             <div class="grid grid-flow-col grid-cols-2 place-items-center">
               <div>
@@ -452,12 +441,12 @@
               </div>
             </div>
             <div class="grid grid-cols-2 grid-rows-3 lg:grid-cols-3 text-base md:text-sm px-4 md:pl-24 lg:pl-0 gap-x-20">
-                <div class="order-1 pl-2 ml-1"><a href="index.html">HOME</a></div>
-                <div class="lg:order-2 order-5 pl-2 ml-1"><a href="ourcars.html">CARS</a></div>
-                <div class="lg:order-3 order-4 pl-2 ml-1 md:ml-3 lg:ml-1"><a href="sponsors.html">SPONSORS</a></div>
-                <div class="lg:order-4 order-3 pl-2 ml-1"><a href="competitions.html">COMPETITIONS</a></div>
-                <div class="lg:order-5 order-2 pl-2 ml-2 md:ml-3 lg:ml-1"><a href="team21_22.html">TEAM</a></div>
-                <div class="order-6 pl-2 ml-1 md:ml-3 lg:ml-1"><a href="contact.html">CONTACT</a></div>
+              <div class="order-1 pl-2 ml-1"><a href="index.html">HOME</a></div>
+              <div class="lg:order-2 order-5 pl-2 ml-1"><a href="ourcars.html">CARS</a></div>
+              <div class="lg:order-3 order-4 pl-2 ml-1 md:ml-3 lg:ml-1"><a href="sponsors.html">SPONSORS</a></div>
+              <div class="lg:order-4 order-3 pl-2 ml-1"><a href="competitions.html">COMPETITIONS</a></div>
+              <div class="lg:order-5 order-2 pl-2 ml-2 md:ml-3 lg:ml-1"><a href="team21_22.html">TEAM</a></div>
+              <div class="order-6 pl-2 ml-1 md:ml-3 lg:ml-1"><a href="contact.html">CONTACT</a></div>
             </div>
             <div class="grid grid-rows-2 gap-0 lg:gap-10">
               <div class="flex flex-row-reverse mx-auto lg:mx-0">
@@ -478,17 +467,18 @@
           Copyright &copy; Since 2012 - IITG RACING WEB-OPS. All rights reserved.
         </div>
       </footer>
-      <script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
         var toTop = document.getElementById("topBtn");
         window.onscroll = function() {scrollFunction()};
 
         function scrollFunction() {
-          if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            toTop.style.display = "block";
-          }
-          else {
-            toTop.style.display = "none";
-          }
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+               toTop.style.display = "block";
+            }
+            else {
+                toTop.style.display = "none";
+            }
         }
 
         function reachTop() {
@@ -496,23 +486,11 @@
           document.documentElement.scrollTop = 0;
         }
       </script>
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
     <script src="forcursor.js"></script>
     <script src="vanilla-tilt.js"></script>
     <script src="desktopnavbar.js"></script>
     <script src="mobilenavbar.js"></script>
-    <script>
-        $("#hamburger").click(function() {
-            if($('this').hasClass('is-active')) {
-                $(".introbanner").css("overflow-y", "hidden");
-            }
-            if(!$(this).hasClass('is-active')) {
-                $(".introbanner").css("overflow-y", "auto");
-            }
-        });
-    </script>
 </body>
 </html>
