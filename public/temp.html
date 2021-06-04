@@ -55,7 +55,66 @@
             transform: rotate(-180deg);
             transition-duration: 1s;
         }
+        .carousel-open:checked + .carousel-item {
+            position: static;
+            opacity: 100;
+        }
+        .carousel-item {
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
+        #carousel-1:checked ~ .control-1,
+        #carousel-2:checked ~ .control-2,
+        #carousel-3:checked ~ .control-3 {
+            display: block;
+        }
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+        }
     </style>
+    <script>
+        function ShowAndHide() {
+          var x = document.getElementById("SectionName");
+          if (x.style.display == "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+      </script>
+      <script>
+         function ShowAndHide1() {
+           var x = document.getElementById("SectionName1");
+           if (x.style.display == "none") {
+             x.style.display = "block";
+           } else {
+             x.style.display = "none";
+           }
+         }
+       </script>
+       <script>
+          function ShowAndHide2() {
+            var x = document.getElementById("SectionName2");
+            if (x.style.display == "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+        </script>
 </head>
 <body>
     <div class="cursor"></div>
@@ -322,153 +381,152 @@
 
      <div style="padding-top: 0.007934336525307vh;" class="container" style="position: relative; z-index: 99;">
         <img src="./img/competitions.png" alt="" style="height: 92vh;" class="w-full object-cover">
-        <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;" class="lg:text-8xl md:text-7xl sm:text-5xl text-3xl text-white w-100 leading-tight">
-          <span class="pl-20">COMPETITIONS</span>
+        <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;" class="lg:text-8xl md:text-7xl sm:text-5xl text-4xl text-white w-100 leading-tight">
+          <span class="pl-16">CONCEPT A</span>
           <div id="intro"></div>
         </div>
         <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-50%, -50%);" class="mx-auto">
           <a href="#intro"><img alt="Arrow Down Icon" src="./img/down.png"></a>
         </div>
       </div>
-      <div class="w-full lg:max-w-full lg:flex py-16">
-        <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
+
+      <div class="w-full lg:max-w-full lg:flex py-8">
+        <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col leading-normal my-auto px-12">
           <div class="mb-8">
-            <div class="text-gray-900 text-2xl mb-4" style="font-family: nebula;">FORMULA STUDENT</div>
-            <p class="text-gray-700 text-base">Formula Student is the world’s biggest competition for engineers. Every year competitions are held all across the globe. Founded by the «Society of Automotive Engineers» in 1981, the first competition in Europe took place in 1998. At present, there are more than 600 teams from universities all over the world competing with their self-constructed race cars.<br><br>
-              The goal is to develop and provide a platform for student engineers to experience, build, and learn. It offers a unique way to test students’ theoretical knowledge in a practical context. Students gain and develop skills such as engineering, project management and team work.</p>
+            <p class="text-base" style="font-family: poppins;">The Covid situation forced us to work from our homes and we made the most of it by designing two concept cars. This is the first of the two Concept cars designed by our club members, this is an IC engine car which uses a KTM RC 390cc engine. </p>
           </div>
-          <button class="bg-transparent hover:bg-red-600 text-black-700 font-semibold py-2 px-2 border border-black hover:border-transparent rounded w-36">
-            <div class="flex text-center">
-              VIEW CARS&nbsp;&nbsp;&nbsp;
-              <img src="https://img.icons8.com/ios-glyphs/15/000000/forward.png"/>
-            </div>
-          </button>
-          <br><br>
-        </div>
-        <div class="h-96 w-full bg-cover rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-members" style="background-image: url('./img/16_21\ 1.jpg'); z-index: -1;" title="Our Team">
-        </div>
-      </div>
     
-      <div class="grid grid-cols-1 lg:grid-cols-3 justify-center w-auto">
-        <div class="p-5 flex justify-center">
-            <div>
-              <img src="./img/Vector.png" class="w-20">
-            </div>
-            <div class="flex-col">
-                <div class="text-gray-900 text-base mt-6" style="font-family: nebula">SUPRA 2018</div>
-                <div class="text-2xl overflow-y-hidden" style="font-family: Poppins;">46th Overall</div>
-            </div>
-          </div>
-        <div class="p-5 flex justify-center">
-            <div>
-              <img src="./img/Vector.png" class="w-20">
-            </div>
-            <div class="flex-col">
-                <div class="text-gray-900 text-base mt-6" style="font-family: nebula">FORMULA BHARAT 2017</div>
-                <div class="text-2xl overflow-y-hidden" style="font-family: Poppins;">21st Overall</div>
-            </div>
-          </div>
-          <div class="p-5 flex justify-center">
-            <div>
-              <img src="./img/Vector.png" class="w-20">
-            </div>
-            <div class="flex-col">
-              <div class="text-gray-900 text-base mt-6" style="font-family: nebula">SUPRA 2015</div>
-              <div class="text-2xl overflow-y-hidden" style="font-family: Poppins;">30th in Virtual Round </div>
-            </div>
-          </div>
+        </div>
+        <div class="h-80 w-full bg-cover rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-members" style="background-image: url('./img_cars/conceptA2.png'); z-index: -1;" title="Our Team">
+        </div>
       </div>
-
+      <div class="w-full lg:max-w-full lg:flex py-16 relative">
+        <img src="./img_cars/conceptA3.png" alt="" class="relative">
+        <div class="" ONCLICK="ShowAndHide2()" >
+          <div class="absolute" style="bottom:37%;left:23%">
+            <img src="./img/Ellipse 7.png" class="" alt="">
+            <img class="relative bottom-5 right-1 "  src="./img/Ellipse 8.png" alt="">
+            <div class="text-3xl w-full text-white absolute bottom-4 left-8 " style="font-family: nebula;">TYRES</div>
+        </div>
+        <div class="absolute" style="display: none;top:57.7%;left:22.8%" id="SectionName2">
+           <img class=" "style="width:6%"src="./img/circle-cropped.png" alt="">
+          <img class=" relative left-4 bottom-1"style="width:90%"src="./img/Vector 1.png" alt="">
+          <div class="text-xl text-white relative left-32 bottom-8" style="font-family: poppins;">HOOSIER SLICK TYRES</div>
+        </div>
+        </div>
+    
+    <div class=""ONCLICK="ShowAndHide()">
+      <div class="absolute"style="bottom:45%;left:38%" >
+        <img src="./img/Ellipse 7.png" class="" alt="">
+        <img class="relative bottom-5 right-1 "  src="./img/Ellipse 8.png" alt="">
+        <div class="text-3xl w-full text-white absolute bottom-4 left-8 " style="font-family: nebula;">ENGINE</div>
+      </div>
+      <div class="absolute" style="display: none;top:49.7%;left:37.8%" id="SectionName">
+        <img class=" "style="width:6%"src="./img/circle-cropped.png" alt="">
+       <img class=" relative  left-4 bottom-1"style="width:70%;"src="./img/Vector 1.png" alt="">
+      <div class="relative"style="bottom:100px;left:55%">
+        <div class="text-xl text-white  " style="font-family: poppins;">390 CC</div>
+        <div class="text-xl text-white  " style="font-family: poppins;">32 kW</div>
+        <div class="text-xl text-white " style="font-family: poppins;">36 nm</div>
+      </div>
+    </div>
+    </div>
+    <div class="" ONCLICK="ShowAndHide1()">
+      <div class="absolute"style="bottom:45%;left:73%">
+        <img src="./img/Ellipse 7.png" class="" alt="">
+        <img class="relative bottom-5 right-1 "  src="./img/Ellipse 8.png" alt="">
+        <div class="text-3xl w-full text-white absolute bottom-4 left-8 " style="font-family: nebula;">BODY</div>
+      </div>
+      <div class="absolute" style="display: none;top:49.8%;left:72.8%" id="SectionName1">
+         <img class=" "style="width:6%"src="./img/circle-cropped.png" alt="">
+        <img class=" relative left-4 bottom-1"style="width:90%"src="./img/Vector 1.png" alt="">
+        <div class="text-xl text-white relative left-32 bottom-8" style="font-family: poppins;">CARBON FIBRE BODY</div>
+      </div>
+    </div>
+    
+    
+    </div>
+    <div class="lg:flex" style="justify-content:center;">
+      <div class="flex ml-24 w-auto">
+        <div class="p-5 px-10 flex">
+    
+          <div class="flex-col">
+            <div class="text-base  mt-6" style="font-family: nebula; margin-right:300px">TOP SPEED</div>
+            <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">110 km/h</div>
+          </div>
+        </div>
+    
+        <div class="p-5 px-10 flex">
+    
+          <div class="flex-col">
+            <div class="text-base  mt-6" style="font-family: nebula;margin-right:300px">MAX POWER</div>
+            <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">80 kW</div>
+          </div>
+        </div>
+    
+        <div class="p-5 px-10 flex">
+    
+          <div class="flex-col">
+            <div class=" text-base  mt-6" style="font-family: nebula">MAX TORQUE</div>
+            <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">36NM</div>
+          </div>
+        </div>
+    
+    
+    
+      </div>
+    </div>
       <div class="w-full lg:max-w-full lg:flex py-16">
-        <div class="h-96 w-full bg-cover rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-cars" style="background-image: url('./img/16_21 1 (1).JPG'); z-index: -1;" title="Our Cars">
+        <div class="h-96 w-full bg-cover rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-cars  bg-center" style="background-image: url('./img_cars/conceptA4.png'); z-index: -1;" title="Our Cars">
         </div>
         <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
           <div class="mb-8">
-            <div class="text-gray-900 text-2xl mb-4" style="font-family: nebula;">EFFICYCLE</div>
-            <p class="text-gray-700 text-base">This is a National level Inter-College event in which teams are supposed to design and fabricate a energy efficient human and electrically powered hybrid vehicle. The prospective of conducting an event of this magnitude at national level is to develop a vehicle which is eco-friendly,less power consuming,ergonomically feasible .
-              <br><br>
-              During the fabrication process of the vehicle,we are required to follow the rules given by SAE INDIA, an affiliate society of SAE International. Technical inspection of the vehicle is done by the people who are working in the field related to Automotive Engineering .</p>
+    
+            <p class="text-base"style="font-family: poppins;">Designed completely by our Creatives team member Aditya Som, this car can clock speed up to 110kmph with its Hoosier Slick tires and the power from the KTM RC engine. Its body is made using carbon fiber.</p>
           </div>
-          <button class="bg-transparent hover:bg-red-600 text-black-700 font-semibold py-2 px-2 border border-black hover:border-transparent rounded w-36">
-            <div class="flex text-center">
-              VIEW CARS&nbsp;&nbsp;&nbsp;
-              <img src="https://img.icons8.com/ios-glyphs/15/000000/forward.png"/>
-            </div>
-          </button>
+    
         </div>
         </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-4 justify-center w-auto">
-            <div class="p-5 flex justify-center">
-                <div>
-                  <img src="./img/Vector.png" class="w-20">
-                </div>
-                <div class="flex-col">
-                    <div class="text-gray-900 text-base mt-6" style="font-family: nebula">EFFICYCLE 2013</div>
-                    <div class="text-2xl overflow-y-hidden" style="font-family: Poppins;">21st Overall</div>
-                </div>
-              </div>
-              <div class="p-5 flex justify-center">
-                <div>
-                  <img src="./img/Vector.png" class="w-20">
-                </div>
-                <div class="flex-col">
-                    <div class="text-gray-900 text-base mt-6" style="font-family: nebula">EFFICYCLE 2014</div>
-                <div class="text-2xl overflow-y-hidden" style="font-family: Poppins;">13th Overall</div>
-                </div>
-              </div>
-              <div class="p-5 flex justify-center">
-                <div>
-                  <img src="./img/Vector.png" class="w-20">
-                </div>
-                <div class="flex-col">
-                    <div class="text-gray-900 text-base mt-6" style="font-family: nebula">EFFICYCLE 2015</div>
-                    <div class="text-2xl overflow-y-hidden" style="font-family: Poppins;">7th Overall</div>
-                </div>
-              </div>
-              <div class="p-5 flex justify-center">
-                <div>
-                  <img src="./img/Vector.png" class="w-20">
-                </div>
-                <div class="flex-col">
-                    <div class="text-gray-900 text-base mt-6" style="font-family: nebula">EFFICYCLE 2018</div>
-                    <div class="text-2xl overflow-y-hidden" style="font-family: Poppins;">9th Overall</div>
-                </div>
-              </div>
+        <div class="carousel relative shadow-2xl bg-white">
+        <div class="carousel-inner relative overflow-hidden w-full">
+          <!--Slide 1-->
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+            <div class="carousel-item absolute opacity-0" style="height:100vh;">
+      <img class="d-block w-full h-full" src="./img_cars/conceptA5a.png" alt="First slide">
+            </div>
+            <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+    
+            <!--Slide 2-->
+            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item absolute opacity-0" style="height:100vh;">
+                <img class="d-block w-full h-full" src="./img_cars/conceptA5b.png" alt="First slide">
+            </div>
+            <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+    
+            <!--Slide 3-->
+            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item absolute opacity-0" style="height:100vh;">
+                <img class="d-block w-full h-full" src="./img_cars/conceptA5c.png" alt="First slide">
+            </div>
+            <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+    
+            <!-- Add additional indicators for each slide-->
+            <ol class="carousel-indicators">
+                <li class="inline-block mr-3">
+                    <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                </li>
+                <li class="inline-block mr-3">
+                    <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                </li>
+                <li class="inline-block mr-3">
+                    <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                </li>
+            </ol>
+    
         </div>
-
-        <div class="w-full lg:max-w-full lg:flex py-16">
-            <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
-              <div class="mb-8">
-                <div class="text-gray-900 text-2xl mb-4" style="font-family: nebula;">BAJA</div>
-                <p class="text-gray-700 text-base">BAJA SAE India is an inter collegiate competition to design build and race an off-road All Terrain Vehicle(ATV) that can withstand the harsh elements of rough terrain.<br><br>
-      
-                  Team SRIJAN, the team from IITG went to bangalore to participate in the prelims of the BAJA-2012 and successfully qualified for the final round. The prelims is named virtual BAJA and has its own prestige in national level competitions for mechanical engineers. Our design was made very accurately and innovatively that the judges who inspected our design in bangalore were impressed very much.</p>
-              </div>
-              <button class="bg-transparent hover:bg-red-600 text-black-700 font-semibold py-2 px-2 border border-black hover:border-transparent rounded w-36">
-                <div class="flex text-center">
-                  VIEW CARS&nbsp;&nbsp;&nbsp;
-                  <img src="https://img.icons8.com/ios-glyphs/15/000000/forward.png"/>
-                </div>
-              </button>
-            </div>
-            <div class="h-96 w-full bg-cover rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-members" style="background-image: url('./img/16_21\ 1\ \(2\).jpg'); z-index: -1;" title="Our Team">
-            </div>
-          </div>
-
-          <div class="lg:flex justify-center pb-6 w-auto">
-            <!-- <div class="lg:flex"> -->
-              <div class="p-5 flex justify-center">
-                <div class="w-28">
-                  <img src="./img/Vector.png" class="w-20">
-                </div>
-                <div class="flex-col">
-                  <div class="text-gray-900 text-base mt-6" style="font-family: nebula">BAJA 2012</div>
-                  <div class="text-2xl overflow-y-hidden" style="font-family: Poppins;">3rd </div>
-                </div>
-              </div>
-            <!-- </div> -->
-          </div>
 
     <footer class="bg-black text-white">
         <div class="grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 pt-16 gap-5 px-10">
