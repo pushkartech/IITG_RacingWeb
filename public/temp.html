@@ -4,24 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Efficycle 4.0 | IITG RACING</title>
+    <title>NEWS | IITG RACING</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/news.css">
     <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/scrollbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
-    <script>
-        function ShowAndHide() {
-          var x = document.getElementById("SectionName");
-          if (x.style.display == "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
-          }
-        }
-      </script>
     <style>
         *{
             scroll-behavior: smooth;
@@ -63,35 +54,6 @@
         #btn4:checked + label > svg {
             transform: rotate(-180deg);
             transition-duration: 1s;
-        }
-        .carousel-open:checked + .carousel-item {
-            position: static;
-            opacity: 100;
-        }
-        .carousel-item {
-            -webkit-transition: opacity 0.6s ease-out;
-            transition: opacity 0.6s ease-out;
-        }
-        #carousel-1:checked ~ .control-1,
-        #carousel-2:checked ~ .control-2,
-        #carousel-3:checked ~ .control-3 {
-            display: block;
-        }
-        .carousel-indicators {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            bottom: 2%;
-            left: 0;
-            right: 0;
-            text-align: center;
-            z-index: 10;
-        }
-        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-            color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
         }
     </style>
 </head>
@@ -359,9 +321,9 @@
     <div class="h-20 hidden lg:block"></div>
 
      <div style="padding-top: 1.007934336525307vh;" class="container" style="position: relative; z-index: 99;">
-        <img src="./img_cars/effi4_1.jpeg" alt="" style="height: 92vh;" class="object-cover bg-black lg:object-fill w-full">
+        <img src="./img/news.png" alt="" style="height: 92vh;" class="object-cover w-full">
         <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;" class="lg:text-8xl md:text-7xl sm:text-5xl text-4xl text-white w-100 leading-tight">
-          <span class="pl-16">EFFICYCLE 3.0</span>
+          <span class="pl-16">NEWS</span>
           <div id="intro"></div>
         </div>
         <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-50%, -50%);" class="mx-auto">
@@ -369,114 +331,142 @@
         </div>
       </div>
 
-      <div class="w-full lg:max-w-full lg:flex py-16">
-        <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
-          <div class="mb-8">
-            <p class="text-gray-700 text-base">This vehicle participated in Efficycle 2018. Laden with experience from previous events we went on to bag the 9th position. The Efficycle also won us the Innovation award for its innovation in Efficient Transmission along with a cash prize of ₹10,000. The innovation report for the vehicle can be found here</p>
-          </div>
-    
-        </div>
-        <div class="h-96 w-full bg-cover bg-center  rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-members" style="background-image: url('./img_cars/effi4_2.jpg');background-size: 100% 100%;width:50rem; z-index: -1;" title="Our Team">
-    
-        </div>
-      </div>
-      <div class="w-full lg:max-w-full lg:flex relative object-center bg-black">
-          <img src="./img_cars/effi4_3.jpg" style="width:80%;left:10%" alt="" class="relative  ">
-    
-      <div class=""ONCLICK="ShowAndHide()">
-        <div class="absolute"style="bottom:30%;left:70%" >
-          <img src="./img/Ellipse 7.png" class="" alt="">
-          <img class="relative bottom-5 right-1 "  src="./img/Ellipse 8.png" alt="">
-          <div class="text-3xl w-full text-white absolute bottom-4 left-8 " style="font-family: nebula;">BATTERY</div>
-        </div>
-        <div class="absolute" style="display: none;top:64.3%;left:69.8%" id="SectionName">
-          <img class=" "style="width:6%"src="./img/circle-cropped.png" alt="">
-         <img class=" relative  left-4 bottom-1"style="width:70%;"src="./img/Vector 1.png" alt="">
-        <div class="relative"style="bottom:60px;left:55%">
-          <div class="text-xl text-white  " style="font-family: poppins;">48 V</div>
-          <div class="text-xl text-white " style="font-family: poppins;">4.6 nm</div>
-        </div>
-      </div>
-      </div>
-    
-      </div>
-    <div class="lg:flex" style="justify-content:center;">
-      <div class="flex ml-24 w-auto">
-        <div class="p-5 px-10 flex">
-    
-          <div class="flex-col">
-            <div class="text-base  mt-6" style="font-family: nebula; margin-right:300px">TOP SPEED</div>
-            <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">22.98 km/h</div>
-          </div>
-        </div>
-    
-        <div class="p-5 px-10 flex">
-    
-          <div class="flex-col">
-            <div class="text-base  mt-6" style="font-family: nebula;margin-right:300px">BATTERY VOLTAGE</div>
-            <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">48 V</div>
-          </div>
-        </div>
-    
-    
-        </div>
-    
-    
-    
-      </div>
-    </div>
-      <div class="w-full lg:max-w-full lg:flex py-16">
-        <div class="h-96 w-full bg-cover bg-left rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-cars " style="background-image: url('./img_cars/effi4_4.jpg'); z-index: -1;" title="Our Cars">
-        </div>
-        <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
-          <div class="mb-8">
-            <p class="text-gray-700 text-base">It is driven electrically by a 48V battery which helps drive this Efficycle to a maximum speed of around 23 kmph. The Efficycle has a Tadpole: Seat by seat configuration with its total weight being 120 kgs, a significant reduction from the last two. Our innovation worked and helped us getting a desired output in form of greater speed.</p>
-          </div>
-    
-        </div>
-        </div>
-        <div class="carousel relative shadow-2xl bg-white">
-        <div class="carousel-inner relative overflow-hidden w-full">
-          <!--Slide 1-->
-            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-            <div class="carousel-item absolute opacity-0" style="height:80vh;">
-      <img class="d-block  w-full h-full object-center object-contain bg-black"  src="./img_cars/effi4_5a.jpg" alt="First slide">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 p-10 sm:p-20">
+
+        <!-- More news to be added  -->
+        <div class="news relative rounded-sm">
+          <div class="news relative rounded-sm">
+            <div class="bg-cover news-img news-img-13">
+              &nbsp;
             </div>
-            <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-            <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-    
-            <!--Slide 2-->
-            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-            <div class="carousel-item absolute opacity-0" style="height:80vh;">
-                <img class="d-block w-full h-full object-bottom object-contain bg-black" src="./img_cars/effi4_5b.jpg" alt="First slide">
+            <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+              <p class="text-xs">30-01-2020</p>
+              <p class="text-lg sm:text-xl">Team Evolution set to perform in Formula Bharat 2020.</p> 
             </div>
-            <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-            <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-    
-            <!--Slide 3-->
-            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-            <div class="carousel-item absolute opacity-0" style="height:80vh;">
-                <img class="d-block w-full h-full object-center object-contain bg-black" src="./img_cars/effi4_5e.jpg" alt="First slide">
-            </div>
-            <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-            <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-    
-    
-            <!-- Add additional indicators for each slide-->
-            <ol class="carousel-indicators">
-                <li class="inline-block mr-3">
-                    <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
-                </li>
-                <li class="inline-block mr-3">
-                    <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
-                </li>
-                <li class="inline-block mr-3">
-                    <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
-                </li>
-    
-            </ol>
-    
+          </div>
         </div>
+  
+        <div class="news relative rounded-sm">
+          <div class="bg-cover news-img news-img-12">
+            &nbsp;
+          </div>
+          <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+            <p class="text-xs">14-10-2018</p>
+            <p class="text-lg sm:text-xl">IIT Guwahati’s Team Evolution wins the Innovation Award in Efficycle 2018.</p> 
+          </div>
+        </div>
+  
+        <div class="news relative rounded-sm">
+          <div class="bg-cover news-img news-img-11">
+            &nbsp;
+          </div>
+          <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+            <p class="text-xs">06-11-2017</p>
+            <p class="text-lg sm:text-xl">IIT Guwahati’s Team Evolution gets 18th rank in Efficycle 2017.</p> 
+          </div>
+        </div>
+  
+        <div class="news relative rounded-sm">
+          <div class="bg-cover news-img news-img-10">
+            &nbsp;
+          </div>
+          <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+            <p class="text-xs">28-08-2017</p>
+            <p class="text-lg sm:text-xl">Unveiling the new car manufactured by students of IITG Racing.</p> 
+          </div>
+        </div>
+        
+        <div class="news relative rounded-sm">
+          <div class="bg-cover news-img news-img-9">
+            &nbsp;
+          </div>
+          <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+            <p class="text-xs">27-03-2017</p>
+            <p class="text-lg sm:text-xl">IIT Guwahati students build car to promote safe racing.</p> 
+          </div>
+        </div>
+  
+        <div class="news relative rounded-sm">
+          <div class="bg-cover news-img news-img-8">
+            &nbsp;
+          </div>
+          <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+            <p class="text-xs">19-03-2017</p>
+            <p class="text-lg sm:text-xl">The new car at display during TechEvince 2017.</p> 
+          </div>
+        </div>
+  
+        <div class="news relative rounded-sm">
+          <div class="bg-cover news-img news-img-7">
+            &nbsp;
+          </div>
+          <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+            <p class="text-xs">30-01-2017</p>
+            <p class="text-lg sm:text-xl">Team Evolution to participate in FB 2017.</p> 
+          </div>
+        </div>
+  
+        <div class="news relative rounded-sm">
+          <div class="bg-cover news-img news-img-6">
+            &nbsp;
+          </div>
+          <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+            <p class="text-xs">18-10-2015</p>
+            <p class="text-lg sm:text-xl">Taj plight drives IITians to a greener world.</p> 
+          </div>
+        </div>
+  
+        <div class="news relative rounded-sm">
+          <div class="bg-cover news-img news-img-5">
+            &nbsp;
+          </div>
+          <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+            <p class="text-xs">18-10-2015</p>
+            <p class="text-lg sm:text-xl sm:w-11/12">IIT Guwahati’s Team Evolution bags 7th rank in Efficycle 2015- its best ever</p> 
+          </div>
+        </div>
+  
+        <div class="news relative rounded-sm">
+          <div class="bg-cover news-img news-img-4">
+            &nbsp;
+          </div>
+          <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+            <p class="text-xs">20-07-2015</p>
+            <p class="text-lg sm:text-xl sm:w-11/12">Team Evolution participating in their first SUPRA SAE INDIA</p> 
+          </div>
+        </div>
+  
+        <div class="news relative rounded-sm">
+          <div class="bg-cover news-img news-img-3">
+            &nbsp;
+          </div>
+          <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+            <p class="text-xs">16-10-2014</p>
+            <p class="text-lg sm:text-xl sm:w-11/12">Team Evolution finishes with 13th rank in Efficycle 2014 at UIET Chandigarh</p> 
+          </div>
+        </div>
+  
+        <div class="news relative rounded-sm">
+          <div class="bg-cover news-img news-img-2">
+            &nbsp;
+          </div>
+          <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+            <p class="text-xs">14-10-2013</p>
+            <p class="text-lg sm:text-xl sm:w-11/12">IIT Guwahati students in the Efficycle event at Punjab University in Chandigarh</p> 
+          </div>
+        </div>
+  
+        <div class="news relative rounded-sm">
+          <div class="bg-cover news-img news-img-1">
+            &nbsp; <!-- this is just a space -->
+          </div>
+          <div class="absolute bottom-5 sm:bottom-10 left-5 sm:left-10 text-white">
+            <p class="text-xs mb-1">20-02-2012</p>
+            <p class="text-lg sm:text-xl sm:w-11/12">Our team Srijan with the Baja car- the first ever made in IIT Guwahati.</p> 
+          </div>
+        </div>
+  
+      </div>
 
 
     <footer class="bg-black text-white">
