@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEAM 2020-21 | IITG RACING</title>
+    <title>TACHYON 2.0 | IITG RACING</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/cursor.css">
@@ -12,6 +12,36 @@
     <link rel="stylesheet" href="css/scrollbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
+    <script>
+        function ShowAndHide() {
+          var x = document.getElementById("SectionName");
+          if (x.style.display == "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+      </script>
+      <script>
+         function ShowAndHide1() {
+           var x = document.getElementById("SectionName1");
+           if (x.style.display == "none") {
+             x.style.display = "block";
+           } else {
+             x.style.display = "none";
+           }
+         }
+       </script>
+       <script>
+          function ShowAndHide2() {
+            var x = document.getElementById("SectionName2");
+            if (x.style.display == "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+        </script>
     <style>
         *{
             scroll-behavior: smooth;
@@ -54,6 +84,35 @@
             transform: rotate(-180deg);
             transition-duration: 1s;
         }
+        .carousel-open:checked + .carousel-item {
+				position: static;
+				opacity: 100;
+			}
+			.carousel-item {
+				-webkit-transition: opacity 0.6s ease-out;
+				transition: opacity 0.6s ease-out;
+			}
+			#carousel-1:checked ~ .control-1,
+			#carousel-2:checked ~ .control-2,
+			#carousel-3:checked ~ .control-3 {
+				display: block;
+			}
+			.carousel-indicators {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				bottom: 2%;
+				left: 0;
+				right: 0;
+				text-align: center;
+				z-index: 10;
+			}
+			#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+			#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+			#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+				color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+			}
     </style>
 </head>
 <body>
@@ -320,718 +379,156 @@
     <div class="h-20 hidden lg:block"></div>
 
      <div style="padding-top: 1.007934336525307vh;" class="container" style="position: relative; z-index: 99;">
-        <img src="img/ourmembers.png" alt="" style="height: 92vh;" class="object-cover w-full">
+        <img src="./img_cars/tachyon2_1.png " alt="" style="height: 92vh;" class="object-cover w-full bg-black">
         <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;" class="lg:text-8xl md:text-7xl sm:text-5xl text-4xl text-white w-100 leading-tight">
-          <span class="pl-16">TEAM<br></span><span class="pl-16">2020-21</span>
+          <span class="pl-16">TACHYON 2.0<br></span>
           <div id="intro"></div>
         </div>
         <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-50%, -50%);" class="mx-auto">
           <a href="#intro"><img alt="Arrow Down Icon" src="./img/down.png"></a>
         </div>
       </div>
-      <br><br><br><br>
-      <div>
-        <!--management-->
-        <div>
-          <div class="text-center text-3xl font-medium ">Management</div>
-          <div class="flex justify-center">
-            <!--person component 1-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Kartikey Kumar
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Secretary
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/kumar.kartikey2"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/k_kartikey/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/kkartikey/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 2-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Kunal Kandu
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Captain
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/kunal.kundu.9212"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/imkunalkundu/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/kunal-kundu-140584179/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Hitesh Yadav
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Project Manager
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/profile.php?id=100010005487834"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/hiteshyadav22/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/yhitesh/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 4-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Yashwant Rawat
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Chairperson
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/yashwant.rawat.393"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/_yashwant_rawat_/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="#"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-          </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <!--creatives-->
-        <div>
-          <div class="text-center text-3xl font-medium ">Creatives</div>
-          <div class="flex justify-center">
-            <!--person component 1-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Aditya Som
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Team Head
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/adisomsom"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/aditosom/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/aditya-som-a32942182/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 2-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Mohammed Fahim
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Team Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/faahym"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/faahym/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/faahym/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-          </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <!--webops-->
-        <div>
-          <div class="text-center text-3xl font-medium ">Web-ops</div>
-          <div class="flex justify-center">
-            <!--person component 1-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Mohammed Fahim
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Team member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/faahym"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/faahym/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/faahym/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 2-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Ujjwal Rustagi
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Team member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="#"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="#"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/ujjwal2411/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-          </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <!--Subsystem heads-->
-        <div>
-          <div class="text-center text-3xl font-medium ">Suspension Subsystem</div>
-          <div class="flex justify-center">
-            <!--person component 1-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Ashutosh Gupta
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Suspension Head
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/AshTG01"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/_ashtg_/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/ashutosh-gupta-4b6745175/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 2-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Mitul Jinger
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Suspension Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/mitul.jinger"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/mituljinger/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/mitul-jinger/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Ritesh Ranjan
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Suspension Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/ritesh.ranjan.58323431"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/_ritesh.ranjan__/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/ritesh-ranjan-669b4a202/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 4-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Ankit Singh Rawat
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Suspension Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/ankitsingh.rawat.77920"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="#"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/ankit-singh-rawat-1708061b2/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="text-center text-3xl font-medium ">Steering Subsystem</div>
-          <div class="flex justify-center">
-            <!--person component 1-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Manan Vora
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Steering Head
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/manan.vora.71"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/manan_vo_rha/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/manan-vora-360852190/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 2-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Durgansh Mishra
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Steering Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/durgansh.mishra.3/"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/durgansh_mishra333/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/durgansh-mishra/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Shardul Shinde
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Steering Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/sharneil.sh7"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/sharneil.sh7/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="www.linkedin.com/in/shardul-shinde/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="text-center text-3xl font-medium ">Chassis,Aerodynamics and Radiator</div>
-          <div class="flex justify-center">
-            <!--person component 1-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Rushabh Parikh
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Chassis-Aero-Radiator Head
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/TheRushabh"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/ruush.i_11/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/parikhrushabh/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 2-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Khushi Meena
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Chassis Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="#"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="#"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/khushi-meena-747320175/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Sanchit Sharma
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Chassis Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/sanchit11sharnma"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/sanchit_sharma_11/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/sanchit0800/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 4-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Upendra Kumar
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Chassis Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/profile.php?id=100027520783505"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/upendra758/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/upendra-kumar-7962901b0/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 5-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      M Sarim Ameed Khan
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Chassis Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/sarimameed.khan.1"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/sarimameedkhan/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/sarim-ameed-khan-b5b24018b/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-          </div>
-        </div>
-        
-          <div class="text-center text-3xl font-medium ">Drivetrain Subsystem</div>
-          <div class="flex justify-center">
-            <!--person component 1-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Kunal Kandu
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Drivetrain Head
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/kunal.kundu.9212"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/imkunalkundu/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/kunal-kundu-140584179/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 2-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Priyanshu Bhanu
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Drivetrain Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/priyanshu.bhanu.7"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/priyanshu_bhanu/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/priyanshu-bhanu-b04982192/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            
-            
-          </div>
-        </div>
-        <div>
-          <div class="text-center text-3xl font-medium ">Engine, Intake and Exhaust</div>
-          <div class="flex justify-center">
-            <!--person component 1-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Sitanshu Chaudhari
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Intake & Exhaust Head
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/sitanshu.chaudhari.71"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/sitanshu_c/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/sitanshu-c-b78624145/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 2-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Shubham Panchal
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Intake & Exhaust Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/profile.php?id=100037534932602"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/_.sbm___/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/shubham-panchal-sbm-1015121a6"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            
-            
-          </div>
-        </div>
-        <div>
-          <div class="text-center text-3xl font-medium ">Vehicle Dynamics Subsystem</div>
-          <div class="flex justify-center">
-            <!--person component 1-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Hitesh Yadav
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      VD Head
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/profile.php?id=100010005487834"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/hiteshyadav22/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/yhitesh/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 2-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Nitish Tripura
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Vehicle Dynamics Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/leesonlain"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/keimanitish/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/nitish-tripura-2868751a1/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Vishal Yadav
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Vehicle Dynamics Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/vishalyadavcool.super"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/vishal_yadav30/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/vishal-yadav-7b2502190"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            
-          </div>
-        </div>
-        <div>
-          <div class="text-center text-3xl font-medium ">Brakes Subsystem</div>
-          <div class="flex justify-center">
-            <!--person component 1-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Rahul Dewangan
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Brakes Head
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="#"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="#"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="#"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 2-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Pratyanshu Raj Singh
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Brakes Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/pratyanshu.rajsingh.94"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/pratyanshu._.20/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/pratyanshu-raj-singh-bb0b351a7/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-            <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                      Shyam Sundar Chauhan
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      Brakes Member
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/shyamsundar.chauhan.9216"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/shyamsn7/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/shyam-sundar-chauhan-108a4419b"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            
-          </div>
-        </div>
-        <div>
+
+  <div class="w-full lg:max-w-full lg:flex py-16">
+    <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
+      <div class="mb-8">
+        <p class="text-gray-700 text-base">The second formula style car, its manufacturing started in 2018. We had in hand experiences from manufacturing Tachyon 1.0 which helped us in making this car smoothly. This car participated in Formula Bharat 2020, unfortunately due to logistics issue this car couldn’t reach on time to the competition. </p>
       </div>
+
+    </div>
+    <div class="h-96 w-full bg-cover bg-no-repeat bg-top rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-members" style="background-image: url('./img_cars/tachyon2_2.jpg'); z-index: -1;" title="Our Team">
+
+    </div>
+  </div>
+  <div class="w-full lg:max-w-full lg:flex py-16 relative">
+      <img src="./img_cars/tachyon2_3.jpg" alt="" class="relative w-full">
+
+      <div class="" ONCLICK="ShowAndHide2()" >
+        <div class="absolute" style="bottom:36.7%;left:15%">
+          <img src="./img/Ellipse 7.png" class="" alt="">
+          <img class="relative bottom-5 right-1 "  src="./img/Ellipse 8.png" alt="">
+          <div class="text-3xl w-full text-white absolute bottom-4 left-8 " style="font-family: nebula;">TYRES</div>
+      </div>
+      <div class="absolute" style="display: none;top:59%;left:14.8%" id="SectionName2">
+         <img class=" "style="width:6%"src="./img/circle-cropped.png" alt="">
+        <img class=" relative left-4 bottom-1"style="width:90%"src="./img/Vector 1.png" alt="">
+        <div class="text-xl text-white relative left-32 bottom-8" style="font-family: poppins;">HOOSIER 10.0X6.0-18 TYRES</div>
+      </div>
+      </div>
+
+  <div class=""ONCLICK="ShowAndHide()">
+    <div class="absolute"style="bottom:45%;left:28%" >
+      <img src="./img/Ellipse 7.png" class="" alt="">
+      <img class="relative bottom-5 right-1 "  src="./img/Ellipse 8.png" alt="">
+      <div class="text-3xl w-full text-white absolute bottom-4 left-8 " style="font-family: nebula;">ENGINE</div>
+    </div>
+    <div class="absolute" style="display: none;top:50.5%;left:27.8%" id="SectionName">
+      <img class=" "style="width:6%"src="./img/circle-cropped.png" alt="">
+     <img class=" relative  left-4 bottom-1"style="width:70%;"src="./img/Vector 1.png" alt="">
+    <div class="relative"style="bottom:100px;left:55%">
+      <div class="text-xl text-white  " style="font-family: poppins;">390 CC</div>
+      <div class="text-xl text-white  " style="font-family: poppins;">30 kW</div>
+      <div class="text-xl text-white " style="font-family: poppins;">33 nm</div>
+    </div>
+  </div>
+  </div>
+  <div class="" ONCLICK="ShowAndHide1()">
+    <div class="absolute"style="bottom:45%;left:73%">
+      <img src="./img/Ellipse 7.png" class="" alt="">
+      <img class="relative bottom-5 right-1 "  src="./img/Ellipse 8.png" alt="">
+      <div class="text-3xl w-full text-white absolute bottom-4 left-8 " style="font-family: nebula;">BODY</div>
+    </div>
+    <div class="absolute" style="display: none;top:50.5%;left:72.8%" id="SectionName1">
+       <img class=" "style="width:6%"src="./img/circle-cropped.png" alt="">
+      <img class=" relative left-4 bottom-1"style="width:90%"src="./img/Vector 1.png" alt="">
+      <div class="text-xl text-white relative left-28 bottom-8" style="font-family: poppins;">FIBRE REINFORCED PLASTIC BODY</div>
+    </div>
+  </div>
+
+
+  </div>
+<div class="lg:flex" style="justify-content:center;">
+  <div class="flex ml-24 w-auto">
+    <div class="p-5 px-10 flex">
+
+      <div class="flex-col">
+        <div class="text-base  mt-6" style="font-family: nebula; margin-right:300px">TOP SPEED</div>
+        <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">80 km/h</div>
+      </div>
+    </div>
+
+    <div class="p-5 px-10 flex">
+
+      <div class="flex-col">
+        <div class="text-base  mt-6" style="font-family: nebula;margin-right:300px">MAX POWER</div>
+        <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">30 kW</div>
+      </div>
+    </div>
+
+    <div class="p-5 px-10 flex">
+
+      <div class="flex-col">
+        <div class=" text-base  mt-6" style="font-family: nebula">MAX TORQUE</div>
+        <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">33NM</div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+  <div class="w-full lg:max-w-full lg:flex py-16">
+    <div class="h-96 w-full bg-cover rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-cars bg-cover bg-center" style="background-image: url('./img_cars/tachyon2_4.jpg'); z-index: -1;" title="Our Cars">
+    </div>
+    <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
+      <div class="mb-8">
+        <p class="text-gray-700 text-base">This time we decided to work with a smaller engine, KTM RC 390cc which powered the car to achieve a maximum speed of 80 kmph. The body of this car was of Grey color made up of Fiber reinforced plastic. The tires used in this car were Hoosier 10.0x6.0 – 18.</p>
+      </div>
+
+    </div>
+    </div>
+    <div class="carousel relative shadow-2xl bg-white">
+	<div class="carousel-inner relative overflow-hidden w-full">
+	  <!--Slide 1-->
+		<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+		<div class="carousel-item absolute opacity-0" style="height:80vh;">
+  <img class="d-block  w-full h-full object-center object-contain bg-black"  src="./img_cars/tachyon2_5a.jpg" alt="First slide">
+		</div>
+		<label for="carousel-5" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+		<!--Slide 2-->
+		<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+		<div class="carousel-item absolute opacity-0" style="height:80vh;">
+			<img class="d-block w-full h-full object-bottom object-contain" src="./img_cars/tachyon2_5b.jpg" alt="First slide">
+    	</div>
+		<label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+		<!--Slide 3-->
+		<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+		<div class="carousel-item absolute opacity-0" style="height:80vh;">
+			<img class="d-block w-full h-full object-center object-cover" src="./img_cars/tachyon2_5c.jpg" alt="First slide">
+		</div>
+		<label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+		<label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+
+		<!-- Add additional indicators for each slide-->
+		<ol class="carousel-indicators">
+			<li class="inline-block mr-3">
+				<label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+			<li class="inline-block mr-3">
+				<label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+			<li class="inline-block mr-3">
+				<label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+			</li>
+
+		</ol>
+
+	</div>
 
 
     <footer class="bg-black text-white">
