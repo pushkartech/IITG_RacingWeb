@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,69 +15,85 @@
     <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
     <script>
         function ShowAndHide() {
-          var x = document.getElementById("SectionName");
-          if (x.style.display == "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
-          }
+            var x = document.getElementById("SectionName");
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
         }
-      </script>
+    </script>
     <style>
-        *{
+        * {
             scroll-behavior: smooth;
         }
+
         @media screen and (min-width: 1025px) {
             .clip-cars {
-            -webkit-clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
+                -webkit-clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
             }
+
             .clip-members {
-            -webkit-clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+                -webkit-clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
             }
         }
+
         .customunderline:hover {
             text-underline-offset: 5px;
             font-weight: 500;
         }
+
         .customnavi:hover {
             letter-spacing: 0.08em;
             font-weight: 500;
             font-size: 18px;
         }
-        #btn1, #btn2, #btn3, #btn4 {
+
+        #btn1,
+        #btn2,
+        #btn3,
+        #btn4 {
             display: none;
         }
-        #btn1:checked + label > svg {
+
+        #btn1:checked+label>svg {
             transform: rotate(-180deg);
             transition-duration: 1s;
         }
-        #btn2:checked + label > svg {
+
+        #btn2:checked+label>svg {
             transform: rotate(-180deg);
             transition-duration: 1s;
         }
-        #btn3:checked + label > svg {
+
+        #btn3:checked+label>svg {
             transform: rotate(-180deg);
             transition-duration: 1s;
         }
-        #btn4:checked + label > svg {
+
+        #btn4:checked+label>svg {
             transform: rotate(-180deg);
             transition-duration: 1s;
         }
-        .carousel-open:checked + .carousel-item {
+
+        .carousel-open:checked+.carousel-item {
             position: static;
             opacity: 100;
         }
+
         .carousel-item {
             -webkit-transition: opacity 0.6s ease-out;
             transition: opacity 0.6s ease-out;
         }
-        #carousel-1:checked ~ .control-1,
-        #carousel-2:checked ~ .control-2,
-        #carousel-3:checked ~ .control-3 {
+
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3 {
             display: block;
         }
+
         .carousel-indicators {
             list-style: none;
             margin: 0;
@@ -88,19 +105,26 @@
             text-align: center;
             z-index: 10;
         }
-        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-            color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+
+        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #2b6cb0;
+            /*Set to match the Tailwind colour you want the active one to be */
         }
     </style>
 </head>
+
 <body>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
-    <button onclick="reachTop()" class="bg-red-600 text-white px-1 py-1 rounded-full hover:bg-red-500 focus:outline-none fixed z-50 bottom-10 right-10 hidden" id="topBtn">
+    <button onclick="reachTop()"
+        class="bg-red-600 text-white px-1 py-1 rounded-full hover:bg-red-500 focus:outline-none fixed z-50 bottom-10 right-10 hidden"
+        id="topBtn">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/>
+            <path fill-rule="evenodd"
+                d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                clip-rule="evenodd" />
         </svg>
     </button>
 
@@ -119,11 +143,13 @@
                     <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="teamhover">TEAM</li>
                 </ul>
             </div>
-            
+
             <div class="ml-auto">
                 <ul class="list-none font-normal">
-                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="sponsorshover"><a href="sponsors.html">SPONSORS</a></li>
-                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="contacthover"><a href="contact.html">CONTACT US</a></li>
+                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg"
+                        id="sponsorshover"><a href="sponsors.html">SPONSORS</a></li>
+                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg"
+                        id="contacthover"><a href="contact.html">CONTACT US</a></li>
                 </ul>
             </div>
         </div>
@@ -160,17 +186,48 @@
                         </ul>
                     </li>
                     <li class="h-40">
-                        <center><img src="img/Navpics/Origin.png" alt="ORIGIN" class="h-60 xl:h-72 hidden" id="originCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Tachyon 1.0.png" alt="TACHYON1.0" class="h-72 xl:h-80 hidden" id="tachyon1Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Tachyon 2.0.png" alt="TACHYON2.0" class="h-48 xl:h-60 hidden" id="tachyon2Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/tachyon3.png" alt="TACHYON3.0" class="h-52 xl:h-72 hidden" id="tachyon3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Effi 1.png" alt="EFFICYCLE1.0" class="hidden h-48 xl:h-80" id="effi1Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Effi 2.png" alt="EFFICYCLE2.0" class="h-48 xl:h-80 hidden" id="effi2Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Efficycle 3.0.png" alt="EFFICYCLE3.0" class="h-72 xl:h-80 hidden" id="effi3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Effi4.0.png" alt="EFFICYCLE4.0" class="h-48 xl:h-80 hidden" id="effi4Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Baja 2012.png" alt="BAJA" class="h-64 hidden" id="srijanCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/conceptA.png" alt="CONCEPT A" class="h-64 xl:h-80 hidden" id="conceptACar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/nav_img.png" alt="VISION F" class="h-48 xl:h-64 hidden" id="visionfCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                        <center><img src="img/Navpics/Origin.png" alt="ORIGIN" class="h-60 xl:h-72 hidden"
+                                id="originCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x"
+                                data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8">
+                        </center>
+                        <center><img src="img/Navpics/Tachyon 1.0.png" alt="TACHYON1.0" class="h-72 xl:h-80 hidden"
+                                id="tachyon1Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x"
+                                data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8">
+                        </center>
+                        <center><img src="img/Navpics/Tachyon 2.0.png" alt="TACHYON2.0" class="h-48 xl:h-60 hidden"
+                                id="tachyon2Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x"
+                                data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8">
+                        </center>
+                        <center><img src="img/Navpics/tachyon3.png" alt="TACHYON3.0" class="h-52 xl:h-72 hidden"
+                                id="tachyon3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x"
+                                data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8">
+                        </center>
+                        <center><img src="img/Navpics/Effi 1.png" alt="EFFICYCLE1.0" class="hidden h-48 xl:h-80"
+                                id="effi1Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x"
+                                data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8">
+                        </center>
+                        <center><img src="img/Navpics/Effi 2.png" alt="EFFICYCLE2.0" class="h-48 xl:h-80 hidden"
+                                id="effi2Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x"
+                                data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8">
+                        </center>
+                        <center><img src="img/Navpics/Efficycle 3.0.png" alt="EFFICYCLE3.0" class="h-72 xl:h-80 hidden"
+                                id="effi3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x"
+                                data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8">
+                        </center>
+                        <center><img src="img/Navpics/Effi4.0.png" alt="EFFICYCLE4.0" class="h-48 xl:h-80 hidden"
+                                id="effi4Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x"
+                                data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8">
+                        </center>
+                        <center><img src="img/Navpics/Baja 2012.png" alt="BAJA" class="h-64 hidden" id="srijanCar"
+                                data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true"
+                                data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
+                        <center><img src="img/Navpics/conceptA.png" alt="CONCEPT A" class="h-64 xl:h-80 hidden"
+                                id="conceptACar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x"
+                                data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8">
+                        </center>
+                        <center><img src="img/nav_img.png" alt="VISION F" class="h-48 xl:h-64 hidden" id="visionfCar"
+                                data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true"
+                                data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
                     </li>
                 </ul>
             </div>
@@ -195,8 +252,9 @@
                 </ul>
             </div>
             <div class="mx-auto text-black cursor-default select-none" id="hideDon">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam magnam aperiam harum, ipsum optio aliquam alias sit corrupti minus numquam hic ea veniam eos, ratione possimus, fuga placeat porro.
-            </div>    
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam magnam aperiam harum, ipsum optio
+                aliquam alias sit corrupti minus numquam hic ea veniam eos, ratione possimus, fuga placeat porro.
+            </div>
         </div>
         <div class="px-72 hidden" id="compMenu">
             <ul class="list-none pl-5">
@@ -218,9 +276,14 @@
     <nav class="bg-black lg:hidden text-white">
         <div class="grid grid-cols-2">
             <div class="px-5 focus:outline-none">
+<<<<<<< HEAD
                 <a href="index.html"><img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING" class="h-16 focus:outline-none"></a>
+=======
+                <a href="#"><img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING"
+                        class="h-16 focus:outline-none"></a>
+>>>>>>> ed8c0a3318b08d4643c472cb07754b192a87aa11
             </div>
-            <div class="justify-end flex px-10" id="hamburger"> 
+            <div class="justify-end flex px-10" id="hamburger">
                 <button class="text-white focus:outline-none" id="hamburger">
                     <span class="bar w-6 h-0.5 bg-white block my-1"></span>
                     <span class="bar w-6 h-0.5 bg-white block my-1"></span>
@@ -231,10 +294,12 @@
         <div class="bg-black px-9 border-t-2 border-gray-500 hidden" id="navmenu">
             <ul class="list-none text-lg">
                 <li class="py-4 grid grid-cols-2" id="carsBtn">
-                    <div>CARS</div> 
+                    <div>CARS</div>
                     <div class="ml-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
                         </svg>
                     </div>
                 </li>
@@ -242,7 +307,9 @@
                     <div>COMPETITIONS</div>
                     <div class="ml-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
                         </svg>
                     </div>
                 </li>
@@ -251,7 +318,9 @@
                     <div>TEAM</div>
                     <div class="ml-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
                         </svg>
                     </div>
                 </li>
@@ -260,82 +329,98 @@
             </ul>
         </div>
         <div class="bg-black px-9 border-t-2 border-gray-500 hidden" id="carsmenu">
-          <ul class="list-none text-lg">
-            <li class="py-4" id="backToMainFromCars">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-                </svg>
-            </li>
-            <li class="py-4 grid grid-cols-2">
-                <div id="studentAccoBtn">FORMULA STUDENT</div>
-                <div class="ml-auto">
-                    <input type="checkbox" id="btn1" disabled>
-                    <label for="btn1" class="btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </label>
-                </div>
-                <ul class="list-none text-sm tracking-widest py-4 hid" id="studentAccoDiv">
-                    <li class="py-1"><a href="origin.html">ORIGIN</a></li>
-                    <li class="py-1"><a href="tachyon1.html">TACHYON 1.0</a></li>
-                    <li class="py-1"><a href="tachyon2.html">TACHYON 2.0</a></li>
-                    <li class="py-1"><a href="#">TACHYON 3.0</a></li>
-                </ul>
-            </li>
-            <li class="py-4 grid grid-cols-2">
-                <div id="effiAccoBtn">EFFICYCLE</div>
-                <div class="ml-auto">
-                    <input type="checkbox" id="btn2" disabled>
-                    <label for="btn2" class="btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </label>
-                </div>
-                <ul class="list-none text-sm tracking-widest py-4 hid" id="effiAccoDiv">
-                    <li class="py-1"><a href="effi1.html">EFFICYCLE 1.0</a></li>
-                    <li class="py-1"><a href="effi2.html">EFFICYCLE 2.0</a></li>
-                    <li class="py-1"><a href="effi3.html">EFFICYCLE 3.0</a></li>
-                    <li class="py-1"><a href="effi4.html">EFFICYCLE 4.0</a></li>
-                </ul>
-            </li>
-            <li class="py-4 grid grid-cols-2">
-                <div id="bajaAccoBtn">BAJA</div>
-                <div class="ml-auto">
-                    <input type="checkbox" id="btn3" disabled>
-                    <label for="btn3" class="btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </label>
-                </div>
-                <ul class="list-none text-sm tracking-widest py-4 hid" id="bajaAccoDiv">
-                    <li class="py-1"><a href="baja.html">SRIJAN</a></li>
-                </ul>
-            </li>
-            <li class="py-4 grid grid-cols-2">
-                <div id="conceptAccoBtn">CONCEPT</div>
-                <div class="ml-auto">
-                    <input type="checkbox" id="btn4" disabled>
-                    <label for="btn4" class="btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </label>
-                </div>
-                <ul class="list-none text-sm tracking-widest py-4 hid" id="conceptAccoDiv">
-                    <li class="py-1"><a href="conceptA.html">CONCEPT A</a></li>
-                    <li class="py-1"><a href="visionf.html">VISION F</a></li>
-                </ul>
-            </li>
-          </ul>  
+            <ul class="list-none text-lg">
+                <li class="py-4" id="backToMainFromCars">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </li>
+                <li class="py-4 grid grid-cols-2">
+                    <div id="studentAccoBtn">FORMULA STUDENT</div>
+                    <div class="ml-auto">
+                        <input type="checkbox" id="btn1" disabled>
+                        <label for="btn1" class="btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </label>
+                    </div>
+                    <ul class="list-none text-sm tracking-widest py-4 hid" id="studentAccoDiv">
+                        <li class="py-1"><a href="origin.html">ORIGIN</a></li>
+                        <li class="py-1"><a href="tachyon1.html">TACHYON 1.0</a></li>
+                        <li class="py-1"><a href="tachyon2.html">TACHYON 2.0</a></li>
+                        <li class="py-1"><a href="#">TACHYON 3.0</a></li>
+                    </ul>
+                </li>
+                <li class="py-4 grid grid-cols-2">
+                    <div id="effiAccoBtn">EFFICYCLE</div>
+                    <div class="ml-auto">
+                        <input type="checkbox" id="btn2" disabled>
+                        <label for="btn2" class="btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </label>
+                    </div>
+                    <ul class="list-none text-sm tracking-widest py-4 hid" id="effiAccoDiv">
+                        <li class="py-1"><a href="effi1.html">EFFICYCLE 1.0</a></li>
+                        <li class="py-1"><a href="effi2.html">EFFICYCLE 2.0</a></li>
+                        <li class="py-1"><a href="effi3.html">EFFICYCLE 3.0</a></li>
+                        <li class="py-1"><a href="effi4.html">EFFICYCLE 4.0</a></li>
+                    </ul>
+                </li>
+                <li class="py-4 grid grid-cols-2">
+                    <div id="bajaAccoBtn">BAJA</div>
+                    <div class="ml-auto">
+                        <input type="checkbox" id="btn3" disabled>
+                        <label for="btn3" class="btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </label>
+                    </div>
+                    <ul class="list-none text-sm tracking-widest py-4 hid" id="bajaAccoDiv">
+                        <li class="py-1"><a href="baja.html">SRIJAN</a></li>
+                    </ul>
+                </li>
+                <li class="py-4 grid grid-cols-2">
+                    <div id="conceptAccoBtn">CONCEPT</div>
+                    <div class="ml-auto">
+                        <input type="checkbox" id="btn4" disabled>
+                        <label for="btn4" class="btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </label>
+                    </div>
+                    <ul class="list-none text-sm tracking-widest py-4 hid" id="conceptAccoDiv">
+                        <li class="py-1"><a href="conceptA.html">CONCEPT A</a></li>
+                        <li class="py-1"><a href="visionf.html">VISION F</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
         <div class="bg-black px-9 border-t-2 border-gray-500 hidden" id="competitionsmenu">
             <ul class="list-none text-lg">
                 <li class="py-4" id="backToMainFromComp">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
                     </svg>
                 </li>
                 <li class="py-4"><a href="competitions.html">FORMULA STUDENT</a></li>
@@ -347,7 +432,9 @@
             <ul class="list-none text-lg">
                 <li class="py-4" id="backToMainFromTeam">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
                     </svg>
                 </li>
                 <li class="py-4"><a href="team20_21.html">2021-22</a></li>
@@ -360,189 +447,224 @@
     </nav>
     <div class="h-20 hidden lg:block"></div>
 
-     <div style="padding-top: 1.007934336525307vh;" class="container" style="position: relative; z-index: 99;">
-        <img src="./img_cars/effi1_1.png" alt="" style="height: 92vh;" class="w-full object-cover bg-black">
-        <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;" class="lg:text-8xl md:text-7xl sm:text-5xl text-4xl text-white w-100 leading-tight">
-          <span class="pl-16">EFFICYCLE 1.0</span>
-          <div id="intro"></div>
+    <div style="padding-top: 1.007934336525307vh;" class="container" style="position: relative; z-index: 99;">
+        <img src="./img/Navpics/Effi 1.png" alt="" style="height: 92vh;" class="w-full object-cover bg-black">
+        <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;"
+            class="lg:text-8xl md:text-7xl sm:text-5xl text-4xl text-white w-100 leading-tight">
+            <span class="pl-16">EFFICYCLE 1.0</span>
+            <div id="intro"></div>
         </div>
-        <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-50%, -50%);" class="mx-auto">
-          <a href="#intro"><img alt="Arrow Down Icon" src="./img/down.png"></a>
+        <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-50%, -50%);"
+            class="mx-auto">
+            <a href="#intro"><img alt="Arrow Down Icon" src="./img/down.png"></a>
         </div>
-      </div>
-      <div class="w-full lg:max-w-full lg:flex py-16">
-        <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
-          <div class="mb-8">
-            <p class="text-gray-700 text-base">This competition is aimed at fabricating human and electrically powered hybrid vehicle. We took this trike to participate in Efficycle 2013 held at UIET Chandigarh. This was our first attempt at making such a vehicle and we did it successfully securing 21st rank out of the 80 participants who qualified for the final round. </p>
-          </div>
-    
-        </div>
-        <div class="h-96 w-full bg-cover bg-no-repeat bg-top rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-members" style="background-image: url('./img_cars/effi1_2.jpg'); z-index: -1;" title="Our Team">
-    
-        </div>
-      </div>
-      <div class="w-full lg:max-w-full lg:flex relative object-center bg-black">
-          <img src="./img_cars/effi1_3.jpg" style="width:70%;left:15%" alt="" class="relative  ">
-    
-      <div class="" ONCLICK="ShowAndHide()">
-        <div class="absolute"style="bottom:45%;left:64%" >
-          <img src="./img/Ellipse 7.png" class="" alt="">
-          <img class="relative bottom-5 right-1 "  src="./img/Ellipse 8.png" alt="">
-          <div class="text-3xl w-full text-white absolute bottom-4 left-8 " style="font-family: nebula;">BATTERY</div>
-        </div>
-        <div class="absolute" style="display: none;top:49.7%;left:63.8%" id="SectionName">
-          <img class=" "style="width:6%"src="./img/circle-cropped.png" alt="">
-         <img class=" relative  left-4 bottom-1"style="width:70%;"src="./img/Vector 1.png" alt="">
-        <div class="relative"style="bottom:60px;left:55%">
-          <div class="text-xl text-white  " style="font-family: poppins;">12 V</div>
-          <div class="text-xl text-white " style="font-family: poppins;">4.6 nm</div>
-        </div>
-      </div>
-      </div>
-    
-      </div>
-    <div class="lg:flex" style="justify-content:center;">
-      <div class="flex ml-24 w-auto">
-    
-    
-        <div class="p-5 px-10 flex">
-    
-          <div class="flex-col">
-            <div class="text-base  mt-6" style="font-family: nebula;margin-right:300px">BATTERY VOLTAGE</div>
-            <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">12 V</div>
-          </div>
-        </div>
-    
-        <div class="p-5 px-10 flex">
-    
-          <div class="flex-col">
-            <div class=" text-base  mt-6" style="font-family: nebula">MAX TORQUE</div>
-            <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">4.6NM</div>
-          </div>
-        </div>
-    
-    
-    
-      </div>
     </div>
-      <div class="w-full lg:max-w-full lg:flex py-16">
-        <div class="h-96 w-full bg-cover rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-cars bg-cover bg-center" style="background-image: url('./img_cars/effi1_4.jpg'); z-index: -1;" title="Our Cars">
+    <div class="w-full lg:max-w-full lg:flex py-16">
+        <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
+            <div class="mb-8">
+                <p class="text-gray-700 text-base">This competition is aimed at fabricating human and electrically
+                    powered hybrid vehicle. We took this trike to participate in Efficycle 2013 held at UIET Chandigarh.
+                    This was our first attempt at making such a vehicle and we did it successfully securing 21st rank
+                    out of the 80 participants who qualified for the final round. </p>
+            </div>
+
+        </div>
+        <div class="h-96 w-full bg-cover bg-no-repeat bg-top rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-members"
+            style="background-image: url('./img_cars/effi1_2.jpg'); z-index: -1;" title="Our Team">
+
+        </div>
+    </div>
+    <div class="w-full lg:max-w-full lg:flex relative object-center bg-black">
+        <img src="./img_cars/effi1_3.jpg" style="width:70%;left:15%" alt="" class="relative  ">
+
+        <div class="" ONCLICK="ShowAndHide()">
+            <div class="absolute" style="bottom:45%;left:64%">
+                <img src="./img/Ellipse 7.png" class="" alt="">
+                <img class="relative bottom-5 right-1 " src="./img/Ellipse 8.png" alt="">
+                <div class="text-3xl w-full text-white absolute bottom-4 left-8 " style="font-family: nebula;">BATTERY
+                </div>
+            </div>
+            <div class="absolute" style="display: none;top:49.7%;left:63.8%" id="SectionName">
+                <img class=" " style="width:6%" src="./img/circle-cropped.png" alt="">
+                <img class=" relative  left-4 bottom-1" style="width:70%;" src="./img/Vector 1.png" alt="">
+                <div class="relative" style="bottom:60px;left:55%">
+                    <div class="text-xl text-white  " style="font-family: poppins;">12 V</div>
+                    <div class="text-xl text-white " style="font-family: poppins;">4.6 nm</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="lg:flex" style="justify-content:center;">
+        <div class="flex ml-24 w-auto">
+
+
+            <div class="p-5 px-10 flex">
+
+                <div class="flex-col">
+                    <div class="text-base  mt-6" style="font-family: nebula;margin-right:300px">BATTERY VOLTAGE</div>
+                    <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">12 V</div>
+                </div>
+            </div>
+
+            <div class="p-5 px-10 flex">
+
+                <div class="flex-col">
+                    <div class=" text-base  mt-6" style="font-family: nebula">MAX TORQUE</div>
+                    <div class="text-2xl font-bold" style="font-family: Poppins;font-size:37.52px">4.6NM</div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="w-full lg:max-w-full lg:flex py-16">
+        <div class="h-96 w-full bg-cover rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-cars bg-cover bg-center"
+            style="background-image: url('./img_cars/effi1_4.jpg'); z-index: -1;" title="Our Cars">
         </div>
         <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
-          <div class="mb-8">
-            <p class="text-gray-700 text-base">The Efficycle has a Tadpole: Seat by seat configuration with its total weight being 314 kgs. It is driven electrically by a 12V battery which delivers a maximum torque of 4.6 Nm. Designed keeping in aim a sustainable and greener world, we at IITG Racing hope that such vehicles make it to mainstream and contribute as much as they can in saving our environment</p>
-          </div>
-    
-        </div>
-        </div>
-        <div class="carousel relative shadow-2xl bg-white">
-        <div class="carousel-inner relative overflow-hidden w-full">
-          <!--Slide 1-->
-            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-            <div class="carousel-item absolute opacity-0" style="height:80vh;">
-      <img class="d-block  w-full h-full object-center object-contain bg-black"  src="./img_cars/effi1_5a.jpg" alt="First slide">
+            <div class="mb-8">
+                <p class="text-gray-700 text-base">The Efficycle has a Tadpole: Seat by seat configuration with its
+                    total weight being 314 kgs. It is driven electrically by a 12V battery which delivers a maximum
+                    torque of 4.6 Nm. Designed keeping in aim a sustainable and greener world, we at IITG Racing hope
+                    that such vehicles make it to mainstream and contribute as much as they can in saving our
+                    environment</p>
             </div>
-            <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-            <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-    
+
+        </div>
+    </div>
+    <div class="carousel relative shadow-2xl bg-white">
+        <div class="carousel-inner relative overflow-hidden w-full">
+            <!--Slide 1-->
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+                checked="checked">
+            <div class="carousel-item absolute opacity-0" style="height:80vh;">
+                <img class="d-block  w-full h-full object-center object-contain bg-black" src="./img_cars/effi1_5a.jpg"
+                    alt="First slide">
+            </div>
+            <label for="carousel-3"
+                class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-2"
+                class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
             <!--Slide 2-->
             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item absolute opacity-0" style="height:80vh;">
-                <img class="d-block w-full h-full object-bottom object-contain bg-black" src="./img_cars/effi1_5b.jpg" alt="First slide">
+                <img class="d-block w-full h-full object-bottom object-contain bg-black" src="./img_cars/effi1_5b.jpg"
+                    alt="First slide">
             </div>
-            <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-            <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-    
+            <label for="carousel-1"
+                class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-3"
+                class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
             <!--Slide 3-->
             <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item absolute opacity-0" style="height:80vh;">
-                <img class="d-block w-full h-full object-center object-contain bg-black" src="./img_cars/effi1_5d.jpg" alt="First slide">
+                <img class="d-block w-full h-full object-center object-contain bg-black" src="./img_cars/effi1_5d.jpg"
+                    alt="First slide">
             </div>
-            <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-            <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-    
-    
+            <label for="carousel-2"
+                class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-1"
+                class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+
             <!-- Add additional indicators for each slide-->
             <ol class="carousel-indicators">
                 <li class="inline-block mr-3">
-                    <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    <label for="carousel-1"
+                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
                 </li>
                 <li class="inline-block mr-3">
-                    <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    <label for="carousel-2"
+                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
                 </li>
                 <li class="inline-block mr-3">
-                    <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                    <label for="carousel-3"
+                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
                 </li>
-    
+
             </ol>
-    
+
         </div>
 
-    <footer class="bg-black text-white">
-        <div class="grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 pt-16 gap-5 px-10">
-            <div class="grid grid-flow-col grid-cols-2 place-items-center">
-              <div>
-                <img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING">
-              </div>
-              <div class="text-sm" style="margin-left: -2vw;">
-                <span class="font-bold">IIT GUWAHATI RACING</span><br><br>
-                New SAC<br>
-                Indian Institute of Technology Guwahati<br>
-                Guwahati 781039<br>
-                Assam, India
-              </div>
-            </div>
-            <div class="grid grid-cols-2 grid-rows-3 lg:grid-cols-3 text-base md:text-sm px-4 md:pl-24 lg:pl-0 gap-x-20">
-              <div class="order-1 pl-2 ml-1"><a href="index.html">HOME</a></div>
-              <div class="lg:order-2 order-5 pl-2 ml-1"><a href="ourcars.html">CARS</a></div>
-              <div class="lg:order-3 order-4 pl-2 ml-1 md:ml-3 lg:ml-1"><a href="sponsors.html">SPONSORS</a></div>
-              <div class="lg:order-4 order-3 pl-2 ml-1"><a href="competitions.html">COMPETITIONS</a></div>
-              <div class="lg:order-5 order-2 pl-2 ml-2 md:ml-3 lg:ml-1"><a href="team21_22.html">TEAM</a></div>
-              <div class="order-6 pl-2 ml-1 md:ml-3 lg:ml-1"><a href="contact.html">CONTACT</a></div>
-            </div>
-            <div class="grid grid-rows-2 gap-0 lg:gap-10">
-              <div class="flex flex-row-reverse mx-auto lg:mx-0">
-                <a href="https://www.linkedin.com/company/iitgracing/" target="_blank"><img src="./img/linkedin.png" title="Our LinkedIn page" class="mx-5 w-7.5 h-6"></a>
-                <a href="https://www.youtube.com/channel/UCv6DkzU0C6Fo2Y1bK56y0ew" target="_blank"><img src="./img/yt.png" title="Our YouTube page" class="mx-5 w-7.5 h-6"></a>
-                <a href="https://www.instagram.com/iitg.racing/" target="_blank"><img src="./img/insta.png" title="Our Instagram page" class="mx-5 w-7.5 h-6"></a>
-                <a href="https://www.facebook.com/iitg.racing/" target="_blank"><img src="./img/fb.png" title="Our Facebook page" class="mx-5 w-7.5 h-6"></a>
-              </div>
-              <div class="flex flex-row-reverse mx-auto lg:mx-0">
-                <a href="https://www.iitg.ac.in/" target="_blank"><img src="./img/ft3.png" alt="" class="h-10 w-12 mx-2"></a>
-                <a href="https://www.iitg.ac.in/stud/gymkhana/technical/index.html" target="_blank"><img src="./img/ft2.png" alt="" class="h-10 w-12 mx-2"></a>
-                <a href="https://www.iitg.ac.in/mech/" target="_blank"><img src="./img/ft1.png" alt="" class="h-10 w-12 mx-2"></a>
-              </div>
-            </div>
-          
-        </div>
-        <div class="text-center md:text-base text-xs pb-5 mx-auto">
-          Copyright &copy; Since 2012 - IITG RACING WEB-OPS. All rights reserved.
-        </div>
-      </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>
-        var toTop = document.getElementById("topBtn");
-        window.onscroll = function() {scrollFunction()};
+        <footer class="bg-black text-white">
+            <div class="grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 pt-16 gap-5 px-10">
+                <div class="grid grid-flow-col grid-cols-2 place-items-center">
+                    <div>
+                        <img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING">
+                    </div>
+                    <div class="text-sm" style="margin-left: -2vw;">
+                        <span class="font-bold">IIT GUWAHATI RACING</span><br><br>
+                        New SAC<br>
+                        Indian Institute of Technology Guwahati<br>
+                        Guwahati 781039<br>
+                        Assam, India
+                    </div>
+                </div>
+                <div
+                    class="grid grid-cols-2 grid-rows-3 lg:grid-cols-3 text-base md:text-sm px-4 md:pl-24 lg:pl-0 gap-x-20">
+                    <div class="order-1 pl-2 ml-1"><a href="index.html">HOME</a></div>
+                    <div class="lg:order-2 order-5 pl-2 ml-1"><a href="ourcars.html">CARS</a></div>
+                    <div class="lg:order-3 order-4 pl-2 ml-1 md:ml-3 lg:ml-1"><a href="sponsors.html">SPONSORS</a></div>
+                    <div class="lg:order-4 order-3 pl-2 ml-1"><a href="competitions.html">COMPETITIONS</a></div>
+                    <div class="lg:order-5 order-2 pl-2 ml-2 md:ml-3 lg:ml-1"><a href="team21_22.html">TEAM</a></div>
+                    <div class="order-6 pl-2 ml-1 md:ml-3 lg:ml-1"><a href="contact.html">CONTACT</a></div>
+                </div>
+                <div class="grid grid-rows-2 gap-0 lg:gap-10">
+                    <div class="flex flex-row-reverse mx-auto lg:mx-0">
+                        <a href="https://www.linkedin.com/company/iitgracing/" target="_blank"><img
+                                src="./img/linkedin.png" title="Our LinkedIn page" class="mx-5 w-7.5 h-6"></a>
+                        <a href="https://www.youtube.com/channel/UCv6DkzU0C6Fo2Y1bK56y0ew" target="_blank"><img
+                                src="./img/yt.png" title="Our YouTube page" class="mx-5 w-7.5 h-6"></a>
+                        <a href="https://www.instagram.com/iitg.racing/" target="_blank"><img src="./img/insta.png"
+                                title="Our Instagram page" class="mx-5 w-7.5 h-6"></a>
+                        <a href="https://www.facebook.com/iitg.racing/" target="_blank"><img src="./img/fb.png"
+                                title="Our Facebook page" class="mx-5 w-7.5 h-6"></a>
+                    </div>
+                    <div class="flex flex-row-reverse mx-auto lg:mx-0">
+                        <a href="https://www.iitg.ac.in/" target="_blank"><img src="./img/ft3.png" alt=""
+                                class="h-10 w-12 mx-2"></a>
+                        <a href="https://www.iitg.ac.in/stud/gymkhana/technical/index.html" target="_blank"><img
+                                src="./img/ft2.png" alt="" class="h-10 w-12 mx-2"></a>
+                        <a href="https://www.iitg.ac.in/mech/" target="_blank"><img src="./img/ft1.png" alt=""
+                                class="h-10 w-12 mx-2"></a>
+                    </div>
+                </div>
 
-        function scrollFunction() {
-            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-               toTop.style.display = "block";
+            </div>
+            <div class="text-center md:text-base text-xs pb-5 mx-auto">
+                Copyright &copy; Since 2012 - IITG RACING WEB-OPS. All rights reserved.
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script>
+            var toTop = document.getElementById("topBtn");
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    toTop.style.display = "block";
+                }
+                else {
+                    toTop.style.display = "none";
+                }
             }
-            else {
-                toTop.style.display = "none";
-            }
-        }
 
-        function reachTop() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
-      </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
-    <script src="forcursor.js"></script>
-    <script src="vanilla-tilt.js"></script>
-    <script src="desktopnavbar.js"></script>
-    <script src="mobilenavbar.js"></script>
+            function reachTop() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
+        <script src="forcursor.js"></script>
+        <script src="vanilla-tilt.js"></script>
+        <script src="desktopnavbar.js"></script>
+        <script src="mobilenavbar.js"></script>
 </body>
+
 </html>
