@@ -18,123 +18,11 @@
       scroll-behavior: smooth;
     }
 
-<<<<<<< HEAD
-    <nav class="bg-black text-white hidden lg:block fixed w-screen z-50">
-        <div class="grid grid-cols-3">
-            <div class="col-span-2">
-                <ul class="list-none font-normal">
-                  <a href="index.html">
-                    <li class="float-left pl-9">
-                      <img src="./img/iitgracing.png" alt="IITG RACING" id="logo">
-                    </li>
-                  </a>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="carshover">CARS</li>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="competitionshover">COMPETITIONS</li>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="newshover"><a href="news.html">NEWS</a></li>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="teamhover">TEAM</li>
-                </ul>
-            </div>
-            
-            <div class="ml-auto">
-                <ul class="list-none font-normal">
-                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="sponsorshover"><a href="sponsors.html">SPONSORS</a></li>
-                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="contacthover"><a href="contact.html">CONTACT US</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid grid-rows-2 hidden" id="carsMenu">
-            <div>
-                <ul class="list-none pl-40">
-                    <li class="float-left pl-10">
-                        <ul class="list-none pl-4">
-                            <li class="customnavi cursor-default py-2" id="formulaHover">FORMULA STUDENT</li>
-                            <li class="customnavi cursor-default py-2" id="effiHover">EFFICYCLE</li>
-                            <li class="customnavi cursor-default py-2" id="bajaHover">BAJA</li>
-                            <li class="customnavi cursor-default py-2" id="conceptHover">CONCEPT</li>
-                        </ul>
-                    </li>
-                    <li class="float-left pl-36">
-                        <ul class="list-none hidden" id="formulaOptions">
-                            <li class="customnavi cursor-pointer py-2" id="originHover">ORIGIN</li>
-                            <li class="customnavi cursor-pointer py-2" id="tachyon1Hover">TACHYON 1.0</li>
-                            <li class="customnavi cursor-pointer py-2" id="tachyon2Hover">TACHYON 2.0</li>
-                            <li class="customnavi cursor-pointer py-2" id="tachyon3Hover">TACHYON 3.0</li>
-                        </ul>
-                        <ul class="list-none pl-9 hidden" id="effiOptions">
-                            <li class="customnavi cursor-pointer py-2" id="effi1Hover">EFFICYCLE 1.0</li>
-                            <li class="customnavi cursor-pointer py-2" id="effi2Hover">EFFICYCLE 2.0</li>
-                            <li class="customnavi cursor-pointer py-2" id="effi3Hover">EFFICYCLE 3.0</li>
-                            <li class="customnavi cursor-pointer py-2" id="effi4Hover">EFFICYCLE 4.0</li>
-                        </ul>
-                        <ul class="list-none pl-9 hidden" id="bajaOptions">
-                            <li class="custom-navi cursor-pointer py-2" id="srijanHover">SRIJAN</li>
-                        </ul>
-                        <ul class="list-none pl-9 hidden" id="conceptOptions">
-                            <li class="customnavi cursor-pointer py-2" id="conceptAHover">CONCEPT A</li>
-                            <li class="customnavi cursor-pointer py-2" id="visionfHover">VISION F</li>
-                        </ul>
-                    </li>
-                    <li class="h-40">
-                        <center><img src="img/Navpics/Origin.png" alt="ORIGIN" class="h-60 xl:h-72 hidden" id="originCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Tachyon 1.0.png" alt="TACHYON1.0" class="h-72 xl:h-80 hidden" id="tachyon1Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Tachyon 2.0.png" alt="TACHYON2.0" class="h-48 xl:h-60 hidden" id="tachyon2Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/tachyon3.png" alt="TACHYON3.0" class="h-52 xl:h-72 hidden" id="tachyon3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Effi 1.png" alt="EFFICYCLE1.0" class="hidden h-48 xl:h-80" id="effi1Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Effi 2.png" alt="EFFICYCLE2.0" class="h-48 xl:h-80 hidden" id="effi2Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Efficycle 3.0.png" alt="EFFICYCLE3.0" class="h-72 xl:h-80 hidden" id="effi3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Effi4.0.png" alt="EFFICYCLE4.0" class="h-48 xl:h-80 hidden" id="effi4Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/Baja 2012.png" alt="BAJA" class="h-64 hidden" id="srijanCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/Navpics/conceptA.png" alt="CONCEPT A" class="h-64 xl:h-80 hidden" id="conceptACar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                        <center><img src="img/nav_img.png" alt="VISION F" class="h-48 xl:h-64 hidden" id="visionfCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center>
-                    </li>
-                </ul>
-            </div>
-            <div class="mx-auto mt-32 hidden" id="detailsMenu">
-                <ul class="list-none">
-                    <li class="px-12 float-left">
-                        <span id="f11">TOP SPEED</span><br>
-                        <span class="text-4xl font-semibold" id="f1"></span>
-                    </li>
-                    <li class="px-12 float-left">
-                        <span id="f22">MAX POWER</span><br>
-                        <span class="text-4xl font-semibold" id="f2"></span>
-                    </li>
-                    <li class="px-12 float-left">
-                        <span id="f33">MAX TORQUE</span><br>
-                        <span class="text-4xl font-semibold" id="f3"></span>
-                    </li>
-                    <li class="px-12 float-left">
-                        <span class="" id="f4">ORIGIN</span><br>
-                        <span class="text-4xl font-semibold">KNOW MORE</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="mx-auto text-black cursor-default select-none" id="hideDon">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam magnam aperiam harum, ipsum optio aliquam alias sit corrupti minus numquam hic ea veniam eos, ratione possimus, fuga placeat porro.
-            </div>    
-        </div>
-        <div class="px-72 hidden" id="compMenu">
-            <ul class="list-none pl-5">
-                <li class="py-1 customnavi"><a href="competitions.html">FORMULA STUDENT</a></li>
-                <li class="py-1 customnavi"><a href="competitions.html">COMPETITIONS</a></li>
-                <li class="pb-4 py-1 customnavi"><a href="competitions.html">BAJA</a></li>
-            </ul>
-        </div>
-        <div class="pl-96 hidden" id="teamsMenu">
-            <ul class="list-none pl-52 pb-5">
-                <li class="customnavi"><a href="team21_22.html">2021-22</a></li>
-                <li class="customnavi"><a href="team20_21.html">2020-21</a></li>
-                <li class="customnavi"><a href="alumni.html">ALUMNI</a></li>
-            </ul>
-        </div>
-    </nav>
-=======
     @media screen and (min-width: 1025px) {
       .clip-cars {
         -webkit-clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
       }
->>>>>>> ed8c0a3318b08d4643c472cb07754b192a87aa11
 
       .clip-members {
         -webkit-clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
@@ -142,20 +30,6 @@
       }
     }
 
-<<<<<<< HEAD
-    <nav class="bg-black lg:hidden text-white">
-      <div class="grid grid-cols-2">
-          <div class="px-5 focus:outline-none">
-              <a href="index.html"><img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING" class="h-16 focus:outline-none"></a>
-          </div>
-          <div class="justify-end flex px-10" id="hamburger"> 
-              <button class="text-white focus:outline-none" id="hamburger">
-                  <span class="bar w-6 h-0.5 bg-white block my-1"></span>
-                  <span class="bar w-6 h-0.5 bg-white block my-1"></span>
-                  <span class="bar w-6 h-0.5 bg-white block my-1"></span>
-              </button>
-          </div>
-=======
     .customunderline:hover {
       text-underline-offset: 5px;
       font-weight: 500;
@@ -225,7 +99,6 @@
           <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="teamhover">TEAM
           </li>
         </ul>
->>>>>>> ed8c0a3318b08d4643c472cb07754b192a87aa11
       </div>
 
       <div class="ml-auto">
@@ -532,7 +405,7 @@
     <!--management-->
     <div>
       <div class="text-center text-3xl font-medium ">Management</div>
-      <div class="flex justify-center">
+      <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
         <!--person component 1-->
         <div>
           <figure class="rounded-xl p-8 ">
@@ -546,7 +419,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Secretary
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/kumar.kartikey2"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/k_kartikey/"><img src="img/insta_whitebg.png"
@@ -571,7 +444,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Captain
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/kunal.kundu.9212"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/imkunalkundu/"><img src="img/insta_whitebg.png"
@@ -596,7 +469,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Project Manager
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/profile.php?id=100010005487834"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/hiteshyadav22/"><img src="img/insta_whitebg.png"
@@ -621,7 +494,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Chairperson
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/yashwant.rawat.393"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/_yashwant_rawat_/"><img src="img/insta_whitebg.png"
@@ -640,7 +513,7 @@
     <!--creatives-->
     <div>
       <div class="text-center text-3xl font-medium ">Creatives</div>
-      <div class="flex justify-center">
+      <div class="flex justify-center grid lg:grid-cols-3 lg:mx-64 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
         <!--person component 1-->
         <div>
           <figure class="rounded-xl p-8 ">
@@ -654,7 +527,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Creatives Team Head
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/adisomsom"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/aditosom/"><img src="img/insta_whitebg.png"
@@ -679,7 +552,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Creatives Team Member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/faahym"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/faahym/"><img src="img/insta_whitebg.png"
@@ -704,7 +577,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Creatives Team Member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/profile.php?id=100009672601665"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/must_be_most_crazy_guy/"><img src="img/insta_whitebg.png"
@@ -724,7 +597,7 @@
     <!--webops-->
     <div>
       <div class="text-center text-3xl font-medium ">Web-ops</div>
-      <div class="flex justify-center">
+      <div class="flex justify-center grid lg:grid-cols-2 lg:mx-96 md:grid-cols-2 sm:grid-cols-2 grid-cols-2">
         <!--person component 1-->
         <div>
           <figure class="rounded-xl p-8 ">
@@ -738,7 +611,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Web Team member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/ujjwal.rustagi.1/" target="_blank"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/ujjwalrustagi/" target="_blank"><img src="img/insta_whitebg.png"
@@ -763,7 +636,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Web Team member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/faahym"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/faahym/"><img src="img/insta_whitebg.png"
@@ -783,7 +656,7 @@
     <!--Subsystem heads-->
     <div>
       <div class="text-center text-3xl font-medium ">Suspension Subsystem</div>
-      <div class="flex justify-center">
+      <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
         <!--person component 1-->
         <div>
           <figure class="rounded-xl p-8 ">
@@ -797,7 +670,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Suspension Head
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/AshTG01"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/_ashtg_/"><img src="img/insta_whitebg.png"
@@ -822,7 +695,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Suspension Member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/mitul.jinger"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/mituljinger/"><img src="img/insta_whitebg.png"
@@ -847,7 +720,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Suspension Member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/ritesh.ranjan.58323431"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/_ritesh.ranjan__/"><img src="img/insta_whitebg.png"
@@ -872,7 +745,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Suspension Member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/ankitsingh.rawat.77920"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="#"><img src="img/insta_whitebg.png" class="mx-5 w-7.5 h-6 inline-block m-1"></a>
@@ -887,7 +760,7 @@
     </div>
     <div>
       <div class="text-center text-3xl font-medium ">Steering Subsystem</div>
-      <div class="flex justify-center">
+      <div class="flex justify-center grid lg:grid-cols-3 lg:mx-64 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
         <!--person component 1-->
         <div>
           <figure class="rounded-xl p-8 ">
@@ -901,7 +774,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Steering Head
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/manan.vora.71"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/manan_vo_rha/"><img src="img/insta_whitebg.png"
@@ -926,7 +799,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Steering Member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/durgansh.mishra.3/"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/durgansh_mishra333/"><img src="img/insta_whitebg.png"
@@ -951,7 +824,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Steering Member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/sharneil.sh7"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/sharneil.sh7/"><img src="img/insta_whitebg.png"
@@ -966,8 +839,8 @@
       </div>
     </div>
     <div>
-      <div class="text-center text-3xl font-medium ">Chassis, Aerodynamics and Radiator</div>
-      <div class="flex justify-center">
+      <div class="text-center text-3xl font-medium mx-8">Chassis, Aerodynamics and Radiator</div>
+      <div class="flex justify-center grid lg:grid-cols-5 lg:mx-16 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
         <!--person component 1-->
         <div>
           <figure class="rounded-xl p-8 ">
@@ -981,7 +854,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Chassis-Aero-Radiator Head
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/TheRushabh"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/ruush.i_11/"><img src="img/insta_whitebg.png"
@@ -1006,7 +879,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Chassis-Aero-Radiator Member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="#"><img src="img/fb_whitebg.png" class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="#"><img src="img/insta_whitebg.png" class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.linkedin.com/in/khushi-meena-747320175/"><img src="img/linkedin_whitebg.png"
@@ -1029,7 +902,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Chassis-Aero-Radiator Member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/sanchit11sharnma"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/sanchit_sharma_11/"><img src="img/insta_whitebg.png"
@@ -1054,7 +927,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Chassis-Aero-Radiator Member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/profile.php?id=100027520783505"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/upendra758/"><img src="img/insta_whitebg.png"
@@ -1079,7 +952,7 @@
                 <div class="text-gray-500 text-l font-medium">
                   Chassis-Aero-Radiator Member
                 </div>
-                <div class="justify-center inline-block">
+                <div class="justify-center grid grid-cols-3">
                   <a href="https://www.facebook.com/sarimameed.khan.1"><img src="img/fb_whitebg.png"
                       class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                   <a href="https://www.instagram.com/sarimameedkhan/"><img src="img/insta_whitebg.png"
@@ -1095,7 +968,7 @@
     </div>
 
     <div class="text-center text-3xl font-medium ">Drivetrain Subsystem</div>
-    <div class="flex justify-center">
+    <div class="flex justify-center grid lg:grid-cols-3 lg:mx-64 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
       <!--person component 1-->
       <div>
         <figure class="rounded-xl p-8 ">
@@ -1109,7 +982,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Drivetrain Head
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="https://www.facebook.com/kunal.kundu.9212"><img src="img/fb_whitebg.png"
                     class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="https://www.instagram.com/imkunalkundu/"><img src="img/insta_whitebg.png"
@@ -1134,7 +1007,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Drivetrain Member
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="https://www.facebook.com/tanmay.sandbhor.9"><img src="img/fb_whitebg.png"
                     class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="https://www.instagram.com/tanmay_sandbhor/"><img src="img/insta_whitebg.png"
@@ -1159,7 +1032,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Drivetrain Member
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="https://www.facebook.com/priyanshu.bhanu.7"><img src="img/fb_whitebg.png"
                     class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="https://www.instagram.com/priyanshu_bhanu/"><img src="img/insta_whitebg.png"
@@ -1175,7 +1048,7 @@
   </div>
   <div>
     <div class="text-center text-3xl font-medium ">Engine, Intake and Exhaust</div>
-    <div class="flex justify-center">
+    <div class="flex justify-center grid lg:grid-cols-3 lg:mx-64 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
       <!--person component 1-->
       <div>
         <figure class="rounded-xl p-8 ">
@@ -1189,7 +1062,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Intake & Exhaust Head
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="https://www.facebook.com/sitanshu.chaudhari.71"><img src="img/fb_whitebg.png"
                     class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="https://www.instagram.com/sitanshu_c/"><img src="img/insta_whitebg.png"
@@ -1214,7 +1087,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Intake & Exhaust Member
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="https://www.facebook.com/profile.php?id=100037534932602"><img src="img/fb_whitebg.png"
                     class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="https://www.instagram.com/_.sbm___/"><img src="img/insta_whitebg.png"
@@ -1239,7 +1112,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Intake & Exhaust Member
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="https://www.facebook.com/profile.php?id=100009672601665"><img src="img/fb_whitebg.png"
                     class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="https://www.instagram.com/must_be_most_crazy_guy/"><img src="img/insta_whitebg.png"
@@ -1256,7 +1129,7 @@
   </div>
   <div>
     <div class="text-center text-3xl font-medium ">Vehicle Dynamics Subsystem</div>
-    <div class="flex justify-center">
+    <div class="flex justify-center grid lg:grid-cols-3 lg:mx-64 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
       <!--person component 1-->
       <div>
         <figure class="rounded-xl p-8 ">
@@ -1270,7 +1143,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Vehicle Dynamics Head
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="https://www.facebook.com/profile.php?id=100010005487834"><img src="img/fb_whitebg.png"
                     class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="https://www.instagram.com/hiteshyadav22/"><img src="img/insta_whitebg.png"
@@ -1295,7 +1168,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Vehicle Dynamics Member
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="https://www.facebook.com/leesonlain"><img src="img/fb_whitebg.png"
                     class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="https://www.instagram.com/keimanitish/"><img src="img/insta_whitebg.png"
@@ -1320,7 +1193,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Vehicle Dynamics Member
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="https://www.facebook.com/vishalyadavcool.super"><img src="img/fb_whitebg.png"
                     class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="https://www.instagram.com/vishal_yadav30/"><img src="img/insta_whitebg.png"
@@ -1337,7 +1210,7 @@
   </div>
   <div>
     <div class="text-center text-3xl font-medium ">Brakes Subsystem</div>
-    <div class="flex justify-center">
+    <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
       <!--person component 1-->
       <div>
         <figure class="rounded-xl p-8 ">
@@ -1351,7 +1224,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Brakes Head
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="#"><img src="img/fb_whitebg.png" class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="#"><img src="img/insta_whitebg.png" class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="#"><img src="img/linkedin_whitebg.png" class="mx-5 w-7.5 h-6 inline-block m-1"></a>
@@ -1373,7 +1246,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Brakes Member
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="https://www.facebook.com/pratyanshu.rajsingh.94"><img src="img/fb_whitebg.png"
                     class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="https://www.instagram.com/pratyanshu._.20/"><img src="img/insta_whitebg.png"
@@ -1398,7 +1271,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Brakes Member
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="https://www.facebook.com/shyamsundar.chauhan.9216"><img src="img/fb_whitebg.png"
                     class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="https://www.instagram.com/shyamsn7/"><img src="img/insta_whitebg.png"
@@ -1423,7 +1296,7 @@
               <div class="text-gray-500 text-l font-medium">
                 Brakes Member
               </div>
-              <div class="justify-center inline-block">
+              <div class="justify-center grid grid-cols-3">
                 <a href="#"><img src="img/fb_whitebg.png" class="mx-5 w-7.5 h-6 inline-block m-1"></a>
                 <a href="https://www.instagram.com/venu_madhav.vuppili/"><img src="img/insta_whitebg.png"
                     class="mx-5 w-7.5 h-6 inline-block m-1"></a>
