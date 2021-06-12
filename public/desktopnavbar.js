@@ -419,6 +419,7 @@ $(document).ready(function() {
         $("#f2").text("45kW");
         $("#f3").text("100Nm");
         $("#f4").text("VISION F");
+        $("#knowhref").wrap('<a href="visionf.html" />');
     });
     $("#conceptAHover").mouseover(function() {
         if(!$("#visionfCar").hasClass('hidden')) {
@@ -437,6 +438,7 @@ $(document).ready(function() {
         $("#f2").text("32kW");
         $("#f3").text("36Nm");
         $("#f4").text("CONCEPT A");
+        $("#knowhref").wrap('<a href="conceptA.html" />');
     });
     $("#srijanHover").mouseover(function() {
         if($("#srijanCar").hasClass('hidden')) {
@@ -452,6 +454,7 @@ $(document).ready(function() {
         $("#f2").text("8kW");
         $("#f3").text("23.5Nm");
         $("#f4").text("BAJA");
+        $("#knowhref").wrap('<a href="baja.html" />');
     });
     $("#effi4Hover").mouseover(function() {
         if(!$("#effi1Car").hasClass('hidden')) {
@@ -479,6 +482,7 @@ $(document).ready(function() {
         $("#f2").text("22.9Nm");
         $("#f3").text("48V");
         $("#f4").text("EFFICYCLE 4.0");
+        $("#knowhref").wrap('<a href="effi4.html" />');
     });
     $("#effi3Hover").mouseover(function() {
         if(!$("#effi1Car").hasClass('hidden')) {
@@ -506,6 +510,7 @@ $(document).ready(function() {
         $("#f2").text("4.6Nm");
         $("#f3").text("24V");
         $("#f4").text("EFFICYCLE 3.0");
+        $("#knowhref").wrap('<a href="effi3.html" />');
     });
     $("#effi2Hover").mouseover(function() {
         if(!$("#effi1Car").hasClass('hidden')) {
@@ -533,6 +538,7 @@ $(document).ready(function() {
         $("#f2").text("4.6Nm");
         $("#f3").text("12V");
         $("#f4").text("EFFICYCLE 2.0");
+        $("#knowhref").wrap('<a href="effi2.html" />');
     });
     $("#effi1Hover").mouseover(function() {
         if(!$("#effi4Car").hasClass('hidden')) {
@@ -560,6 +566,7 @@ $(document).ready(function() {
         $("#f2").text("4.6Nm");
         $("#f3").text("12V");
         $("#f4").text("EFFICYCLE 1.0");
+        $("#knowhref").wrap('<a href="effi1.html" />');
     });
     $("#originHover").mouseover(function() {
         if(!$("#tachyon1Car").hasClass('hidden')) {
@@ -587,6 +594,7 @@ $(document).ready(function() {
         $("#f2").text("88kW");
         $("#f3").text("66Nm");
         $("#f4").text("ORIGIN");
+        $("#knowhref").wrap('<a href="origin.html" />');
     });
     $("#tachyon1Hover").mouseover(function() {
         if(!$("#originCar").hasClass('hidden')) {
@@ -614,6 +622,7 @@ $(document).ready(function() {
         $("#f2").text("82kW");
         $("#f3").text("65Nm");
         $("#f4").text("TACHYON 1.0");
+        $("#knowhref").wrap('<a href="tachyon1.html" />');
     });
     $("#tachyon2Hover").mouseover(function() {
         if(!$("#originCar").hasClass('hidden')) {
@@ -641,6 +650,7 @@ $(document).ready(function() {
         $("#f2").text("30kW");
         $("#f3").text("33Nm");
         $("#f4").text("TACHYON 2.0");
+        $("#knowhref").wrap('<a href="tachyon2.html" />');
     });
     $("#tachyon3Hover").mouseover(function() {
         if(!$("#originCar").hasClass('hidden')) {
@@ -668,6 +678,7 @@ $(document).ready(function() {
         $("#f2").text("TBD");
         $("#f3").text("TBD");
         $("#f4").text("TACHYON 3.0");
+        $("#knowhref").wrap('<a href="#" />');
     });
     // -------------hover out jquery-------------
     $("#hideDon").mouseover(function() {
