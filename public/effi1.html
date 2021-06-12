@@ -48,16 +48,14 @@
         }
 
         .customunderline:hover {
-            text-underline-offset: 5px;
+            text-underline-offset: 6px;
             font-weight: 500;
         }
-
         .customnavi:hover {
-            letter-spacing: 0.08em;
-            font-weight: 500;
+            letter-spacing: 0.23em;
+            font-weight: 800;
             font-size: 18px;
         }
-
         #btn1,
         #btn2,
         #btn3,
@@ -134,7 +132,7 @@
         </svg>
     </button>
 
-    <nav class="bg-black text-white hidden lg:block fixed w-screen z-50">
+    <nav class="bg-black text-white hidden lg:block fixed w-screen z-50" style="font-family: nebula;">
         <div class="grid grid-cols-3">
             <div class="col-span-2">
                 <ul class="list-none font-normal">
@@ -207,7 +205,7 @@
                 </ul>
             </div>
             <div class="mx-auto mt-32 hidden" id="detailsMenu">
-                <ul class="list-none">
+                <ul class="list-none" style="font-family: poppins;">
                     <li class="px-12 float-left">
                         <span id="f11">TOP SPEED</span><br>
                         <span class="text-4xl font-semibold" id="f1"></span>
@@ -248,7 +246,7 @@
     </nav>
 
 
-    <nav class="bg-black lg:hidden text-white">
+    <nav class="bg-black lg:hidden text-white" style="font-family: poppins;">
         <div class="grid grid-cols-2">
             <div class="px-5 focus:outline-none">
                 <a href="index.html"><img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING" class="h-16 focus:outline-none"></a>
@@ -307,8 +305,8 @@
                             clip-rule="evenodd" />
                     </svg>
                 </li>
-                <li class="py-4 grid grid-cols-2">
-                    <div id="studentAccoBtn">FORMULA STUDENT</div>
+                <li class="py-4 grid grid-cols-3">
+                    <div id="studentAccoBtn" class="col-span-2">FORMULA STUDENT</div>
                     <div class="ml-auto">
                         <input type="checkbox" id="btn1" disabled>
                         <label for="btn1" class="btn">
@@ -321,10 +319,10 @@
                         </label>
                     </div>
                     <ul class="list-none text-sm tracking-widest py-4 hid" id="studentAccoDiv">
-                        <li class="py-1"><a href="origin.html">ORIGIN</a></li>
-                        <li class="py-1"><a href="tachyon1.html">TACHYON 1.0</a></li>
-                        <li class="py-1"><a href="tachyon2.html">TACHYON 2.0</a></li>
-                        <li class="py-1"><a href="#">TACHYON 3.0</a></li>
+                        <li class="py-1 w-screen"><a href="origin.html">ORIGIN</a></li>
+                        <li class="py-1 w-screen"><a href="tachyon1.html">TACHYON 1.0</a></li>
+                        <li class="py-1 w-screen"><a href="tachyon2.html">TACHYON 2.0</a></li>
+                        <li class="py-1 w-screen"><a href="#">TACHYON 3.0</a></li>
                     </ul>
                 </li>
                 <li class="py-4 grid grid-cols-2">
@@ -341,10 +339,10 @@
                         </label>
                     </div>
                     <ul class="list-none text-sm tracking-widest py-4 hid" id="effiAccoDiv">
-                        <li class="py-1"><a href="effi1.html">EFFICYCLE 1.0</a></li>
-                        <li class="py-1"><a href="effi2.html">EFFICYCLE 2.0</a></li>
-                        <li class="py-1"><a href="effi3.html">EFFICYCLE 3.0</a></li>
-                        <li class="py-1"><a href="effi4.html">EFFICYCLE 4.0</a></li>
+                        <li class="py-1 w-screen"><a href="effi1.html">EFFICYCLE 1.0</a></li>
+                        <li class="py-1 w-screen"><a href="effi2.html">EFFICYCLE 2.0</a></li>
+                        <li class="py-1 w-screen"><a href="effi3.html">EFFICYCLE 3.0</a></li>
+                        <li class="py-1 w-screen"><a href="effi4.html">EFFICYCLE 4.0</a></li>
                     </ul>
                 </li>
                 <li class="py-4 grid grid-cols-2">
@@ -432,7 +430,7 @@
     <div class="w-full lg:max-w-full lg:flex py-16">
         <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
             <div class="mb-8">
-                <p class="text-gray-700 text-base">This competition is aimed at fabricating human and electrically
+                <p class="text-gray-700 text-base" style="font-family: poppins;">This competition is aimed at fabricating human and electrically
                     powered hybrid vehicle. We took this trike to participate in Efficycle 2013 held at UIET Chandigarh.
                     This was our first attempt at making such a vehicle and we did it successfully securing 21st rank
                     out of the 80 participants who qualified for the final round. </p>
@@ -495,7 +493,7 @@
         </div>
         <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
             <div class="mb-8">
-                <p class="text-gray-700 text-base">The Efficycle has a Tadpole: Seat by seat configuration with its
+                <p class="text-gray-700 text-base" style="font-family: poppins;">The Efficycle has a Tadpole: Seat by seat configuration with its
                     total weight being 314 kgs. It is driven electrically by a 12V battery which delivers a maximum
                     torque of 4.6 Nm. Designed keeping in aim a sustainable and greener world, we at IITG Racing hope
                     that such vehicles make it to mainstream and contribute as much as they can in saving our
