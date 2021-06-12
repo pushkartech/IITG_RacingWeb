@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="css/news.css">
   <link rel="stylesheet" href="css/hamburger.css">
   <link rel="stylesheet" href="css/scrollbar.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
   <style>
     * {
       scroll-behavior: smooth;
@@ -39,13 +41,12 @@
     }
 
     .customunderline:hover {
-      text-underline-offset: 5px;
+      text-underline-offset: 6px;
       font-weight: 500;
     }
-
     .customnavi:hover {
-      letter-spacing: 0.08em;
-      font-weight: 500;
+      letter-spacing: 0.23em;
+      font-weight: 800;
       font-size: 18px;
     }
 
@@ -75,36 +76,39 @@
       transform: rotate(-180deg);
       transition-duration: 1s;
     }
+    figcaption {
+      font-family: poppins;
+    }
   </style>
 </head>
 
 <body>
   <div class="cursor"></div>
   <div class="cursor-follower"></div>
-  <nav class="bg-black text-white hidden lg:block fixed w-screen z-50">
+  <nav class="bg-black text-white hidden lg:block fixed w-screen z-50" style="font-family: nebula;">
     <div class="grid grid-cols-3">
       <div class="col-span-2">
         <ul class="list-none font-normal">
           <li class="float-left pl-9">
             <img src="./img/iitgracing.png" alt="IITG RACING" id="logo">
           </li>
-          <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="carshover">CARS
+          <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="carshover">CARS
           </li>
-          <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg"
+          <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg"
             id="competitionshover">COMPETITIONS</li>
-          <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="newshover"><a
+          <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="newshover"><a
               href="news.html">NEWS</a></li>
-          <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="teamhover">TEAM
+          <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="teamhover">TEAM
           </li>
         </ul>
       </div>
 
       <div class="ml-auto">
         <ul class="list-none font-normal">
-          <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="sponsorshover">
+          <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="sponsorshover">
             <a href="sponsors.html">SPONSORS</a>
           </li>
-          <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="contacthover"><a
+          <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="contacthover"><a
               href="contact.html">CONTACT US</a></li>
         </ul>
       </div>
@@ -157,7 +161,7 @@
         </ul>
       </div>
       <div class="mx-auto mt-32 hidden" id="detailsMenu">
-        <ul class="list-none">
+        <ul class="list-none" style="font-family: poppins;">
           <li class="px-12 float-left">
             <span id="f11">TOP SPEED</span><br>
             <span class="text-4xl font-semibold" id="f1"></span>
@@ -198,7 +202,7 @@
   </nav>
 
 
-  <nav class="bg-black lg:hidden text-white">
+  <nav class="bg-black lg:hidden text-white" style="font-family: nebula;">
     <div class="grid grid-cols-2">
       <div class="px-5 focus:outline-none">
         <a href="#"><img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING"
@@ -368,9 +372,13 @@
     <div class="relative">
       <img class="object-cover w-full" src="img/ourmembers.png" style="height: 90.5vh;">
       <div
-        class=" absolute inset-0 z-10 flex justify-left block items-center px-3 py-2 rounded-md text-6xl font-medium text-white m-5">
-        ALMUNI
+        class=" absolute inset-0 z-10 flex justify-left block items-center px-10 py-2 rounded-md text-7xl font-medium text-white m-5" style="font-family: nebula;">
+        ALUMNI
+        <!-- <div id="intro"></div> -->
       </div>
+      <!-- <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-50%, -50%);" class="mx-auto">
+        <a href="#intro"><img alt="Arrow Down Icon" src="./img/down.png"></a>
+      </div> -->
     </div>
   </div>
   <br>
@@ -379,7 +387,8 @@
   <!--team list-->
   <!--2017 batch-->
   <div>
-    <div class="text-center text-3xl font-medium ">2017 Batch</div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2017 Batch</div>
+    <br>
     <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
       <!--person component 1-->
       <div>
@@ -388,10 +397,10 @@
             height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Ananya Manohar
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Bajaj
               </div>
               <div class="justify-center inline-block">
@@ -411,10 +420,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 T Goutham Kumar Goud
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Bajaj
               </div>
               <div class="justify-center inline-block">
@@ -433,10 +442,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Katana Sri Ajay
               </div>
-              <div class="text-gray-500 text-center text-l font-medium ">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 EXL
               </div>
               <div class="justify-center inline-block">
@@ -456,10 +465,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Thota Sai Vaishnav
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 L&T
               </div>
               <div class="justify-center inline-block">
@@ -479,10 +488,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Vishal Jamuar
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Bajaj
               </div>
               <div class="justify-center inline-block">
@@ -502,10 +511,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Sadaival Singh
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Bajaj
               </div>
               <div class="justify-center inline-block">
@@ -525,10 +534,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 R Shreekavi
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 L&T
               </div>
               <div class="justify-center inline-block">
@@ -547,10 +556,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Ayush Kumar
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 GMET at Jaguar Land Rover
               </div>
               <div class="justify-center inline-block">
@@ -566,8 +575,10 @@
     </div>
   </div>
   <!---->
+  <br><br>
   <div>
-    <div class="text-center text-3xl font-medium ">2016 Batch</div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2016 Batch</div>
+    <br>
     <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
       <!--person component 1-->
       <div>
@@ -576,10 +587,10 @@
             height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Himansh Mittal
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Product Analyst at Sprinklr
               </div>
               <div class="justify-center inline-block">
@@ -598,10 +609,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Jatin Kumar Mangal
               </div>
-              <div class="text-gray-500 text-center text-l font-medium ">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Bajaj Auto Ltd.
               </div>
               <div class="justify-center inline-block">
@@ -620,10 +631,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Yugam Jayant
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Data Scientist at Embibe
               </div>
               <div class="justify-center inline-block">
@@ -641,10 +652,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Sudhanshu Verma
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Bajaj Auto Ltd.
               </div>
               <div class="justify-center inline-block">
@@ -659,8 +670,10 @@
     </div>
   </div>
   <!---->
+  <br><br>
   <div>
-    <div class="text-center text-3xl font-medium ">2015 Batch</div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2015 Batch</div>
+    <br>
     <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
       <!--person component 1-->
       <div>
@@ -669,10 +682,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Aashit Rathore
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Graduate Research Assistant at McMaster University
               </div>
               <div class="justify-center inline-block">
@@ -690,10 +703,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Akshat Mandloi
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 AI Function Developer at Bosch
               </div>
               <div class="justify-center inline-block">
@@ -711,10 +724,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Amandeep Sahu
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Senior Business Analyst at Shadowfax
               </div>
               <div class="justify-center inline-block">
@@ -732,10 +745,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Ankur Shiledar
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Graduate Research Associate at The Ohio State University
               </div>
               <div class="justify-center inline-block">
@@ -753,10 +766,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Bhaswati Gohain Barua
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Field Engineer at Schlumberger
               </div>
               <div class="justify-center inline-block">
@@ -774,10 +787,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Nihar Bhardwaj
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Research Assistant at IIT Bombay
               </div>
               <div class="justify-center inline-block">
@@ -795,10 +808,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Ronit Hire
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 GSET at Jaguar Land Rover India
               </div>
               <div class="justify-center inline-block">
@@ -816,10 +829,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Suraj Saroj
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Maintenance Officer at IOCL
               </div>
               <div class="justify-center inline-block">
@@ -833,8 +846,10 @@
     </div>
   </div>
   <!---->
+  <br><br>
   <div>
-    <div class="text-center text-3xl font-medium ">2014 Batch</div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2014 Batch</div>
+    <br>
     <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
       <!--person component 1-->
       <div>
@@ -843,10 +858,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Aditya Kumar
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Senior Operations Engineer at IOCL
               </div>
               <div class="justify-center inline-block">
@@ -864,10 +879,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Ajay Kumar Sandula
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Doctoral Researcher at IISc
               </div>
               <div class="justify-center inline-block">
@@ -885,10 +900,10 @@
             alt="" width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Akshay Pimpalkar
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 MSc at Technical University of Munich
               </div>
               <div class="justify-center inline-block">
@@ -906,10 +921,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Avdhoot Waghmode
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Management Consultant at PwC Consulting
               </div>
               <div class="justify-center inline-block">
@@ -927,10 +942,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Hitansh Singhal
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Associate Body Structures Engineer at Rivian
               </div>
               <div class="justify-center inline-block">
@@ -948,10 +963,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Mayank Thakur
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Manager at Reliance Industries Limited
               </div>
               <div class="justify-center inline-block">
@@ -969,10 +984,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Vivek Sawarkar
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Senior officer at Oil India Ltd.
               </div>
               <div class="justify-center inline-block">
@@ -986,8 +1001,10 @@
     </div>
   </div>
   <!---->
+  <br><br>
   <div>
-    <div class="text-center text-3xl font-medium ">2013 Batch</div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2013 Batch</div>
+    <br>
     <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
       <!--person component 1-->
       <div>
@@ -996,10 +1013,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Anirudh Yadav
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 PGP Batch 2020-22 IIM Bangalore
               </div>
               <div class="justify-center inline-block">
@@ -1017,10 +1034,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Bhupendra Singh Dhaked
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 DAQAS Officer, IES at Ministry of Defence
               </div>
               <div class="justify-center inline-block">
@@ -1038,10 +1055,10 @@
             alt="" width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Gaurav Agrawal
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Analyst at Goldman Sachs Private Equity
               </div>
               <div class="justify-center inline-block">
@@ -1059,10 +1076,10 @@
             alt="" width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Gaurav Gavaskar
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Assistant Executive Engineer at ONGC
               </div>
               <div class="justify-center inline-block">
@@ -1080,10 +1097,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Karmesh Yadav
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Planning Engineer at ISEE
               </div>
               <div class="justify-center inline-block">
@@ -1101,10 +1118,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Minkush Kansal
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 PhD at University of Twente
               </div>
               <div class="justify-center inline-block">
@@ -1122,10 +1139,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Parth Tiwari
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Spacecraft Structures Design Engineer at ISRO
               </div>
               <div class="justify-center inline-block">
@@ -1143,10 +1160,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Rohit Murthy
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Autonomous Driving Engineer at NVIDIA
               </div>
               <div class="justify-center inline-block">
@@ -1164,10 +1181,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Saanwra Khod
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Project Manager at Shyam Indus Power Solutions Pvt. Ltd.
               </div>
               <div class="justify-center inline-block">
@@ -1185,10 +1202,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Sanjeev Kumar
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Aerospace Engineering at University of Illinois Urbana-Champaign
               </div>
               <div class="justify-center inline-block">
@@ -1206,10 +1223,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Shivam Lohia
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Technology Analyst at Citigroup
               </div>
               <div class="justify-center inline-block">
@@ -1223,8 +1240,10 @@
     </div>
   </div>
   <!---->
+  <br><br>
   <div>
-    <div class="text-center text-3xl font-medium ">2012 Batch</div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2012 Batch</div>
+    <br>
     <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
       <!--person component 1-->
       <div>
@@ -1233,10 +1252,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Akash Boddeda
               </div>
-              <div class="text-gray-500 text-center text-l font-medium ">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 GET at General Motors
               </div>
               <div class="justify-center inline-block">
@@ -1254,10 +1273,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Anmol Mukati
               </div>
-              <div class="text-gray-500 text-center text-l font-medium ">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Assistant Manager at Maruti Suzuki India Limited
               </div>
               <div class="justify-center inline-block">
@@ -1275,10 +1294,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Naman Kansal
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Supply Chain Manager at Nykaa.com
               </div>
               <div class="justify-center inline-block">
@@ -1296,10 +1315,10 @@
             alt="" width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Saurabh Samant
               </div>
-              <div class="text-gray-500 text-center text-l font-medium ">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 CAE Analyst at Mercedes Benz
               </div>
               <div class="justify-center inline-block">
@@ -1313,8 +1332,10 @@
     </div>
   </div>
   <!---->
+  <br><br>
   <div>
-    <div class="text-center text-3xl font-medium ">2011 Batch</div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2011 Batch</div>
+    <br>
     <div class="flex justify-center grid lg:grid-cols-2 lg:mx-96 md:grid-cols-2 sm:grid-cols-2 grid-cols-2">
       <!--person component 1-->
       <div>
@@ -1323,10 +1344,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Kaushal Kamal Jain
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 PhD Student at Herrick Lab, Purdue University
               </div>
               <div class="justify-center inline-block">
@@ -1344,10 +1365,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Puru Rastogi
               </div>
-              <div class="text-gray-500 text-center text-l font-medium ">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Co-Founder at Mowito
               </div>
               <div class="justify-center inline-block">
@@ -1361,8 +1382,10 @@
     </div>
   </div>
   <!---->
+  <br><br>
   <div>
-    <div class="text-center text-3xl font-medium ">2010 Batch</div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2010 Batch</div>
+    <br>
     <div class="flex justify-center grid grid-cols-1">
       <!--person component 1-->
       <div>
@@ -1371,10 +1394,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Amol Lanjewar
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Assistant Engineer at ONGC
               </div>
               <div class="justify-center inline-block">
@@ -1389,8 +1412,10 @@
     </div>
   </div>
   <!---->
+  <br><br>
   <div>
-    <div class="text-center text-3xl font-medium ">2008-09</div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2008-09 Batch</div>
+    <br>
     <div class="flex justify-center">
       <!--person component 1-->
       <div>
@@ -1399,10 +1424,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Ravish Vasan
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Founder at Sattvam
               </div>
               <div class="justify-center inline-block">
@@ -1420,10 +1445,10 @@
             width="384" height="512">
           <div class="pt-6 text-center space-y-4">
             <figcaption>
-              <div class="text-cyan-600 text-xl font-medium">
+              <div class="text-cyan-600 text-lg font-bold">
                 Sanjay Kumar Jauhar
               </div>
-              <div class="text-gray-500 text-center text-l font-medium">
+              <div class="text-gray-500 text-center text-sm font-semibold">
                 Senior Engineer at Aeronautical Development Agency
               </div>
               <div class="justify-center inline-block">
