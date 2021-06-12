@@ -47,7 +47,14 @@
     * {
       scroll-behavior: smooth;
     }
-
+    ::selection {
+      background-color: #BE1E2D;
+      color: white;
+    }
+    ::-moz-selection {
+      background-color: #BE1E2D;
+      color: white;
+    }
     @media screen and (min-width: 1025px) {
       .clip-cars {
         -webkit-clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
