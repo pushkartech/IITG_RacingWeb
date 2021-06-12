@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/news.css">
     <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/scrollbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
     <style>
         *{
             scroll-behavior: smooth;
@@ -34,12 +36,12 @@
             }
         }
         .customunderline:hover {
-            text-underline-offset: 5px;
+            text-underline-offset: 6px;
             font-weight: 500;
         }
         .customnavi:hover {
-            letter-spacing: 0.08em;
-            font-weight: 500;
+            letter-spacing: 0.23em;
+            font-weight: 800;
             font-size: 18px;
         }
         #btn1, #btn2, #btn3, #btn4 {
@@ -71,7 +73,7 @@
           <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
         </svg>
       </button>
-    <nav class="bg-black text-white hidden lg:block fixed w-screen z-50">
+    <nav class="bg-black text-white hidden lg:block fixed w-screen z-50" style="font-family: nebula;">
         <div class="grid grid-cols-3">
             <div class="col-span-2">
                 <ul class="list-none font-normal">
@@ -80,17 +82,17 @@
                           <img src="./img/iitgracing.png" alt="IITG RACING" id="logo">
                         </li>
                       </a>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="carshover">CARS</li>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="competitionshover">COMPETITIONS</li>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="newshover">NEWS</li>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="teamhover">TEAM</li>
+                    <li class="float-left pl-10 tracking-wide py-8 hover:underline customunderline text-md xl:text-lg" id="carshover">CARS</li>
+                    <li class="float-left pl-10 tracking-wide py-8 hover:underline customunderline text-md xl:text-lg" id="competitionshover">COMPETITIONS</li>
+                    <li class="float-left pl-10 tracking-wide py-8 hover:underline customunderline text-md xl:text-lg" id="newshover">NEWS</li>
+                    <li class="float-left pl-10 tracking-wide py-8 hover:underline customunderline text-md xl:text-lg" id="teamhover">TEAM</li>
                 </ul>
             </div>
             
             <div class="ml-auto">
                 <ul class="list-none font-normal">
-                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="sponsorshover">SPONSORS</li>
-                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="contacthover">CONTACT US</li>
+                    <li class="float-left pr-10 tracking-wide py-8 hover:underline customunderline text-md xl:text-lg" id="sponsorshover">SPONSORS</li>
+                    <li class="float-left pr-10 tracking-wide py-8 hover:underline customunderline text-md xl:text-lg" id="contacthover">CONTACT US</li>
                 </ul>
             </div>
         </div>
@@ -181,7 +183,7 @@
         </div>
     </nav>
 
-    <nav class="bg-black lg:hidden text-white">
+    <nav class="bg-black lg:hidden text-white" style="font-family: nebula;">
         <div class="grid grid-cols-2">
             <div class="px-5 focus:outline-none">
                 <a href="index.html"><img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING" class="h-16 focus:outline-none"></a>
@@ -325,21 +327,21 @@
         </div>
     </nav>
     <div class="h-20 hidden lg:block"></div>
-    <div class="text-center py-20 px-24 md:px-36 lg:px-72">
+    <div class="text-center py-20 px-24 md:px-36 lg:px-64 text-md" style="font-family: poppins;">
         The Automobile Club of IIT Guwahati comprises young and hardworking individuals who share a common passion-automobiles. Our love for the latest technologies and innovation in the realm of automobiles drives us to the endeavour to design and fabricate vehicles of our own. We take part in various national competitions like Formula Bharat, SUPRA SAE, SAE NIS EffiCycle. Our love for automobiles drives us to spread this knowledge and help ignite this passion in others. We organize lectures on Automobiles and their various subsystems. We also hold workshops and hackathons to teach and give hands-on experience of different software essential for our field like Solidworks, MATLAB, ANSYS.
     </div>
     <div class="lg:flex">
         <div class="w-full">
             <img src="./img/ourcars.png" alt="Our Cars" title="Our Cars" class="w-full clip-cars z-0">
         </div>
-        <div class="flex flex-col py-10 lg:py-28 px-10">
-            <h1 class="py-2">THE CARS</h1>
-            <p>
+        <div class="flex flex-col py-10 lg:py-20 px-10">
+            <h1 class="text-2xl tracking-widest" style="font-family: nebula;">THE CARS</h1>
+            <p style="font-family: poppins;" class="text-md font-medium">
                 Take a look at the cars and trikes we’ve designed and fabricated since 2010- the year it all started. We took these cars to various national competitions and have won accolades. Till now, all of our cars were internal combustion engine cars. The world is changing and is taking a shift towards a more sustainable and greener future. We at IITG Racing embrace this change and are planning to shift our manufacturing to wholly electric in the next couple of years.
             </p>
             <br>
             <a href="ourcars.html">
-              <span class="mt-4 bg-transparent hover:bg-red-600 text-black-700 font-normal px-4 border border-black hover:border-transparent rounded w-44 hover:text-white text-base cursor-pointer py-2">
+              <span class="mt-4 bg-transparent hover:bg-red-600 text-black-700 font-normal px-4 border border-black hover:border-transparent rounded w-44 hover:text-white text-base cursor-pointer py-2" style="font-family: poppins;">
                   VIEW ALL CARS
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-6 inline-block align-bottom" viewBox="0 0 20 20" fill="currentColor" style="height: 2.0em; vertical-align: -0.65em;">
                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
@@ -350,13 +352,13 @@
     </div>
     <div class="lg:flex mt-2 grid grid-cols-1 w-full">
         <div class="flex flex-col py-10 lg:py-28 px-10 order-last lg:order-1 order-2">
-            <h1 class="py-2">THE TEAM</h1>
-            <p>
+            <h1 class="py-2 text-2xl tracking-widest" style="font-family: nebula;">THE TEAM</h1>
+            <p style="font-family: poppins;" class="text-md font-medium">
                 Meet the team of hardworking individuals who have made it possible here at IITG Racing since 2010. A young, talented, and above all, a super enthusiastic lot who are willing to learn new concepts and skills whenever an opportunity arises, and this exactly is what has made us achieve so much in such a short period. As Henry Ford rightly said, “Coming together is a beginning. Keeping together is progress. Working together is success,” and that is what our team has believed in since the very first day.
             </p>
             <br>
             <a href="team20_21.html">
-            <span class="mt-4 bg-transparent hover:bg-red-600 text-black-700 font-normal px-4 border border-black hover:border-transparent rounded w-48 hover:text-white text-base cursor-pointer py-2">
+            <span class="mt-4 bg-transparent hover:bg-red-600 text-black-700 font-normal px-4 border border-black hover:border-transparent rounded w-48 hover:text-white text-base cursor-pointer py-2" style="font-family: poppins;">
                 MEET THE TEAM
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-6 inline-block align-bottom" viewBox="0 0 20 20" fill="currentColor" style="height: 2.0em; vertical-align: -0.65em;">
                   <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
@@ -368,10 +370,10 @@
             <img src="./img/ourmembers.png" alt="OUR TEAM" title="OUR TEAM" class="w-full clip-members">
         </div>
       </div>
-      <div class="mt-4 py-10 text-center text-2xl font-normal">
+      <div class="mt-4 py-10 text-center text-2xl font-normal" style="font-family: nebula; letter-spacing: 0.4em;">
         LATEST NEWS POSTS
     </div>
-    <div class="grid grid-cols-1 gap-0 px-0 md:grid-cols-3">
+    <div class="grid grid-cols-1 gap-0 px-0 md:grid-cols-3" style="font-family: poppins;">
         
         <div class="news relative rounded-sm">
             <a href="news6.html">
@@ -408,7 +410,7 @@
         </a>
         </div>
       </div>
-      <div class="mt-4 py-10 text-center text-2xl font-normal">
+      <div class="mt-4 py-10 text-center text-2xl font-normal" style="font-family: nebula; letter-spacing: 0.4em;">
         INSTAGRAM
       </div>
       <div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-0">
