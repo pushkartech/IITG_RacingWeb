@@ -48,12 +48,12 @@
             }
         }
         .customunderline:hover {
-            text-underline-offset: 5px;
+            text-underline-offset: 6px;
             font-weight: 500;
         }
         .customnavi:hover {
-            letter-spacing: 0.08em;
-            font-weight: 500;
+            letter-spacing: 0.23em;
+            font-weight: 800;
             font-size: 18px;
         }
         #btn1, #btn2, #btn3, #btn4 {
@@ -115,7 +115,7 @@
         </svg>
     </button>
 
-    <nav class="bg-black text-white hidden lg:block fixed w-screen z-50">
+    <nav class="bg-black text-white hidden lg:block fixed w-screen z-50" style="font-family: nebula;">
         <div class="grid grid-cols-3">
             <div class="col-span-2">
                 <ul class="list-none font-normal">
@@ -124,17 +124,17 @@
                           <img src="./img/iitgracing.png" alt="IITG RACING" id="logo">
                         </li>
                       </a>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="carshover">CARS</li>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="competitionshover">COMPETITIONS</li>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="newshover"><a href="news.html">NEWS</a></li>
-                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-lg" id="teamhover">TEAM</li>
+                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="carshover">CARS</li>
+                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="competitionshover">COMPETITIONS</li>
+                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="newshover"><a href="news.html">NEWS</a></li>
+                    <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="teamhover">TEAM</li>
                 </ul>
             </div>
             
             <div class="ml-auto">
                 <ul class="list-none font-normal">
-                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="sponsorshover"><a href="sponsors.html">SPONSORS</a></li>
-                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-lg" id="contacthover"><a href="contact.html">CONTACT US</a></li>
+                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="sponsorshover"><a href="sponsors.html">SPONSORS</a></li>
+                    <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="contacthover"><a href="contact.html">CONTACT US</a></li>
                 </ul>
             </div>
         </div>
@@ -186,7 +186,7 @@
                 </ul>
             </div>
             <div class="mx-auto mt-32 hidden" id="detailsMenu">
-                <ul class="list-none">
+                <ul class="list-none" style="font-family: poppins;">
                     <li class="px-12 float-left">
                         <span id="f11">TOP SPEED</span><br>
                         <span class="text-4xl font-semibold" id="f1"></span>
@@ -226,7 +226,7 @@
     </nav>
 
 
-    <nav class="bg-black lg:hidden text-white">
+    <nav class="bg-black lg:hidden text-white" style="font-family: nebula;">
         <div class="grid grid-cols-2">
             <div class="px-5 focus:outline-none">
                 <a href="index.html"><img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING" class="h-16 focus:outline-none"></a>
@@ -277,8 +277,8 @@
                     <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
                 </svg>
             </li>
-            <li class="py-4 grid grid-cols-2">
-                <div id="studentAccoBtn">FORMULA STUDENT</div>
+            <li class="py-4 grid grid-cols-3">
+                <div id="studentAccoBtn" class="col-span-2">FORMULA STUDENT</div>
                 <div class="ml-auto">
                     <input type="checkbox" id="btn1" disabled>
                     <label for="btn1" class="btn">
@@ -288,10 +288,10 @@
                     </label>
                 </div>
                 <ul class="list-none text-sm tracking-widest py-4 hid" id="studentAccoDiv">
-                    <li class="py-1"><a href="origin.html">ORIGIN</a></li>
-                    <li class="py-1"><a href="tachyon1.html">TACHYON 1.0</a></li>
-                    <li class="py-1"><a href="tachyon2.html">TACHYON 2.0</a></li>
-                    <li class="py-1"><a href="#">TACHYON 3.0</a></li>
+                    <li class="py-1 w-screen"><a href="origin.html">ORIGIN</a></li>
+                    <li class="py-1 w-screen"><a href="tachyon1.html">TACHYON 1.0</a></li>
+                    <li class="py-1 w-screen"><a href="tachyon2.html">TACHYON 2.0</a></li>
+                    <li class="py-1 w-screen"><a href="#">TACHYON 3.0</a></li>
                 </ul>
             </li>
             <li class="py-4 grid grid-cols-2">
@@ -305,10 +305,10 @@
                     </label>
                 </div>
                 <ul class="list-none text-sm tracking-widest py-4 hid" id="effiAccoDiv">
-                    <li class="py-1"><a href="effi1.html">EFFICYCLE 1.0</a></li>
-                    <li class="py-1"><a href="effi2.html">EFFICYCLE 2.0</a></li>
-                    <li class="py-1"><a href="effi3.html">EFFICYCLE 3.0</a></li>
-                    <li class="py-1"><a href="effi4.html">EFFICYCLE 4.0</a></li>
+                    <li class="py-1 w-screen"><a href="effi1.html">EFFICYCLE 1.0</a></li>
+                    <li class="py-1 w-screen"><a href="effi2.html">EFFICYCLE 2.0</a></li>
+                    <li class="py-1 w-screen"><a href="effi3.html">EFFICYCLE 3.0</a></li>
+                    <li class="py-1 w-screen"><a href="effi4.html">EFFICYCLE 4.0</a></li>
                 </ul>
             </li>
             <li class="py-4 grid grid-cols-2">
@@ -385,7 +385,7 @@
       <div class="w-full lg:max-w-full lg:flex py-16">
         <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
           <div class="mb-8">
-            <p class="text-gray-700 text-base">This is a formula style car designed keeping in mind SUPRA 2015. It was the first racing car manufactured by our club, which came with its own ups and downs. We stood at 67th position among the 167 teams that participated in the competition at the Madras Motor Track</p>
+            <p class="text-gray-700 text-base" style="font-family: poppins;">This is a formula style car designed keeping in mind SUPRA 2015. It was the first racing car manufactured by our club, which came with its own ups and downs. We stood at 67th position among the 167 teams that participated in the competition at the Madras Motor Track</p>
           </div>
     
         </div>
@@ -445,7 +445,7 @@
         </div>
         <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col leading-normal my-auto px-12">
           <div class="mb-8">
-            <p class="text-gray-700 text-base">The car was designed to reach speed up to 115 kmph powered by a Honda CBR 600cc engine with max torque of 66Nm. This car reached 0 to 100 kmph in 14.5 sec. Firstly the car had a green body but after the competition, the team did many changes to its design and the body was also changed to Red-Black</p>
+            <p class="text-gray-700 text-base" style="font-family: poppins;">The car was designed to reach speed up to 115 kmph powered by a Honda CBR 600cc engine with max torque of 66Nm. This car reached 0 to 100 kmph in 14.5 sec. Firstly the car had a green body but after the competition, the team did many changes to its design and the body was also changed to Red-Black</p>
           </div>
     
         </div>
