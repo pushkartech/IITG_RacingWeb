@@ -1,1032 +1,1542 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwindcss 2.0</title>
-    <link rel="stylesheet" href="css/tailwind.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALMUNI | IITG RACING</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/cursor.css">
+  <link rel="stylesheet" href="css/news.css">
+  <link rel="stylesheet" href="css/hamburger.css">
+  <link rel="stylesheet" href="css/scrollbar.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
+    ::selection {
+        background-color: #BE1E2D;
+        color: white;
+    }
+    ::-moz-selection {
+        background-color: #BE1E2D;
+        color: white;
+    }
+
+    @media screen and (min-width: 1025px) {
+      .clip-cars {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
+      }
+
+      .clip-members {
+        -webkit-clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(31% 0, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+
+    .customunderline:hover {
+      text-underline-offset: 6px;
+      font-weight: 500;
+    }
+    .customnavi:hover {
+      letter-spacing: 0.23em;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    #btn1,
+    #btn2,
+    #btn3,
+    #btn4 {
+      display: none;
+    }
+
+    #btn1:checked+label>svg {
+      transform: rotate(-180deg);
+      transition-duration: 1s;
+    }
+
+    #btn2:checked+label>svg {
+      transform: rotate(-180deg);
+      transition-duration: 1s;
+    }
+
+    #btn3:checked+label>svg {
+      transform: rotate(-180deg);
+      transition-duration: 1s;
+    }
+
+    #btn4:checked+label>svg {
+      transform: rotate(-180deg);
+      transition-duration: 1s;
+    }
+    figcaption {
+      font-family: poppins;
+    }
+  </style>
 </head>
+
 <body>
-    <!-- This example requires Tailwind CSS v2.0+ -->
-<nav class="bg-black">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-16">
-        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex-shrink-0 flex items-center">
-            <!-- <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"> -->
-            <img class="hidden lg:block h-12" src="./img/iitgracing.png" title="IITG RACING">
-          </div>
-          <div class="hidden sm:block sm:ml-6">
-            <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="#" class="underline text-white px-3 py-2 rounded-md tracking-widest" aria-current="page" style="text-underline-position: under;">CARS</a>
-  
-              <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md tracking-widest" style="text-underline-position: under;">COMPETITIONS</a>
-  
-              <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md tracking-widest" style="text-underline-position: under;">NEWS</a>
-  
-              <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md tracking-widest" style="text-underline-position: under;">TEAM</a>
-            </div>
-          </div>
-        </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div class="ml-3 relative">
-                <div>
-                  <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md tracking-widest" style="text-underline-position: under;">SPONSORS</a>
-                </div>
-              </div>
-  
-          <!-- Profile dropdown -->
-          <div class="ml-3 relative">
-            <div>
-              <a href="#" class="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md leading-relaxed tracking-widest" style="text-underline-position: under;">CONTACT US</a>
-            </div>
-          </div>
-        </div>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+  <nav class="bg-black text-white hidden lg:block fixed w-screen z-50" style="font-family: nebula;">
+    <div class="grid grid-cols-3">
+      <div class="col-span-2">
+        <ul class="list-none font-normal">
+          <li class="float-left pl-9">
+            <img src="./img/iitgracing.png" alt="IITG RACING" id="logo">
+          </li>
+          <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="carshover">CARS
+          </li>
+          <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg"
+            id="competitionshover">COMPETITIONS</li>
+          <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="newshover"><a
+              href="news.html">NEWS</a></li>
+          <li class="float-left pl-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="teamhover">TEAM
+          </li>
+        </ul>
+      </div>
+
+      <div class="ml-auto">
+        <ul class="list-none font-normal">
+          <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="sponsorshover">
+            <a href="sponsors.html">SPONSORS</a>
+          </li>
+          <li class="float-left pr-10 tracking-widest py-8 hover:underline customunderline text-md xl:text-lg" id="contacthover"><a
+              href="contact.html">CONTACT US</a></li>
+        </ul>
       </div>
     </div>
-  
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
-  
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-  
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-  
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+    <div class="grid grid-rows-2 hidden" id="carsMenu">
+      <div>
+        <ul class="list-none pl-40">
+          <li class="float-left pl-10">
+            <ul class="list-none pl-4">
+              <li class="customnavi cursor-default py-2" id="formulaHover">FORMULA STUDENT</li>
+              <li class="customnavi cursor-default py-2" id="effiHover">EFFICYCLE</li>
+              <li class="customnavi cursor-default py-2" id="bajaHover">BAJA</li>
+              <li class="customnavi cursor-default py-2" id="conceptHover">CONCEPT</li>
+            </ul>
+          </li>
+          <li class="float-left pl-36">
+            <ul class="list-none hidden" id="formulaOptions">
+              <li class="customnavi cursor-pointer py-2" id="originHover">ORIGIN</li>
+              <li class="customnavi cursor-pointer py-2" id="tachyon1Hover">TACHYON 1.0</li>
+              <li class="customnavi cursor-pointer py-2" id="tachyon2Hover">TACHYON 2.0</li>
+              <li class="customnavi cursor-pointer py-2" id="tachyon3Hover">TACHYON 3.0</li>
+            </ul>
+            <ul class="list-none pl-9 hidden" id="effiOptions">
+              <li class="customnavi cursor-pointer py-2" id="effi1Hover">EFFICYCLE 1.0</li>
+              <li class="customnavi cursor-pointer py-2" id="effi2Hover">EFFICYCLE 2.0</li>
+              <li class="customnavi cursor-pointer py-2" id="effi3Hover">EFFICYCLE 3.0</li>
+              <li class="customnavi cursor-pointer py-2" id="effi4Hover">EFFICYCLE 4.0</li>
+            </ul>
+            <ul class="list-none pl-9 hidden" id="bajaOptions">
+              <li class="custom-navi cursor-pointer py-2" id="srijanHover">SRIJAN</li>
+            </ul>
+            <ul class="list-none pl-9 hidden" id="conceptOptions">
+              <li class="customnavi cursor-pointer py-2" id="conceptAHover">CONCEPT A</li>
+              <li class="customnavi cursor-pointer py-2" id="visionfHover">VISION F</li>
+            </ul>
+          </li>
+          <li class="h-40">
+            <a href="origin.html"><center><img src="img/Navpics/Origin.png" alt="ORIGIN" class="h-60 xl:h-72 hidden" id="originCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+            <a href="tachyon1.html"><center><img src="img/Navpics/Tachyon 1.0.png" alt="TACHYON1.0" class="h-72 xl:h-80 hidden" id="tachyon1Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+            <a href="tachyon2.html"><center><img src="img/Navpics/Tachyon 2.0.png" alt="TACHYON2.0" class="h-48 xl:h-60 hidden" id="tachyon2Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+            <a href="#"><center><img src="img/Navpics/tachyon3.png" alt="TACHYON3.0" class="h-52 xl:h-72 hidden" id="tachyon3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+            <a href="effi1.html"><center><img src="img/Navpics/Effi 1.png" alt="EFFICYCLE1.0" class="hidden h-48 xl:h-80" id="effi1Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+            <a href="effi2.html"><center><img src="img/Navpics/Effi 2.png" alt="EFFICYCLE2.0" class="h-48 xl:h-80 hidden" id="effi2Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+            <a href="effi3.html"><center><img src="img/Navpics/Efficycle 3.0.png" alt="EFFICYCLE3.0" class="h-72 xl:h-80 hidden" id="effi3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+            <a href="effi4.html"><center><img src="img/Navpics/Effi4.0.png" alt="EFFICYCLE4.0" class="h-48 xl:h-80 hidden" id="effi4Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+            <a href="baja.html"><center><img src="img/Navpics/Baja 2012.png" alt="BAJA" class="h-64 hidden" id="srijanCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+            <a href="conceptA.html"><center><img src="img/Navpics/conceptA.png" alt="CONCEPT A" class="h-64 xl:h-80 hidden" id="conceptACar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+            <a href="visionf.html"><center><img src="img/nav_img.png" alt="VISION F" class="h-48 xl:h-64 hidden" id="visionfCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+        </li>
+        </ul>
       </div>
+      <div class="mx-auto mt-32 hidden" id="detailsMenu">
+        <ul class="list-none" style="font-family: poppins;">
+          <li class="px-12 float-left">
+            <span id="f11">TOP SPEED</span><br>
+            <span class="text-4xl font-semibold" id="f1"></span>
+          </li>
+          <li class="px-12 float-left">
+            <span id="f22">MAX POWER</span><br>
+            <span class="text-4xl font-semibold" id="f2"></span>
+          </li>
+          <li class="px-12 float-left">
+            <span id="f33">MAX TORQUE</span><br>
+            <span class="text-4xl font-semibold" id="f3"></span>
+          </li>
+          <li class="px-12 float-left">
+            <span class="" id="f4">ORIGIN</span><br>
+            <span class="text-4xl font-semibold" id="knowhref">KNOW MORE</span>
+          </li>
+        </ul>
+      </div>
+      <div class="mx-auto text-black cursor-default select-none" id="hideDon">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nam magnam aperiam harum, ipsum optio aliquam
+        alias sit corrupti minus numquam hic ea veniam eos, ratione possimus, fuga placeat porro.
+      </div>
+    </div>
+    <div class="px-72 hidden" id="compMenu">
+      <ul class="list-none pl-5">
+        <li class="py-1 customnavi"><a href="competitions.html">FORMULA STUDENT</a></li>
+        <li class="py-1 customnavi"><a href="competitions.html">EFFICYCLE</a></li>
+        <li class="pb-4 py-1 customnavi"><a href="competitions.html">BAJA</a></li>
+      </ul>
+    </div>
+    <div class="pl-96 hidden" id="teamsMenu">
+      <ul class="list-none pl-52 pb-5">
+        <li class="customnavi"><a href="team21_22.html">2021-22</a></li>
+        <li class="customnavi"><a href="team20_21.html">2020-21</a></li>
+        <li class="customnavi"><a href="alumni.html">ALUMNI</a></li>
+      </ul>
     </div>
   </nav>
-  <!--members image-->
+
+
+  <nav class="bg-black lg:hidden text-white" style="font-family: nebula;">
+    <div class="grid grid-cols-2">
+      <div class="px-5 focus:outline-none">
+        <a href="#"><img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING"
+            class="h-16 focus:outline-none"></a>
+      </div>
+      <div class="justify-end flex px-10" id="hamburger">
+        <button class="text-white focus:outline-none" id="hamburger">
+          <span class="bar w-6 h-0.5 bg-white block my-1"></span>
+          <span class="bar w-6 h-0.5 bg-white block my-1"></span>
+          <span class="bar w-6 h-0.5 bg-white block my-1"></span>
+        </button>
+      </div>
+    </div>
+    <div class="bg-black px-9 border-t-2 border-gray-500 hidden" id="navmenu">
+      <ul class="list-none text-lg">
+        <li class="py-4 grid grid-cols-2" id="carsBtn">
+          <div>CARS</div>
+          <div class="ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+        </li>
+        <li class="py-4 grid grid-cols-2" id="competitionsBtn">
+          <div>COMPETITIONS</div>
+          <div class="ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+        </li>
+        <li class="py-4"><a href="news.html">NEWS</a></li>
+        <li class="py-4 grid grid-cols-2" id="teamsBtn">
+          <div>TEAM</div>
+          <div class="ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+        </li>
+        <li class="py-4"><a href="sponsors.html">SPONSORS</a></li>
+        <li class="py-4"><a href="contact.html">CONTACT US</a></li>
+      </ul>
+    </div>
+    <div class="bg-black px-9 border-t-2 border-gray-500 hidden" id="carsmenu">
+      <ul class="list-none text-lg">
+        <li class="py-4" id="backToMainFromCars">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </li>
+        <li class="py-4 grid grid-cols-3">
+          <div id="studentAccoBtn" class="col-span-2">FORMULA STUDENT</div>
+          <div class="ml-auto">
+            <input type="checkbox" id="btn1" disabled>
+            <label for="btn1" class="btn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </label>
+          </div>
+          <ul class="list-none text-sm tracking-widest py-4 hid" id="studentAccoDiv">
+            <li class="py-1 w-screen"><a href="origin.html">ORIGIN</a></li>
+            <li class="py-1 w-screen"><a href="tachyon1.html">TACHYON 1.0</a></li>
+            <li class="py-1 w-screen"><a href="tachyon2.html">TACHYON 2.0</a></li>
+            <li class="py-1 w-screen"><a href="#">TACHYON 3.0</a></li>
+          </ul>
+        </li>
+        <li class="py-4 grid grid-cols-2">
+          <div id="effiAccoBtn">EFFICYCLE</div>
+          <div class="ml-auto">
+            <input type="checkbox" id="btn2" disabled>
+            <label for="btn2" class="btn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </label>
+          </div>
+          <ul class="list-none text-sm tracking-widest py-4 hid" id="effiAccoDiv">
+            <li class="py-1 w-screen"><a href="effi1.html">EFFICYCLE 1.0</a></li>
+            <li class="py-1 w-screen"><a href="effi2.html">EFFICYCLE 2.0</a></li>
+            <li class="py-1 w-screen"><a href="effi3.html">EFFICYCLE 3.0</a></li>
+            <li class="py-1 w-screen"><a href="effi4.html">EFFICYCLE 4.0</a></li>
+          </ul>
+        </li>
+        <li class="py-4 grid grid-cols-2">
+          <div id="bajaAccoBtn">BAJA</div>
+          <div class="ml-auto">
+            <input type="checkbox" id="btn3" disabled>
+            <label for="btn3" class="btn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </label>
+          </div>
+          <ul class="list-none text-sm tracking-widest py-4 hid" id="bajaAccoDiv">
+            <li class="py-1"><a href="baja.html">SRIJAN</a></li>
+          </ul>
+        </li>
+        <li class="py-4 grid grid-cols-2">
+          <div id="conceptAccoBtn">CONCEPT</div>
+          <div class="ml-auto">
+            <input type="checkbox" id="btn4" disabled>
+            <label for="btn4" class="btn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </label>
+          </div>
+          <ul class="list-none text-sm tracking-widest py-4 hid" id="conceptAccoDiv">
+            <li class="py-1"><a href="conceptA.html">CONCEPT A</a></li>
+            <li class="py-1"><a href="visionf.html">VISION F</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="bg-black px-9 border-t-2 border-gray-500 hidden" id="competitionsmenu">
+      <ul class="list-none text-lg">
+        <li class="py-4" id="backToMainFromComp">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </li>
+        <li class="py-4"><a href="competitions.html">FORMULA STUDENT</a></li>
+        <li class="py-4"><a href="competitions.html">EFFICYCLE</a></li>
+        <li class="py-4"><a href="competitions.html">BAJA</a></li>
+      </ul>
+    </div>
+    <div class="bg-black px-9 border-t-2 border-gray-500 hidden" id="teamsmenu">
+      <ul class="list-none text-lg">
+        <li class="py-4" id="backToMainFromTeam">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </li>
+        <li class="py-4"><a href="team20_21.html">2021-22</a></li>
+        <li class="py-4"><a href="team21_20.html">2021-20</a></li>
+        <li class="py-4"><a href="almuni.html">ALUMNI</a></li>
+      </ul>
+    </div>
+    <div class="bg-black fixed w-full text-black h-screen hidden" id="hiddenarea">
+    </div>
+  </nav>
+  <div class="h-20 hidden lg:block"></div>
+
   <div>
     <div class="relative">
-      <img class="object-cover h-120 w-full" src="img/ourmembers.png">
-      <div class=" absolute inset-0 z-10 flex justify-left block items-center  px-3 py-2 rounded-md text-6xl font-medium text-white m-5">TEAM<br>2020-21
+      <img class="object-cover w-full" src="img/ourmembers.png" style="height: 90.5vh;">
+      <div
+        class=" absolute inset-0 z-10 flex justify-left block items-center px-10 py-2 rounded-md text-7xl font-medium text-white m-5" style="font-family: nebula;">
+        ALUMNI
+        <!-- <div id="intro"></div> -->
       </div>
+      <!-- <div style="position: absolute; left: 50%; top: 95.75923392612859vh; transform: translate(-50%, -50%);" class="mx-auto">
+        <a href="#intro"><img alt="Arrow Down Icon" src="./img/down.png"></a>
+      </div> -->
     </div>
   </div>
   <br>
   <br>
   <br>
   <!--team list-->
+  <!--2017 batch-->
   <div>
-    <!--2017 batch-->
-    <div>
-      <div class="text-center text-3xl font-medium ">2017-18</div>
-      <div class="flex justify-center">
-        <!--person component 1-->
-        <div>
-          <figure class="rounded-xl p-8 ">
-            <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-            <div class="pt-6 text-center space-y-4">
-              <figcaption>
-                <div class="text-cyan-600 text-xl font-medium">
-                    Ananya Manohar
-                </div>
-                <div class="text-gray-500 text-l font-medium">
-                    <br>
-                </div>
-                <div class="justify-center inline-block">
-                  <a href="https://www.facebook.com/mantowerCorp"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  <a href="https://www.instagram.com/manoharananya/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  <a href="https://www.linkedin.com/in/ananyamanohar/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                </div>
-              </figcaption>
-            </div>
-          </figure>
-        </div>
-        <!--person component 2-->
-        <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    T Goutham Kumar Goud
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                    <a href="#"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    <a href="#"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    <a href="#"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2017 Batch</div>
+    <br>
+    <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
+      <!--person component 1-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto" src="img/profile_pic/Alumni/Ananya.png" alt="" width="384"
+            height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Ananya Manohar
               </div>
-            </figure>
-          </div>
-          <!--person component 3-->
-        <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    Katana Sri Ajay
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                    <a href="https://www.facebook.com/katana.sriajay"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    <a href="https://www.instagram.com/ajay_katana/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    <a href="https://www.linkedin.com/in/ajay987/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Bajaj
               </div>
-            </figure>
-          </div>
-          <!--person component 4-->
-        <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    Thota Sai Vaishnav
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                    <a href="https://www.facebook.com/saivaishnav.thota.9"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    <a href="#"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    <a href="https://www.linkedin.com/in/thota-sai-vaishnav/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
+              <div class="justify-center inline-block">
+                <!-- <a href="https://www.facebook.com/mantowerCorp"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+                      <a href="https://www.instagram.com/manoharananya/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a> -->
+                <a href="https://www.linkedin.com/in/ananyamanohar/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
               </div>
-            </figure>
+            </figcaption>
           </div>
+        </figure>
+      </div>
+      <!--person component 2-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Goutham.png" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                T Goutham Kumar Goud
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Bajaj
+              </div>
+              <div class="justify-center inline-block">
+                <!-- <a href="#"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+                        <a href="#"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a> -->
+                <a href="#"><img src="img/linkedin_whitebg.png" class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 3-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Ajay.png" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Katana Sri Ajay
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                EXL
+              </div>
+              <div class="justify-center inline-block">
+                <!-- <a href="https://www.facebook.com/katana.sriajay"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+                        <a href="https://www.instagram.com/ajay_katana/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a> -->
+                <a href="https://www.linkedin.com/in/ajay987/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 4-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Vaishnav.png" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Thota Sai Vaishnav
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                L&T
+              </div>
+              <div class="justify-center inline-block">
+                <!-- <a href="https://www.facebook.com/saivaishnav.thota.9"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+                        <a href="#"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a> -->
+                <a href="https://www.linkedin.com/in/thota-sai-vaishnav/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 5-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Vishal Jamuar.png" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Vishal Jamuar
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Bajaj
+              </div>
+              <div class="justify-center inline-block">
+                <!-- <a href="https://www.facebook.com/vishal.jamuar.1"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+                        <a href="https://www.instagram.com/the_vatican_cameo/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a> -->
+                <a href="https://www.linkedin.com/in/vishal-jamuar/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 6-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Sadaival.png" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Sadaival Singh
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Bajaj
+              </div>
+              <div class="justify-center inline-block">
+                <!-- <a href="https://www.facebook.com/sadaival.singh"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+                          <a href="https://www.instagram.com/sadaival_singh/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a> -->
+                <a href="https://www.linkedin.com/in/sadaival-singh/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 7-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Shreekavi.png" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                R Shreekavi
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                L&T
+              </div>
+              <div class="justify-center inline-block">
+                <!-- <a href="https://www.facebook.com/shreekavi.rajesh.3"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+                          <a href="https://www.instagram.com/shreekavi_rajesh/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a> -->
+                <a href="#"><img src="img/linkedin_whitebg.png" class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 8-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Aayush.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Ayush Kumar
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                GMET at Jaguar Land Rover
+              </div>
+              <div class="justify-center inline-block">
+                <!-- <a href="https://www.facebook.com/profile.php?id=100022615142841"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+                          <a href="https://www.instagram.com/la_ayush_05/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a> -->
+                <a href="https://www.linkedin.com/in/ak3018/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
       </div>
     </div>
-    <!---->
-    <div>
-        <div class="text-center text-3xl font-medium "></div>
-        <div class="flex justify-center">
-          <!--person component 1-->
-          <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    Vishal Jamuar
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                    <a href="https://www.facebook.com/vishal.jamuar.1"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    <a href="https://www.instagram.com/the_vatican_cameo/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    <a href="https://www.linkedin.com/in/vishal-jamuar/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
-              </div>
-            </figure>
-          </div>
-          <!--person component 2-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Sadaival Singh
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                        <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/sadaival.singh"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/sadaival_singh/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/sadaival-singh/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        R Shreekavi
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                        <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/shreekavi.rajesh.3"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/shreekavi_rajesh/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="#"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 4-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Ayush Kumar
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.facebook.com/profile.php?id=100022615142841"><img src="img/fb_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.instagram.com/la_ayush_05/"><img src="img/insta_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                      <a href="https://www.linkedin.com/in/ak3018/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-        </div>
-    </div>
-    <!---->
-    <div>
-        <div class="text-center text-3xl font-medium ">2016-17</div>
-        <div class="flex justify-center">
-          <!--person component 1-->
-          <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    Himansh Mittal
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                   
-                    <a href="https://www.linkedin.com/in/himansh-mittal-58452b168"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
-              </div>
-            </figure>
-          </div>
-          <!--person component 2-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Jatin Kumar Mangal
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      
-                      <a href="https://www.linkedin.com/in/j-k-m"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Yugam Jayant
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/yugam/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-        </div>
-    </div>
-    <!---->
-    <div>
-        <div class="text-center text-3xl font-medium ">2015-16</div>
-        <div class="flex justify-center">
-          <!--person component 2-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Aashit Rathore
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/aashitrathore/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Akshat Mandloi
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/akshat-2503/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 4-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Amandeep Sahu
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/amandeep-sahu/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-        </div>
-     </div><!---->
-     <div>
-       <div class="text-center text-3xl font-medium "></div>
-       <div class="flex justify-center">
-         <!--person component 5-->
-         <div>
-           <figure class="rounded-xl p-8 ">
-             <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-             <div class="pt-6 text-center space-y-4">
-               <figcaption>
-                 <div class="text-cyan-600 text-xl font-medium">
-                    Ankur Shiledar
-                 </div>
-                 <div class="text-gray-500 text-l font-medium">
-                   <br>
-                 </div>
-                 <div class="justify-center inline-block">
-                   <a href="https://www.linkedin.com/in/ankur-shiledar/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                 </div>
-               </figcaption>
-             </div>
-           </figure>
-         </div>
-         <!--person component 6-->
-         <div>
-             <figure class="rounded-xl p-8 ">
-               <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-               <div class="pt-6 text-center space-y-4">
-                 <figcaption>
-                   <div class="text-cyan-600 text-xl font-medium">
-                    Ronit Hire
-                   </div>
-                   <div class="text-gray-500 text-l font-medium">
-                     <br>
-                   </div>
-                   <div class="justify-center inline-block">
-                     <a href="https://www.linkedin.com/in/ronit-hire/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                   </div>
-                 </figcaption>
-               </div>
-             </figure>
-           </div>
-           <!--person component 7-->
-         <div>
-             <figure class="rounded-xl p-8 ">
-               <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-               <div class="pt-6 text-center space-y-4">
-                 <figcaption>
-                   <div class="text-cyan-600 text-xl font-medium">
-                    Suraj Saroj
-                   </div>
-                   <div class="text-gray-500 text-l font-medium">
-                     <br>
-                   </div>
-                   <div class="justify-center inline-block">
-                     <a href="https://www.linkedin.com/in/suraj-saroj-87b864122/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                   </div>
-                 </figcaption>
-               </div>
-             </figure>
-           </div>
-       </div>
-    </div>
-    <!---->
-    <div>
-        <div class="text-center text-3xl font-medium "></div>
-        <div class="flex justify-center">
-          <!--person component 1-->
-          <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    Aditya Kumar
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                    <a href="https://www.linkedin.com/in/ak4466/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
-              </div>
-            </figure>
-          </div>
-          <!--person component 2-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Ajay Kumar Sandula
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/sandula-ajay-kumar/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Akshay Pimpalkar
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/pimakshay/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 4-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Avdhoot Waghmode
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/avdhoot-waghmode/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-        </div>
-     </div>
-     <!---->
-    <div>
-        <div class="text-center text-3xl font-medium "></div>
-        <div class="flex justify-center">
-          <!--person component 1-->
-          <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    Hitansh Singhal
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                    <a href="https://www.linkedin.com/in/hs123/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
-              </div>
-            </figure>
-          </div>
-          <!--person component 2-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Mayank Thakur
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/mayank1615/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 7-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Vivek Sawarkar
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/vivek-sawarkar/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-        </div>
-     </div>
-     <!---->
-    <div>
-        <div class="text-center text-3xl font-medium ">2013-2012</div>
-        <div class="flex justify-center">
-          <!--person component 1-->
-          <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    Anirudh Yadav
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                    <a href="https://www.linkedin.com/in/anirudhyadav1001/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
-              </div>
-            </figure>
-          </div>
-          <!--person component 2-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Gaurav Agrawal
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/gauraviitg12/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Gaurav Gavaskar
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/g-gavaskar-2750/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 4-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Karmesh Yadav
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/karmesh-yadav/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-        </div>
-     </div>
-     <!---->
-    <div>
-        <div class="text-center text-3xl font-medium "></div>
-        <div class="flex justify-center">
-          <!--person component 1-->
-          <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    Minkush Kansal
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                    <a href="https://www.linkedin.com/in/minkush-kansal/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
-              </div>
-            </figure>
-          </div>
-          <!--person component 2-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Parth Tiwari
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/parth-tiwari/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Rohit Murthy
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/rohitmurthy1/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 4-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Saanwra Khod
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/saanwra-khod-0687678a/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-        </div>
-     </div>
-     <!---->
-    <div>
-        <div class="text-center text-3xl font-medium "></div>
-        <div class="flex justify-center">
-          <!--person component 1-->
-          <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    Sanjeev Kumar
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                    <a href="https://www.linkedin.com/in/sanjeev-kumar-696093127/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
-              </div>
-            </figure>
-          </div>
-          <!--person component 2-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Shivam Lohia
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/shivam-lohia-0ab648a1/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-        </div>
-     </div>
-     <!---->
-    <div>
-        <div class="text-center text-3xl font-medium ">2012-11</div>
-        <div class="flex justify-center">
-          <!--person component 1-->
-          <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    Akash Boddeda
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                    <a href="https://www.linkedin.com/in/akashboddeda/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
-              </div>
-            </figure>
-          </div>
-          <!--person component 2-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Anmol Mukati
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/anmol-mukati/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 3-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Naman Kansal
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/namankansal/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            <!--person component 4-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Saurabh Samant
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/saurabh-samant-705576a4/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-        </div>
-     </div>
-     <!---->
-    <div>
-        <div class="text-center text-3xl font-medium ">2011-10</div>
-        <div class="flex justify-center">
-          <!--person component 1-->
-          <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    Kaushal Kamal Jain
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                    <a href="https://www.linkedin.com/in/kaushal23/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
-              </div>
-            </figure>
-          </div>
-          <!--person component 2-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Puru Rastogi
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/pururastogi/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-        </div>
-     </div>
-     <!---->
-    <div>
-        <div class="text-center text-3xl font-medium ">2008-09</div>
-        <div class="flex justify-center">
-          <!--person component 1-->
-          <div>
-            <figure class="rounded-xl p-8 ">
-              <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-              <div class="pt-6 text-center space-y-4">
-                <figcaption>
-                  <div class="text-cyan-600 text-xl font-medium">
-                    Ravish Vasan
-                  </div>
-                  <div class="text-gray-500 text-l font-medium">
-                    <br>
-                  </div>
-                  <div class="justify-center inline-block">
-                    <a href="https://www.linkedin.com/in/vasanravish/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                  </div>
-                </figcaption>
-              </div>
-            </figure>
-          </div>
-          <!--person component 2-->
-          <div>
-              <figure class="rounded-xl p-8 ">
-                <img class="w-32 h-32 rounded-full mx-auto" src="img/profilepicturedefault.png" alt="" width="384" height="512">
-                <div class="pt-6 text-center space-y-4">
-                  <figcaption>
-                    <div class="text-cyan-600 text-xl font-medium">
-                        Sanjay Kumar Jauhar
-                    </div>
-                    <div class="text-gray-500 text-l font-medium">
-                      <br>
-                    </div>
-                    <div class="justify-center inline-block">
-                      <a href="https://www.linkedin.com/in/sanjayjauhar/"><img src="img/linkedin_whitebg.png"  class="mx-5 w-7.5 h-6 inline-block m-1"></a>
-                    </div>
-                  </figcaption>
-                </div>
-              </figure>
-            </div>
-            
-        </div>
-     </div>
-<div>
   </div>
-    <footer class="footer-1 bg-black py-10 text-white">
-        <div class="flex justify-center">
-            <img src="./img/fb.png" title="Our Facebook page" class="mx-5 w-7.5 h-6">
-            <img src="./img/insta.png" title="Our Instagram page" class="mx-5 w-7.5 h-6">
-            <img src="./img/yt.png" title="Our YouTube page" class="mx-5 w-7.5 h-6">
-            <img src="./img/linkedin.png" title="Our LinkedIn page" class="mx-5 w-7.5 h-6">
+  <!---->
+  <br><br>
+  <div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2016 Batch</div>
+    <br>
+    <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
+      <!--person component 1-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto" src="img/profile_pic/Alumni/Himansh.jpg" alt="" width="384"
+            height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Himansh Mittal
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Product Analyst at Sprinklr
+              </div>
+              <div class="justify-center inline-block">
+
+                <a href="https://www.linkedin.com/in/himansh-mittal-58452b168"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 2-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Jatin.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Jatin Kumar Mangal
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Bajaj Auto Ltd.
+              </div>
+              <div class="justify-center inline-block">
+
+                <a href="https://www.linkedin.com/in/j-k-m"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 3-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Yugam.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Yugam Jayant
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Data Scientist at Embibe
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/yugam/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 4-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Sudhanshu.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Sudhanshu Verma
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Bajaj Auto Ltd.
+              </div>
+              <div class="justify-center inline-block">
+
+                <a href="https://www.linkedin.com/in/sv-4b7"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!---->
+  <br><br>
+  <div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2015 Batch</div>
+    <br>
+    <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
+      <!--person component 1-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Aashit.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Aashit Rathore
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Graduate Research Assistant at McMaster University
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/aashitrathore/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 2-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Akshat.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Akshat Mandloi
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                AI Function Developer at Bosch
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/akshat-2503/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 3-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Amandeep.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Amandeep Sahu
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Senior Business Analyst at Shadowfax
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/amandeep-sahu/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 4-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Ankur.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Ankur Shiledar
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Graduate Research Associate at The Ohio State University
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/ankur-shiledar/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 5-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Bhaswati.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Bhaswati Gohain Barua
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Field Engineer at Schlumberger
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/gb-bhaswati/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 6-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profilepicturedefault.png" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Nihar Bhardwaj
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Research Assistant at IIT Bombay
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/nihar-bhardwaj-b83993a3/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 7-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Ronit Hire.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Ronit Hire
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                GSET at Jaguar Land Rover India
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/ronit-hire/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 8-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Suraj.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Suraj Saroj
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Maintenance Officer at IOCL
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/suraj-saroj-87b864122/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!---->
+  <br><br>
+  <div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2014 Batch</div>
+    <br>
+    <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
+      <!--person component 1-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Aditya Kumar.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Aditya Kumar
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Senior Operations Engineer at IOCL
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/ak4466/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 2-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Ajay Sandula.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Ajay Kumar Sandula
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Doctoral Researcher at IISc
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/sandula-ajay-kumar/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 3-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Akshay Pimpalakar.jpg"
+            alt="" width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Akshay Pimpalkar
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                MSc at Technical University of Munich
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/pimakshay/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 4-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Avdhoot.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Avdhoot Waghmode
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Management Consultant at PwC Consulting
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/avdhoot-waghmode/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 5-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Hitansh.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Hitansh Singhal
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Associate Body Structures Engineer at Rivian
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/hs123/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 6-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Mayank.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Mayank Thakur
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Manager at Reliance Industries Limited
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/mayank1615/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 7-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Vivek.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Vivek Sawarkar
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Senior officer at Oil India Ltd.
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/vivek-sawarkar/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!---->
+  <br><br>
+  <div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2013 Batch</div>
+    <br>
+    <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
+      <!--person component 1-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Aniruddh.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Anirudh Yadav
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                PGP Batch 2020-22 IIM Bangalore
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/anirudhyadav1001/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 2-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Bhupendra.png" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Bhupendra Singh Dhaked
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                DAQAS Officer, IES at Ministry of Defence
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://m.facebook.com/people/Bhupendra-Singh-Dhakad/100007171387083/"><img
+                    src="img/fb_whitebg.png" class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 3-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Gaurav Agrawal.jpg"
+            alt="" width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Gaurav Agrawal
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Analyst at Goldman Sachs Private Equity
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/gauraviitg12/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 4-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Gaurav Gavaskar.jpg"
+            alt="" width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Gaurav Gavaskar
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Assistant Executive Engineer at ONGC
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/g-gavaskar-2750/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 5-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Karmesh.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Karmesh Yadav
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Planning Engineer at ISEE
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/karmesh-yadav/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 6-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Minkush.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Minkush Kansal
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                PhD at University of Twente
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/minkush-kansal/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 7-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Parth.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Parth Tiwari
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Spacecraft Structures Design Engineer at ISRO
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/parth-tiwari/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 8-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Rohit.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Rohit Murthy
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Autonomous Driving Engineer at NVIDIA
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/rohitmurthy1/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 9-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Saanwra.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Saanwra Khod
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Project Manager at Shyam Indus Power Solutions Pvt. Ltd.
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/saanwra-khod-0687678a/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 10-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Sanjeev kumar.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Sanjeev Kumar
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Aerospace Engineering at University of Illinois Urbana-Champaign
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/sanjeev-kumar-696093127/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 11-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Shivam.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Shivam Lohia
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Technology Analyst at Citigroup
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/shivam-lohia-0ab648a1/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!---->
+  <br><br>
+  <div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2012 Batch</div>
+    <br>
+    <div class="flex justify-center grid lg:grid-cols-4 lg:mx-52 md:grid-cols-3 sm:grid-cols-2 grid-cols-2">
+      <!--person component 1-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Akash Boddeda.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Akash Boddeda
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                GET at General Motors
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/akashboddeda/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 2-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Anmol Mukati.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Anmol Mukati
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Assistant Manager at Maruti Suzuki India Limited
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/anmol-mukati/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 3-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Naman Kansal.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Naman Kansal
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Supply Chain Manager at Nykaa.com
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/namankansal/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 4-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Saurabh Samant.jpg"
+            alt="" width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Saurabh Samant
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                CAE Analyst at Mercedes Benz
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/saurabh-samant-705576a4/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!---->
+  <br><br>
+  <div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2011 Batch</div>
+    <br>
+    <div class="flex justify-center grid lg:grid-cols-2 lg:mx-96 md:grid-cols-2 sm:grid-cols-2 grid-cols-2">
+      <!--person component 1-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Kaushal.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Kaushal Kamal Jain
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                PhD Student at Herrick Lab, Purdue University
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/kaushal23/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 2-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Puru.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Puru Rastogi
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Co-Founder at Mowito
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/pururastogi/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!---->
+  <br><br>
+  <div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2010 Batch</div>
+    <br>
+    <div class="flex justify-center grid grid-cols-1">
+      <!--person component 1-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Amol.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Amol Lanjewar
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Assistant Engineer at ONGC
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.facebook.com/amol.lanjewar1"><img src="img/fb_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+  <!---->
+  <br><br>
+  <div>
+    <div class="text-center text-4xl font-medium" style="font-family: nebula;">2008-09 Batch</div>
+    <br>
+    <div class="flex justify-center">
+      <!--person component 1-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Ravish.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Ravish Vasan
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Founder at Sattvam
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/vasanravish/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <!--person component 2-->
+      <div>
+        <figure class="rounded-xl p-8 ">
+          <img class="w-32 h-32 rounded-full mx-auto object-cover" src="img/profile_pic/Alumni/Sanjay.jpg" alt=""
+            width="384" height="512">
+          <div class="pt-6 text-center space-y-4">
+            <figcaption>
+              <div class="text-cyan-600 text-lg font-bold">
+                Sanjay Kumar Jauhar
+              </div>
+              <div class="text-gray-500 text-center text-sm font-semibold">
+                Senior Engineer at Aeronautical Development Agency
+              </div>
+              <div class="justify-center inline-block">
+                <a href="https://www.linkedin.com/in/sanjayjauhar/"><img src="img/linkedin_whitebg.png"
+                    class="mx-5 w-7.5 h-6 inline-block m-1"></a>
+              </div>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-black text-white">
+    <div class="grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 pt-16 gap-5 px-10">
+      <div class="grid grid-flow-col grid-cols-2 place-items-center">
+        <div>
+          <img src="./img/iitgracing.png" alt="IITG RACING" title="IITG RACING">
         </div>
-        <div class="container mx-auto px-4 font-thin">
-            <div class="sm:flex sm:flex-wrap sm:mx-4 md:py-4">
-                <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/3">
-                    <div class="grid grid-flow-col grid-cols-2">
-                        <div class="py-6 pl-10">
-                            <img src="./img/iitgracing.png" title="IITG RACING">
-                        </div>
-                        <div>
-                            <span class="font-bold">IIT GUWAHATI RACING</span><br><br>
-                            New SAC<br>
-                            Indian Institute of Technology<br>
-                            Guwahati 781039<br>
-                            Assam, India
-                        </div>
-                    </div>
-                </div>
-                <div class="px-2 py-12 sm:w-1/2 md:w-1/4 xl:w-1/3">
-                    <div class="sm:flex sm:flex-wrap text-center">
-                        <div class="px-4 sm:w-1/2 md:w-1/3 text-left">
-                            HOME
-                        </div>
-                        <div class="px-4 sm:w-1/2 md:w-1/3">
-                            CARS
-                        </div>
-                        <div class="px-4 sm:w-1/2 md:w-1/3">
-                            SPONSORS
-                        </div>
-                        <div class="px-4 sm:w-1/2 md:w-1/3 text-left">
-                            COMPETITIONS
-                        </div>
-                        <div class="px-4 sm:w-1/2 md:w-1/3">
-                            TEAM
-                        </div>
-                        <div class="px-4 sm:w-1/2 md:w-1/3">
-                            CONTACT
-                        </div>
-                    </div>
-                </div>
-                <div class="px-2 py-12 sm:w-1/2 md:w-1/4 xl:w-1/3">
-                    <div class="sm:flex sm:flex-wrap flex-row-reverse">
-                        <img src="./img/ft3.png" alt="" class="h-10 w-12 mx-3">
-                        <img src="./img/ft2.png" alt="" class="h-10 w-12 mx-3">
-                        <img src="./img/ft1.png" alt="" class="h-10 w-12 mx-3">
-                    </div>  
-                </div>
-            </div>
-            <div class="text-center">
-                Copyright &copy; Since 2012 - IITG RACING WEB-OPS. All rights reserved.
-            </div>
+        <div class="text-sm" style="margin-left: -2vw;">
+          <span class="font-bold">IIT GUWAHATI RACING</span><br><br>
+          New SAC<br>
+          Indian Institute of Technology Guwahati<br>
+          Guwahati 781039<br>
+          Assam, India
         </div>
-    </footer>
+      </div>
+      <div class="grid grid-cols-2 grid-rows-3 lg:grid-cols-3 text-base md:text-sm px-4 md:pl-24 lg:pl-0 gap-x-20">
+        <div class="order-1 pl-2 ml-1"><a href="index.html">HOME</a></div>
+        <div class="lg:order-2 order-5 pl-2 ml-1"><a href="ourcars.html">CARS</a></div>
+        <div class="lg:order-3 order-4 pl-2 ml-1 md:ml-3 lg:ml-1"><a href="sponsors.html">SPONSORS</a></div>
+        <div class="lg:order-4 order-3 pl-2 ml-1"><a href="competitions.html">COMPETITIONS</a></div>
+        <div class="lg:order-5 order-2 pl-2 ml-2 md:ml-3 lg:ml-1"><a href="team21_22.html">TEAM</a></div>
+        <div class="order-6 pl-2 ml-1 md:ml-3 lg:ml-1"><a href="contact.html">CONTACT</a></div>
+      </div>
+      <div class="grid grid-rows-2 gap-0 lg:gap-10">
+        <div class="flex flex-row-reverse mx-auto lg:mx-0">
+          <a href="https://www.linkedin.com/company/iitgracing/" target="_blank"><img src="./img/linkedin.png"
+              title="Our LinkedIn page" class="mx-5 w-7.5 h-6"></a>
+          <a href="https://www.youtube.com/channel/UCv6DkzU0C6Fo2Y1bK56y0ew" target="_blank"><img src="./img/yt.png"
+              title="Our YouTube page" class="mx-5 w-7.5 h-6"></a>
+          <a href="https://www.instagram.com/iitg.racing/" target="_blank"><img src="./img/insta.png"
+              title="Our Instagram page" class="mx-5 w-7.5 h-6"></a>
+          <a href="https://www.facebook.com/iitg.racing/" target="_blank"><img src="./img/fb.png"
+              title="Our Facebook page" class="mx-5 w-7.5 h-6"></a>
+        </div>
+        <div class="flex flex-row-reverse mx-auto lg:mx-0">
+          <a href="https://www.iitg.ac.in/" target="_blank"><img src="./img/ft3.png" alt="" class="h-10 w-12 mx-2"></a>
+          <a href="https://www.iitg.ac.in/stud/gymkhana/technical/index.html" target="_blank"><img src="./img/ft2.png"
+              alt="" class="h-10 w-12 mx-2"></a>
+          <a href="https://www.iitg.ac.in/mech/" target="_blank"><img src="./img/ft1.png" alt=""
+              class="h-10 w-12 mx-2"></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center md:text-base text-xs pb-5 mx-auto">
+      Copyright &copy; Since 2012 - IITG RACING WEB-OPS. All rights reserved.
+    </div>
+  </footer>
+  <script>
+    var toTop = document.getElementById("topBtn");
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        toTop.style.display = "block";
+      }
+      else {
+        toTop.style.display = "none";
+      }
+    }
+
+    function reachTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
+  <script src="forcursor.js"></script>
+  <script src="vanilla-tilt.js"></script>
+  <script src="desktopnavbar.js"></script>
+  <script src="mobilenavbar.js"></script>
+  <script src="cscursor.js"></script>
 </body>
+
 </html>
