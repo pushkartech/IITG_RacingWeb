@@ -416,7 +416,7 @@
     </nav>
     <div class="h-20 hidden lg:block"></div>
 
-    <div style="padding-top: 1.007934336525307vh;" class="container" style="position: relative; z-index: 99;">
+    <div style="padding-top: 1.007934336525307vh;" class="container bg-black" style="position: relative; z-index: 99;">
         <img src="./img_cars/effi4_1.jpeg" alt="" style="height: 92vh;"
             class="object-cover bg-black lg:object-fill w-full">
         <div style="position: absolute; top: 32.83173734610123vh; font-family: nebula;"
@@ -440,13 +440,56 @@
             </div>
 
         </div>
-        <div class="h-96 w-full bg-cover bg-center  rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-members"
-            style="background-image: url('./img_cars/effi4_2.jpg');background-size: 100% 100%;width:50rem; z-index: -1;"
+        <div class="h-96 w-full bg-contain bg-center bg-no-repeat rounded-t bg-black lg:rounded-t-none lg:rounded-1 text-center clip-members"
+            style="background-image: url('./img_cars/effi4_2.jpg'); z-index: -1;width:50vw"
             title="Our Team">
 
         </div>
     </div>
-    <div class="w-full lg:max-w-full lg:flex relative object-center bg-black">
+    <div class="w-full lg:max-w-full lg:flex relative object-cover bg-black">
+        <img src="./img_cars/effi4_3.png" style="width:80%;left:10%" alt="" class="relative w-full  ">
+
+    <!-- <div class=""ONCLICK="ShowAndHide()"> -->
+      <div class="absolute"style="bottom:60%;left:28%" ONCLICK="ShowAndHide()">
+          <img  class="absolute  "style="width:.8vw;top:5%;left:2.5%" src="./img/Ellipse 7.png" class="" alt="">
+          <img style="width:1.3vw"  src="./img/Ellipse 8.png" alt="">
+          <div class="w-full text-white relative  " style="font-family: nebula;font-size:1.5vw;left:30%;bottom:2vw">BATTERY</div>
+          <div class="absolute" style="display: none;top:0;" id="SectionName">
+            <img class="absolute "style="width:9%"src="./img/circle-cropped.png" alt="">
+           <img class=" relative   "style="width:15vw;top:1vw;left:.8vw;max-width: max-content"src="./img/Vector 1.png" alt="">
+          <div class="relative"style="bottom:2vw;left:75%">
+            <div class="text-white  " style="font-family: poppins;font-size:1vw">48 V</div>
+            <div class="text-white " style="font-family: poppins;font-size:1vw">22.98 km/h</div>
+          </div>
+        </div>
+        </div>
+
+
+    </div>
+
+    <div class="lg:flex" style="justify-content:center;align-items:center">
+      <div class="flex  w-auto">
+        <div class=" flex">
+
+          <div class="flex-col">
+            <div class="text-base ml-6 mt-6" style="font-family: nebula; margin-right:20vw;padding-left:5vw">BATTERY VOLTAGE</div>
+            <div class=" ml-6 font-bold" style="font-family: Poppins;font-size:2vw;padding-left:5vw">48 V</div>
+          </div>
+        </div>
+
+        <div class=" flex">
+
+          <div class="flex-col">
+            <div class="text-base  mt-6" style="font-family: nebula">TOP SPEED</div>
+            <div class="font-bold" style="font-family: Poppins;font-size:2vw">22.98 km/h</div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- <div class="w-full lg:max-w-full lg:flex relative object-center bg-black">
         <img src="./img_cars/effi4_3.jpg" style="width:80%;left:10%" alt="" class="relative  ">
 
         <div class="" ONCLICK="ShowAndHide()">
@@ -491,7 +534,7 @@
 
 
     </div>
-    </div>
+    </div> -->
     <div class="w-full lg:max-w-full lg:flex py-16">
         <div class="h-96 w-full bg-cover bg-left rounded-t lg:rounded-t-none lg:rounded-1 text-center clip-cars "
             style="background-image: url('./img_cars/effi4_4.jpg'); z-index: -1;" title="Our Cars">
