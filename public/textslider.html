@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Slider</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        .slide-progress {
+            display: block;
+            width: 0%;
+            height: 1.8px;
+            margin-left: 0px;
+            background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+        }
+        .grow {
+            width: 100%;
+            transition-duration: 10s;
+            transition-timing-function: ease-out;
+        }
+        .normal {
+            width: 0%;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            visibility: hidden;
+            background: transparent;
+        }
+        * {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body id="custom-start-videos" class="bg-black" onload="sliderStart()">
+    <div class="h-screen">
+        <video autoplay muted="" playsinline="" style="object-fit: fill; height:100vh; width: 100vw;" loop id="video-area">
+            <source src="" type="video/mp4">
+            "This browser does not support the video element."
+        </video>
+    </div>
+    
+    <div class="absolute top-10" style="font-family: poppins;">
+        <ul class="px-10 select-none">
+            <li onclick="resetInterval1(event)" class="py-0.5 float-left w-36 mx-0.5 px-0.5 bg-transparent cursor-pointer pt-2 text-md text-red-600 font-bold" id="slide-0">
+                <span id="l-0" style="text-shadow: 1px 1px 1px black;">Concept A</span>
+                <div class="h-2" id="ht-0"></div>
+                <span class="slide-progress normal align-bottom" id="slide0"></span>
+            </li>
+            <li onclick="resetInterval2(event)" class="py-0.5 float-left w-10 mx-0.5 px-0.5 bg-transparent cursor-pointer pt-2 text-md font-normal text-white border-b-2 border-white" id="slide-1">
+                <span id="l-1" style="text-shadow: 1px 1px 1px black;">2</span>
+                <div class="h-1" id="ht-1"></div>
+                <span class="slide-progress normal align-bottom" id="slide1"></span>
+            </li>
+            <li onclick="resetInterval3(event)" class="py-0.5 float-left w-10 mx-0.5 px-0.5 bg-transparent cursor-pointer pt-2 text-md font-normal text-white border-b-2 border-white" id="slide-2">
+                <span id="l-2" style="text-shadow: 1px 1px 1px black;">3</span>
+                <div class="h-1" id="ht-2"></div>
+                <span class="slide-progress normal align-bottom" id="slide2"></span>
+            </li>
+            <li onclick="resetInterval4(event)" class="py-0.5 float-left w-10 mx-0.5 px-0.5 bg-transparent cursor-pointer pt-2 text-md font-normal text-white border-b-2 border-white" id="slide-3">
+                <span id="l-3" style="text-shadow: 1px 1px 1px black;">4</span>
+                <div class="h-1" id="ht-3"></div>
+                <span class="slide-progress normal align-bottom" id="slide3"></span>
+            </li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        var u = null;
+        var interval = null;
+        var btn0 = document.getElementById('slide-0');
+        var btn1 = document.getElementById('slide-1');
+        var btn2 = document.getElementById('slide-2');
+        var btn3 = document.getElementById('slide-3');
+
+        var tile0 = document.getElementById('slide0');
+        var tile1 = document.getElementById('slide1');
+        var tile2 = document.getElementById('slide2');
+        var tile3 = document.getElementById('slide3');
+
+        var label0 = document.getElementById('l-0');
+        var label1 = document.getElementById('l-1');
+        var label2 = document.getElementById('l-2');
+        var label3 = document.getElementById('l-3');
+
+        var ht0 = document.getElementById('ht-0');
+        var ht1 = document.getElementById('ht-1');
+        var ht2 = document.getElementById('ht-2');
+        var ht3 = document.getElementById('ht-3');
+
+        // js for heights at the border is missing/needs to be debugged
+
+        function resize0() {
+            if(btn0.classList.contains('w-36')) {
+                if(tile0.classList.contains('normal')) {
+                    tile0.classList.toggle('normal');
+                    tile0.classList.toggle('grow');
+                }
+            }
+            else {
+                btn0.classList.toggle('w-10');
+                btn0.classList.toggle('w-36');
+                btn0.classList.toggle('text-white');
+                btn0.classList.toggle('text-red-600');
+                btn0.classList.toggle('border-white');
+                btn0.classList.toggle('border-b-2');
+                btn0.classList.toggle('font-normal');
+                btn0.classList.toggle('font-bold');
+                tile0.classList.toggle('normal');
+                tile0.classList.toggle('grow');
+                ht0.classList.toggle('h-1');
+                ht0.classList.toggle('h-2');
+                label0.innerText = 'Concept A';
+                label1.innerText = '2';
+                label2.innerText = '3';
+                label3.innerText = '4';
+                fdisable('0');
+            }
+        }
+
+        function resize1() {
+            if(btn1.classList.contains('w-36')) {
+
+            }
+            else {
+                btn1.classList.toggle('w-10');
+                btn1.classList.toggle('w-36');
+                btn1.classList.toggle('text-white');
+                btn1.classList.toggle('text-red-600');
+                btn1.classList.toggle('border-white');
+                btn1.classList.toggle('border-b-2');
+                btn1.classList.toggle('font-normal');
+                btn1.classList.toggle('font-bold')
+                tile1.classList.toggle('normal');
+                tile1.classList.toggle('grow');
+                ht1.classList.toggle('h-1');
+                ht1.classList.toggle('h-2');
+                label1.innerText = 'Vision F';
+                label0.innerText = '1';
+                label2.innerText = '3';
+                label3.innerText = '4';
+                fdisable('1');
+            }
+        }
+
+        function resize2() {
+            if(btn2.classList.contains('w-36')) {
+
+            }
+            else {
+                btn2.classList.toggle('w-10');
+                btn2.classList.toggle('w-36');
+                btn2.classList.toggle('text-white');
+                btn2.classList.toggle('text-red-600');
+                btn2.classList.toggle('border-white');
+                btn2.classList.toggle('border-b-2');
+                btn2.classList.toggle('font-normal');
+                btn2.classList.toggle('font-bold');
+                tile2.classList.toggle('normal');
+                tile2.classList.toggle('grow');
+                ht2.classList.toggle('h-1');
+                ht2.classList.toggle('h-2');
+                label2.innerText = 'Tachyon 1.0';
+                label0.innerText = '1';
+                label1.innerText = '2';
+                label3.innerText = '4';
+                fdisable('2');
+            }
+        }
+
+        function resize3() {
+            if(btn3.classList.contains('w-36')) {
+
+            }
+            else {
+                btn3.classList.toggle('w-10');
+                btn3.classList.toggle('w-36');
+                btn3.classList.toggle('text-white');
+                btn3.classList.toggle('text-red-600');
+                btn3.classList.toggle('border-white');
+                btn3.classList.toggle('border-b-2');
+                btn3.classList.toggle('font-normal');
+                btn3.classList.toggle('font-bold');
+                tile3.classList.toggle('normal');
+                tile3.classList.toggle('grow');
+                ht3.classList.toggle('h-1');
+                ht3.classList.toggle('h-2');
+                label3.innerText = 'Tachyon 2.0';
+                label0.innerText = '1';
+                label1.innerText = '2';
+                label2.innerText = '3';
+                fdisable('3');
+            }
+        }
+        
+        function fdisable(id) {
+            for(var i=0; i<4; i++) {
+                if(i!=id) {
+                    let bTn = document.getElementById('slide-'+i);
+                    let tiLe = document.getElementById('slide'+i);
+                    let heigh = document.getElementById('ht-'+i);
+
+                    if(bTn.classList.contains('w-36')) {
+                        bTn.classList.toggle('w-36');
+                        bTn.classList.toggle('w-10');
+                    }
+                    if(bTn.classList.contains('text-red-600')) {
+                        bTn.classList.toggle('text-white');
+                        bTn.classList.toggle('text-red-600');
+                    }
+                    if(bTn.classList.contains('font-bold')) {
+                        bTn.classList.toggle('font-bold');
+                        bTn.classList.toggle('font-normal');
+                    }
+                    if(bTn.classList.contains('border-red-600')) {
+                        bTn.classList.toggle('border-red-600');
+                        bTn.classList.toggle('border-white');
+                    }
+                    if(tiLe.classList.contains('grow')) {
+                        tiLe.classList.toggle('grow');
+                        tiLe.classList.toggle('normal');
+                    }
+                    if(bTn.classList.contains('border-white') == false) {
+                        bTn.classList.toggle('border-white');
+                        bTn.classList.toggle('border-b-2');
+                    }
+                    if(heigh.classList.contains('h-2')) {
+                        heigh.classList.toggle('h-2');
+                        heigh.classList.toggle('h-1');
+                    }
+                }
+            }
+        }
+
+        function videoURL(url) {
+            if(u!=url) {
+                document.getElementById('video-area').src = url;
+                u = url;
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        function videoid() {
+            if(btn0.classList.contains('w-36')) {
+                resize1();
+                videoURL('video-clips/clip2.mp4');
+            }
+            else if(btn1.classList.contains('w-36')) {
+                resize2();
+                videoURL('video-clips/clip3.mp4');
+            }
+            else if(btn2.classList.contains('w-36')) {
+                resize3();
+                videoURL('video-clips/clip4.mp4');
+            }
+            else if(btn3.classList.contains('w-36')) {
+                resize0();
+                videoURL('video-clips/clip1.mp4');
+            }
+        }
+
+        function sliderStart() {
+            resize0();
+            videoURL('video-clips/clip1.mp4');
+            intervalVideo();
+        }
+
+        function intervalVideo() {
+            interval = setInterval(videoid, 10000);
+        }
+
+        console.log('Neche dekho neche');
+        function resetInterval1(event) {
+            if(event.button == 0) {
+                clearInterval(interval);
+                resize0();
+                videoURL('video-clips/clip1.mp4');
+                intervalVideo();
+            }
+        }
+        function resetInterval2(event) {
+            if(event.button == 0) {
+                clearInterval(interval);
+                resize1();
+                videoURL('video-clips/clip2.mp4');
+                intervalVideo();
+            }
+        }
+        function resetInterval3(event) {
+            if(event.button == 0) {
+                clearInterval(interval);
+                resize2();
+                videoURL('video-clips/clip3.mp4');
+                intervalVideo();
+            }
+        }
+        function resetInterval4(event) {
+            if(event.button == 0) {
+                clearInterval(interval);
+                resize3();
+                videoURL('video-clips/clip4.mp4');
+                intervalVideo();
+            }
+        }
+    </script>
+    <script>
+    </script>
+</body>
+</html>
