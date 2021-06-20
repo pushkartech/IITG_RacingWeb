@@ -18,7 +18,8 @@ $(document).ready(function() {
             $("#backToMainFromTeam").click();
         }
         $("#hiddenarea").toggleClass('hidden');
-        console.log($("#hiddenarea"));
+        $("#head-title").toggleClass('hidden');
+        $("#head-down").toggleClass('hidden');
     });
 
     $("#carsBtn, #backToMainFromCars").click(function() {
