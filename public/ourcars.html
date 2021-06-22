@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,6 +88,19 @@
   .carousel-cell:before {
     display: block;
   }
+
+  @media screen and ( min-width: 0px ) {
+  /* half-width cells for larger devices */
+  .carousel-cell { width: 100%; }}
+
+  @media screen and ( min-width: 768px ) {
+  /* half-width cells for larger devices */
+  .carousel-cell { width: 40%; }
+
+  @media screen and ( min-width: 1024px ) {
+  /* half-width cells for larger devices */
+  .carousel-cell { width: 24%; }}
+}
 </style>
 
 <body>
@@ -398,14 +410,14 @@
   </div>
 
   <div class="mt-16 mb-36">
-    <div class="ml-10 mb-8">
-      <h1 class="text-4xl justify-center" style="font-family: nebula; text-align: center;">formula student</h1>
+    <div class="mb-8">
+      <h1 class="text-4xl mx-auto" style="font-family: nebula; text-align: center;">formula student</h1>
     </div>
     <div class="carousel" data-flickity='{ "wrapAround": true, "imagesLoaded": false}'>
       <div class="carousel-cell">
         <a href="origin.html">
           <div class="">
-            <img class="cars-img w-96" src="./img/side png 1 (1)cc.png">
+            <img class="cars-img w-full object-cover" src="./img/side png 1 (1)cc.png">
             <p class="text-2xl justify-center" style="font-family: nebula; text-align: center;">origin</p>
           </div>
         </a>
@@ -413,7 +425,7 @@
       <div class="carousel-cell">
         <a href="tachyon1.html">
           <div class="">
-            <img class="cars-img w-96" src="./img/Cars-Shadows/tachyon 1.0.png">
+            <img class="cars-img w-full object-cover" src="./img/Cars-Shadows/tachyon 1.0.png">
             <p class="text-2xl" style="font-family: nebula; text-align: center;">tachyon 1.0</p>
           </div>
         </a>
@@ -421,7 +433,7 @@
       <div class="carousel-cell">
         <a href="tachyon2.html">
           <div class="">
-            <img class="cars-img w-96" src="./img/Cars-Shadows/tachyon 2.0.png">
+            <img class="cars-img w-full object-cover" src="./img/Cars-Shadows/tachyon 2.0.png">
             <p class="text-2xl" style="font-family: nebula; text-align: center;">tachyon 2.0</p>
           </div>
         </a>
@@ -429,7 +441,7 @@
       <div class="carousel-cell">
         <a href="origin.html">
           <div class="">
-            <img class="cars-img w-96" src="./img/side png 1 (1)cc.png">
+            <img class="cars-img w-full object-cover" src="./img/side png 1 (1)cc.png">
             <p class="text-2xl justify-center" style="font-family: nebula; text-align: center;">origin</p>
           </div>
         </a>
@@ -437,7 +449,7 @@
       <div class="carousel-cell">
         <a href="#">
           <div class="">
-            <img class="cars-img w-96" src="./img/Cars-Shadows/tachyon 3.0.png">
+            <img class="cars-img w-full object-cover" src="./img/Cars-Shadows/tachyon 3.0.png">
             <p class="text-2xl justify-center" style="font-family: nebula; text-align: center;">tachyon 3.0</p>
           </div>
         </a>
@@ -447,7 +459,7 @@
 
 
   <div class="mt-16 mb-36">
-    <div class="ml-10 mb-8">
+    <div class="mb-8">
       <h1 class="text-4xl justify-center" style="font-family: nebula; text-align: center;">Efficycle</h1>
     </div>
     <div class="carousel" data-flickity='{ "wrapAround": true, "imagesLoaded": false}'>
@@ -455,7 +467,7 @@
         <a href="effi1.html">
           <div class="">
             <div>
-              <img class="cars-img w-96" src="./img/Cars-Shadows/effi 1.png">
+              <img class="cars-img w-full object-cover" src="./img/Cars-Shadows/effi 1.png">
             </div>
             <div class="">
               <p class="text-2xl justify-center" style="font-family: nebula; text-align: center;">Efficycle 1.0</p>
@@ -466,7 +478,7 @@
       <div class="carousel-cell">
         <a href="effi2.html">
           <div class="cars-img">
-            <img class=" w-96" src="./img/Cars-Shadows/effi 2.png">
+            <img class=" w-full object-cover" src="./img/Cars-Shadows/effi 2.png">
             <p class="text-2xl" style="font-family: nebula; text-align: center;">Efficycle 2.0</p>
           </div>
         </a>
@@ -474,7 +486,7 @@
       <div class="carousel-cell">
         <a href="effi3.html">
           <div class="">
-            <img class="cars-img w-96" src="./img/Cars-Shadows/effi 3.png">
+            <img class="cars-img w-full object-cover" src="./img/Cars-Shadows/effi 3.png">
             <p class="text-2xl" style="font-family: nebula; text-align: center;">Efficycle 3.0</p>
           </div>
         </a>
@@ -482,7 +494,7 @@
       <div class="carousel-cell">
         <a href="effi1.html">
           <div class="">
-            <img class="cars-img w-96" src="./img/Cars-Shadows/effi 1.png">
+            <img class="cars-img w-full object-cover" src="./img/Cars-Shadows/effi 1.png">
             <p class="text-2xl" style="font-family: nebula; text-align: center;">Efficycle 1.0</p>
           </div>
         </a>
@@ -490,7 +502,7 @@
       <div class="carousel-cell">
         <a href="effi4.html">
           <div class="">
-            <img class="cars-img w-96" src="./img/Cars-Shadows/effi 4.png">
+            <img class="cars-img w-full object-cover" src="./img/Cars-Shadows/effi 4.png">
             <p class="text-2xl" style="font-family: nebula; text-align: center;">Efficycle 4.0</p>
           </div>
         </a>
@@ -500,28 +512,31 @@
 
 
   <div class="mt-16 mb-36">
-    <div class="ml-10 mb-8">
+    <div class="mb-8">
       <h1 class="text-4xl justify-center" style="font-family: nebula; text-align: center;">Concept Cars</h1>
     </div>
-    <div class="flex justify-center">
+    <br><br>
+    <div class="md:flex justify-center">
       <a href="conceptA.html">
         <div class="">
+          <br>
           <div>
-            <img class="cars-img" src="./img/side png 1.png">
+            <img class="cars-img w-full object-cover" src="./img/side png 1.png">
           </div>
           <div class="">
-            <p class="text-2xl justify-center" style="font-family: nebula; text-align: center;">concept a</p>
+            <p class="text-2xl justify-center" style="font-family: nebula; text-align: center; margin-top: -20%;">concept a</p>
           </div>
         </div>
       </a>
 
       <a href="visionf.html">
         <div class="">
+          <br>
           <div>
-            <img class="cars-img" src="./img/side png 1 (1).png">
+            <img class="cars-img w-full object-cover" src="./img/side png 1 (1).png">
           </div>
           <div class="">
-            <p class="text-2xl justify-center" style="font-family: nebula; text-align: center;">vision f</p>
+            <p class="text-2xl justify-center" style="font-family: nebula; text-align: center; margin-top: -20%;">vision f</p>
           </div>
         </div>
       </a>
@@ -529,14 +544,14 @@
   </div>
 
   <div class="mt-16 mb-20">
-    <div class="ml-10 mb-8">
+    <div class="mb-8">
       <h1 class="text-4xl justify-center" style="font-family: nebula; text-align: center;">baja</h1>
     </div>
     <div class="flex justify-center">
       <a href="baja.html">
         <div class="">
           <div>
-            <img class="cars-img" src="./img/side png 1 (2).png">
+            <img class="cars-img w-full object-cover" src="./img/side png 1 (2).png">
           </div>
           <div class="">
             <p class="text-2xl justify-center" style="font-family: nebula; text-align: center;">srijan</p>
