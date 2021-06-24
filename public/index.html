@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/scrollbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/nebula-hollow?styles=53391" rel="stylesheet">
+    <script src="jquery-3.6.0.js"></script>
     <style>
         *{
             scroll-behavior: smooth;
@@ -152,14 +153,14 @@
                   <li class="customnavi py-2" id="visionfHover"><a>VISION F</a></li>
                 </ul>
               </li>
-              <li class="h-40">
-                <a href="origin.html"><center><img src="img/Navpics/Origin.png" alt="ORIGIN" class="h-60 xl:h-72 hidden" id="originCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+              <li class="h-96 absolute overflow-y-hidden">
+                <a href="origin.html"><center><img src="img/Navpics/Origin.png" alt="ORIGIN" class="h-60 xl:h-72 hidden relative overflow-hidden" id="originCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
                 <a href="tachyon1.html"><center><img src="img/Navpics/Tachyon 1.0.png" alt="TACHYON1.0" class="h-72 xl:h-80 hidden" id="tachyon1Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
                 <a href="tachyon2.html"><center><img src="img/Navpics/Tachyon 2.0.png" alt="TACHYON2.0" class="h-48 xl:h-60 hidden" id="tachyon2Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
                 <a href="#"><center><img src="img/Navpics/tachyon3.png" alt="TACHYON3.0" class="h-52 xl:h-72 hidden" id="tachyon3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
                 <a href="effi1.html"><center><img src="img/Navpics/Effi 1.png" alt="EFFICYCLE1.0" class="hidden h-48 xl:h-80" id="effi1Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
                 <a href="effi2.html"><center><img src="img/Navpics/Effi 2.png" alt="EFFICYCLE2.0" class="h-48 xl:h-80 hidden" id="effi2Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
-                <a href="effi3.html"><center><img src="img/Cars-Shadows/effi 3.png" alt="EFFICYCLE3.0" class="h-72 xl:h-80 hidden" id="effi3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
+                <a href="effi3.html"><center><img src="img/Cars-Shadows/effi 3.png" alt="EFFICYCLE3.0" class="h-64 xl:h-80 hidden" id="effi3Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
                 <a href="effi4.html"><center><img src="img/Navpics/Effi4.0.png" alt="EFFICYCLE4.0" class="h-48 xl:h-80 hidden" id="effi4Car" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
                 <a href="baja.html"><center><img src="img/Navpics/Baja 2012.png" alt="BAJA" class="h-64 hidden" id="srijanCar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
                 <a href="conceptA.html"><center><img src="img/Navpics/conceptA.png" alt="CONCEPT A" class="h-64 xl:h-80 hidden" id="conceptACar" data-tilt data-tilt-scale="1.1" data-tilt-axis="x" data-tilt-inverted="true" data-tilt-max="15" data-tilt-glare data-tilt-max-glare="0.8"></center></a>
@@ -167,7 +168,7 @@
             </li>
             </ul>
           </div>
-          <div class="mx-auto mt-32 hidden" id="detailsMenu">
+          <div class="mx-auto mt-40 xl:mt-32 hidden" id="detailsMenu">
             <ul class="list-none" style="font-family: poppins;">
               <li class="px-12 float-left">
                 <span id="f11">TOP SPEED</span><br>
@@ -397,6 +398,9 @@
         </ul>
     </div>
 
+    <div class="absolute bottom-28 text-white font-semibold pl-16 text-6xl overflow-y-hidden" id="actual-text" style="text-shadow: 1px 1px 1px black; font-family: nebula;">
+      <!-- A NEW BEGINNING -->
+    </div>
     <div class="text-white text-2xl absolute bottom-3" style="left: 50%; transform: translate(-50%, -50%);">
         <a>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -606,6 +610,8 @@
         var ht2 = document.getElementById('ht-2');
         var ht3 = document.getElementById('ht-3');
 
+        var actual = document.getElementById('actual-text');
+
         // js for heights at the border is missing/needs to be debugged
 
         function resize0() {
@@ -613,6 +619,7 @@
                 if(tile0.classList.contains('normal')) {
                     tile0.classList.toggle('normal');
                     tile0.classList.toggle('grow');
+                    actual.innerText = 'A NEW BEGINNING';
                 }
             }
             else {
@@ -632,6 +639,7 @@
                 label1.innerText = '2';
                 label2.innerText = '3';
                 label3.innerText = '4';
+                actual.innerText = 'A NEW BEGINNING';
                 fdisable('0');
             }
         }
@@ -657,6 +665,7 @@
                 label0.innerText = '1';
                 label2.innerText = '3';
                 label3.innerText = '4';
+                actual.innerText = 'REVEALING THE DARK SIDE';
                 fdisable('1');
             }
         }
@@ -682,6 +691,7 @@
                 label0.innerText = '1';
                 label1.innerText = '2';
                 label3.innerText = '4';
+                actual.innerText = 'FASTER THAN LIGHT';
                 fdisable('2');
             }
         }
@@ -707,6 +717,7 @@
                 label0.innerText = '1';
                 label1.innerText = '2';
                 label2.innerText = '3';
+                actual.innerText = 'THE GREY MATTER';
                 fdisable('3');
             }
         }
