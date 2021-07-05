@@ -84,6 +84,15 @@
             visibility: hidden;
             background: transparent;
         }
+        #video-area {
+          object-fit: cover;
+        }
+        @media screen and (min-width: 768px) {
+          #video-area {
+            object-fit: fill;
+          }
+        }
+        
     </style>
 </head>
 <body onload="sliderStart()">
@@ -356,7 +365,7 @@
 
     <!-- Video Slider for main page -->
     <div class="h-screen">
-        <video autoplay muted="" playsinline="" style="object-fit: fill; height:92vh; width: 100vw;" loop id="video-area">
+        <video autoplay muted="" playsinline="" style="height:92vh; width: 100vw;" loop id="video-area">
             <source src="" type="video/mp4">
             "This browser does not support the video element."
         </video>
@@ -398,7 +407,7 @@
         </ul>
     </div>
 
-    <div class="absolute bottom-28 text-white font-semibold pl-16 text-6xl overflow-y-hidden" id="actual-text" style="text-shadow: 1px 1px 1px black; font-family: nebula;">
+    <div class="absolute top-60 text-white font-semibold px-10 md:px-12 text-4xl md:text-6xl overflow-y-hidden" id="actual-text" style="text-shadow: 1px 1px 1px black; font-family: nebula;">
       <!-- A NEW BEGINNING -->
     </div>
     <div class="text-white text-2xl absolute bottom-3" style="left: 50%; transform: translate(-50%, -50%);">
@@ -408,7 +417,7 @@
             </svg>
         </a>
     </div>
-    <div class="text-center py-20 px-24 md:px-36 lg:px-64 text-md" style="font-family: poppins;">
+    <div class="text-center py-20 px-24 md:px-36 lg:px-64 text-md" style="font-family: poppins; margin-top: -6vh;">
         The Automobile Club of IIT Guwahati comprises young and hardworking individuals who share a common passion-automobiles. Our love for the latest technologies and innovation in the realm of automobiles drives us to the endeavour to design and fabricate vehicles of our own. We take part in various national competitions like Formula Bharat, SUPRA SAE, SAE NIS EffiCycle. Our love for automobiles drives us to spread this knowledge and help ignite this passion in others. We organize lectures on Automobiles and their various subsystems. We also hold workshops and hackathons to teach and give hands-on experience of different software essential for our field like Solidworks, MATLAB, ANSYS.
     </div>
     <div class="lg:flex">
