@@ -412,7 +412,7 @@
       <!-- A NEW BEGINNING -->
     </div>
     <div class="text-white text-2xl absolute bottom-3" style="left: 50%; transform: translate(-50%, -50%);">
-      <a>
+      <a onclick="topclick()">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
@@ -604,6 +604,11 @@
       </script>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
+
+        function topclick() {
+          window.scrollBy(0, 700);
+        }
+
         var u = null;
         var interval = null;
         var btn0 = document.getElementById('slide-0');

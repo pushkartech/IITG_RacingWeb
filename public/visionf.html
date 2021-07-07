@@ -402,7 +402,7 @@
           <div id="intro"></div>
         </div>
         <div class="text-white text-2xl absolute bottom-3" style="left: 50%; transform: translate(-50%, -50%);">
-          <a>
+          <a onclick="topclick()">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
@@ -586,6 +586,10 @@
         function reachTop() {
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
+        }
+
+        function topclick() {
+          window.scrollBy(0, 700);
         }
       </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
