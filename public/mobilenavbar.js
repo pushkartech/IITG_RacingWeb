@@ -20,6 +20,8 @@ $(document).ready(function() {
         $("#hiddenarea").toggleClass('hidden');
         $("#head-title").toggleClass('hidden');
         $("#head-down").toggleClass('hidden');
+        $("#head-back").toggleClass('hidden');
+        $("#actual-text").toggleClass('hidden');
     });
 
     $("#carsBtn, #backToMainFromCars").click(function() {

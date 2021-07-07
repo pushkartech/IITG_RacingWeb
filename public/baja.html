@@ -109,8 +109,8 @@
     </style>
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <div class="cursor hidden md:block"></div>
+    <div class="cursor-follower hidden md:block"></div>
     <button onclick="reachTop()" class="bg-red-600 text-white px-1 py-1 rounded-full hover:bg-red-500 focus:outline-none fixed z-50 bottom-10 right-10 hidden" id="topBtn">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
@@ -382,7 +382,7 @@
     Baja
       <div id="intro"></div>
     </div>
-    <div class="text-white text-2xl absolute bottom-3" style="left: 50%; transform: translate(-50%, -50%);">
+    <div class="text-white text-2xl absolute bottom-3" style="left: 50%; transform: translate(-50%, -50%);" id="head-down">
       <a onclick="topclick()">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
