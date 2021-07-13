@@ -36,3 +36,13 @@
   ::-webkit-scrollbar-button:vertical:single-button:increment:hover {
     border-color: #BE1E2D transparent transparent transparent;
   }  */
+
+
+  .counter-item {
+    background-color: #ccc;
+    padding: 5px;
+  }
+  
+  #incrementCounter {
+    margin-top: 20px;
+  }
